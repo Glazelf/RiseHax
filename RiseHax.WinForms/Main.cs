@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RiseHax
+namespace RiseHax.WinForms
 {
     public partial class Main : Form
     {
@@ -17,9 +17,5 @@ namespace RiseHax
             InitializeComponent();
         }
 
-        private void Main_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
