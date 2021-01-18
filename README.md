@@ -6,3 +6,7 @@ A lot of development will go into this before it will be usable on either the de
 Check the [releases](https://github.com/Glazelf/RiseHax/releases) page for releases when this is ready.
 
 Expect nothing and your expectations can only be positively met.
+
+## Support
+Have questions? Join my Discord.  
+<a href="https://discord.gg/2gkybyu"><img src="https://canary.discordapp.com/api/guilds/549214833858576395/widget.png?style=banner2"></a>
