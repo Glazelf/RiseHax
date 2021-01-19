@@ -40,7 +40,7 @@ namespace RiseHax.WinForms
             this.btnLiveHax.TabIndex = 0;
             this.btnLiveHax.Text = "LiveHax";
             this.btnLiveHax.UseVisualStyleBackColor = true;
-            this.btnLiveHax.Click += new System.EventHandler(this.btnLiveHax_Click);
+            this.btnLiveHax.Click += new System.EventHandler(this.BtnLiveHax_Click);
             // 
             // btnSaveEdit
             // 
@@ -51,7 +51,7 @@ namespace RiseHax.WinForms
             this.btnSaveEdit.TabIndex = 1;
             this.btnSaveEdit.Text = "Save Edit";
             this.btnSaveEdit.UseVisualStyleBackColor = true;
-            this.btnSaveEdit.Click += new System.EventHandler(this.btnSaveEdit_Click);
+            this.btnSaveEdit.Click += new System.EventHandler(this.BtnSaveEdit_Click);
             // 
             // Main
             // 

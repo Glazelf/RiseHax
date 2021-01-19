@@ -1,5 +1,5 @@
 ﻿
-namespace RiseHax.WinForms.Subforms.SysBot
+namespace RiseHax.WinForms
 {
     partial class SysBotUI
     {
@@ -33,12 +33,13 @@ namespace RiseHax.WinForms.Subforms.SysBot
             // 
             // SysBotUI
             // 
-            this.Icon = Properties.Resources.icon;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Icon = global::RiseHax.WinForms.Properties.Resources.icon;
             this.Name = "SysBotUI";
             this.Text = "RiseHax";
+            this.Load += new System.EventHandler(this.SysBotUI_Load);
             this.ResumeLayout(false);
 
         }
