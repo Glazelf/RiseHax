@@ -19,7 +19,9 @@ namespace RiseHax.WinForms
 #endif
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            Main frmMain = new Main();
+            frmMain.Show();
+            Application.Run();
         }
     }
 }
