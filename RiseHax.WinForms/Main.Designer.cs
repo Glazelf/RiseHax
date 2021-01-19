@@ -27,44 +27,49 @@ namespace RiseHax.WinForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.Icon = Properties.Resources.icon;
-            this.ButtonLiveHax = new System.Windows.Forms.Button();
-            this.ButtonSaveEdit = new System.Windows.Forms.Button();
+            this.btnLiveHax = new System.Windows.Forms.Button();
+            this.btnSaveEdit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // ButtonLiveHax
+            // btnLiveHax
             // 
-            this.ButtonLiveHax.Location = new System.Drawing.Point(64, 17);
-            this.ButtonLiveHax.Name = "ButtonLiveHax";
-            this.ButtonLiveHax.Size = new System.Drawing.Size(150, 52);
-            this.ButtonLiveHax.TabIndex = 0;
-            this.ButtonLiveHax.Text = "LiveHax";
-            this.ButtonLiveHax.UseVisualStyleBackColor = true;
+            this.btnLiveHax.AccessibleName = "buttonLiveHax";
+            this.btnLiveHax.Location = new System.Drawing.Point(64, 17);
+            this.btnLiveHax.Name = "btnLiveHax";
+            this.btnLiveHax.Size = new System.Drawing.Size(150, 52);
+            this.btnLiveHax.TabIndex = 0;
+            this.btnLiveHax.Text = "LiveHax";
+            this.btnLiveHax.UseVisualStyleBackColor = true;
+            this.btnLiveHax.Click += new System.EventHandler(this.btnLiveHax_Click);
             // 
-            // ButtonSaveEdit
+            // btnSaveEdit
             // 
-            this.ButtonSaveEdit.Location = new System.Drawing.Point(64, 87);
-            this.ButtonSaveEdit.Name = "ButtonSaveEdit";
-            this.ButtonSaveEdit.Size = new System.Drawing.Size(150, 52);
-            this.ButtonSaveEdit.TabIndex = 1;
-            this.ButtonSaveEdit.Text = "Save Edit";
-            this.ButtonSaveEdit.UseVisualStyleBackColor = true;
+            this.btnSaveEdit.AccessibleName = "buttonSaveEdit";
+            this.btnSaveEdit.Location = new System.Drawing.Point(64, 87);
+            this.btnSaveEdit.Name = "btnSaveEdit";
+            this.btnSaveEdit.Size = new System.Drawing.Size(150, 52);
+            this.btnSaveEdit.TabIndex = 1;
+            this.btnSaveEdit.Text = "Save Edit";
+            this.btnSaveEdit.UseVisualStyleBackColor = true;
+            this.btnSaveEdit.Click += new System.EventHandler(this.btnSaveEdit_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(286, 166);
-            this.Controls.Add(this.ButtonSaveEdit);
-            this.Controls.Add(this.ButtonLiveHax);
+            this.Controls.Add(this.btnSaveEdit);
+            this.Controls.Add(this.btnLiveHax);
+            this.Icon = global::RiseHax.WinForms.Properties.Resources.icon;
             this.Name = "Main";
             this.Text = "RiseHax";
             this.ResumeLayout(false);
 
         }
 
-        private System.Windows.Forms.Button ButtonLiveHax;
-        private System.Windows.Forms.Button ButtonSaveEdit;
+        private System.Windows.Forms.Button btnLiveHax;
+        private System.Windows.Forms.Button btnSaveEdit;
+
     }
 }
 
