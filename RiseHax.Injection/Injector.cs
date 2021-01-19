@@ -1,8 +1,7 @@
-﻿using System;
-
-namespace RiseHax.Injection
+﻿namespace RiseHax.Injection
 {
     public class Injector
     {
+
     }
 }

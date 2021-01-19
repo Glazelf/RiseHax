@@ -210,6 +210,7 @@ namespace RiseHax.WinForms
             // QuestSysBotPouchMegaPotionCount
             // 
             this.QuestSysBotPouchMegaPotionCount.AccessibleName = "QuestSysBotPouchMegaPotionCount";
+            this.QuestSysBotPouchMegaPotionCount.Enabled = false;
             this.QuestSysBotPouchMegaPotionCount.Location = new System.Drawing.Point(87, 24);
             this.QuestSysBotPouchMegaPotionCount.Maximum = new decimal(new int[] {
             9999,
@@ -236,6 +237,7 @@ namespace RiseHax.WinForms
             // QuestSysBotPlayerHPCount
             // 
             this.QuestSysBotPlayerHPCount.AccessibleName = "QuestSysBotPlayerHPCount";
+            this.QuestSysBotPlayerHPCount.Enabled = false;
             this.QuestSysBotPlayerHPCount.Location = new System.Drawing.Point(53, 22);
             this.QuestSysBotPlayerHPCount.Maximum = new decimal(new int[] {
             999,
@@ -277,6 +279,7 @@ namespace RiseHax.WinForms
             // QuestSysBotMonsterHPCount
             // 
             this.QuestSysBotMonsterHPCount.AccessibleName = "QuestSysBotMonsterHPCount";
+            this.QuestSysBotMonsterHPCount.Enabled = false;
             this.QuestSysBotMonsterHPCount.Location = new System.Drawing.Point(53, 21);
             this.QuestSysBotMonsterHPCount.Maximum = new decimal(new int[] {
             99999,
@@ -301,6 +304,7 @@ namespace RiseHax.WinForms
             // ButtonSysbotQuestRead
             // 
             this.ButtonSysbotQuestRead.AccessibleName = "ButtonSysbotQuestRead";
+            this.ButtonSysbotQuestRead.Enabled = false;
             this.ButtonSysbotQuestRead.Location = new System.Drawing.Point(736, 90);
             this.ButtonSysbotQuestRead.Name = "ButtonSysbotQuestRead";
             this.ButtonSysbotQuestRead.Size = new System.Drawing.Size(75, 23);
