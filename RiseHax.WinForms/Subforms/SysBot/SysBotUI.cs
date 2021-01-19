@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RiseHax.WinForms.Subforms.SysBot
+namespace RiseHax.WinForms
 {
     public partial class SysBotUI : Form
     {
         public SysBotUI()
         {
             InitializeComponent();
+        }
+
+        private void SysBotUI_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

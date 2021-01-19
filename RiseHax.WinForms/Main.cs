@@ -17,12 +17,14 @@ namespace RiseHax.WinForms
             InitializeComponent();
         }
 
-        private void btnLiveHax_Click(object sender, EventArgs e)
+        private void BtnLiveHax_Click(object sender, EventArgs e)
         {
-
+            var SysBotUIForm = new SysBotUI();
+            SysBotUIForm.Show();
+            Close();
         }
 
-        private void btnSaveEdit_Click(object sender, EventArgs e)
+        private void BtnSaveEdit_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Since the Monster Hunter: Rise demo barely has saves, this feature will only be worked on when the full game is out.",
                 "RiseHax Save Editor",
