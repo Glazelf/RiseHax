@@ -19,5 +19,25 @@ namespace RiseHax.WinForms
         {
 
         }
+
+        private void QuestSysBotMonsterHPCount_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void QuestSysBotPouchMegaPotionCount_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void QuestSysBotPlayerHPCount_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonSysbotQuestRead_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
