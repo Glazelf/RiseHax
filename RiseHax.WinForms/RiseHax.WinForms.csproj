@@ -7,12 +7,13 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
     <ApplicationIcon>icon.ico</ApplicationIcon>
-    <Authors>Glaze</Authors>
+    <Authors>RiseHax.WinForms</Authors>
     <PackageIcon>icon.ico</PackageIcon>
-    <PackageProjectUrl>https://github.com/Glazelf/RiseHax</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/Glazelf/RiseHax</RepositoryUrl>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl></RepositoryUrl>
     <AssemblyName>RiseHax</AssemblyName>
     <StartupObject>RiseHax.WinForms.Program</StartupObject>
+    <PackageId>RiseHax.WinForms</PackageId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net46|AnyCPU'">
