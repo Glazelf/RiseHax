@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace RiseHax.Core
+﻿namespace RiseHax.Core
 {
     public class CoreClass
     {
