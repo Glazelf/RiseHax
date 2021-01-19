@@ -39,7 +39,7 @@ namespace RiseHax.WinForms
             this.TabControlSysBot = new System.Windows.Forms.TabControl();
             this.TabSysBot1Player = new System.Windows.Forms.TabPage();
             this.TabSysBot2Items = new System.Windows.Forms.TabPage();
-            this.TabSysBot3Mission = new System.Windows.Forms.TabPage();
+            this.TabSysBot3Quest = new System.Windows.Forms.TabPage();
             this.GroupSysBotConnection.SuspendLayout();
             this.TabControlSysBot.SuspendLayout();
             this.SuspendLayout();
@@ -128,7 +128,7 @@ namespace RiseHax.WinForms
             this.TabControlSysBot.AccessibleName = "TabControlSysBot";
             this.TabControlSysBot.Controls.Add(this.TabSysBot1Player);
             this.TabControlSysBot.Controls.Add(this.TabSysBot2Items);
-            this.TabControlSysBot.Controls.Add(this.TabSysBot3Mission);
+            this.TabControlSysBot.Controls.Add(this.TabSysBot3Quest);
             this.TabControlSysBot.Location = new System.Drawing.Point(3, 3);
             this.TabControlSysBot.Name = "TabControlSysBot";
             this.TabControlSysBot.SelectedIndex = 0;
@@ -157,16 +157,16 @@ namespace RiseHax.WinForms
             this.TabSysBot2Items.Text = "Items";
             this.TabSysBot2Items.UseVisualStyleBackColor = true;
             // 
-            // TabSysBot3Mission
+            // TabSysBot3Quest
             // 
-            this.TabSysBot3Mission.AccessibleName = "TabSysBot3Mission";
-            this.TabSysBot3Mission.Location = new System.Drawing.Point(4, 22);
-            this.TabSysBot3Mission.Name = "TabSysBot3Mission";
-            this.TabSysBot3Mission.Padding = new System.Windows.Forms.Padding(3);
-            this.TabSysBot3Mission.Size = new System.Drawing.Size(786, 306);
-            this.TabSysBot3Mission.TabIndex = 2;
-            this.TabSysBot3Mission.Text = "Mission";
-            this.TabSysBot3Mission.UseVisualStyleBackColor = true;
+            this.TabSysBot3Quest.AccessibleName = "TabSysBot3Quest";
+            this.TabSysBot3Quest.Location = new System.Drawing.Point(4, 22);
+            this.TabSysBot3Quest.Name = "TabSysBot3Quest";
+            this.TabSysBot3Quest.Padding = new System.Windows.Forms.Padding(3);
+            this.TabSysBot3Quest.Size = new System.Drawing.Size(786, 306);
+            this.TabSysBot3Quest.TabIndex = 2;
+            this.TabSysBot3Quest.Text = "Quest";
+            this.TabSysBot3Quest.UseVisualStyleBackColor = true;
             // 
             // SysBotUI
             // 
@@ -199,6 +199,6 @@ namespace RiseHax.WinForms
         private System.Windows.Forms.TabControl TabControlSysBot;
         private System.Windows.Forms.TabPage TabSysBot1Player;
         private System.Windows.Forms.TabPage TabSysBot2Items;
-        private System.Windows.Forms.TabPage TabSysBot3Mission;
+        private System.Windows.Forms.TabPage TabSysBot3Quest;
     }
 }
