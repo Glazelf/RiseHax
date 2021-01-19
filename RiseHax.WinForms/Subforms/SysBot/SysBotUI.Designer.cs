@@ -47,19 +47,18 @@ namespace RiseHax.WinForms
             // TextBoxIP
             // 
             this.TextBoxIP.AccessibleName = "TextBoxIP";
-            this.TextBoxIP.Location = new System.Drawing.Point(40, 28);
+            this.TextBoxIP.Location = new System.Drawing.Point(44, 28);
             this.TextBoxIP.Name = "TextBoxIP";
-            this.TextBoxIP.Size = new System.Drawing.Size(87, 20);
+            this.TextBoxIP.Size = new System.Drawing.Size(96, 20);
             this.TextBoxIP.TabIndex = 0;
             this.TextBoxIP.Text = "192.168.0.1";
-            this.TextBoxIP.TextChanged += new System.EventHandler(this.TextBoxIP_TextChanged);
             // 
             // ButtonConnect
             // 
             this.ButtonConnect.AccessibleName = "ButtonConnect";
-            this.ButtonConnect.Location = new System.Drawing.Point(40, 81);
+            this.ButtonConnect.Location = new System.Drawing.Point(44, 81);
             this.ButtonConnect.Name = "ButtonConnect";
-            this.ButtonConnect.Size = new System.Drawing.Size(71, 20);
+            this.ButtonConnect.Size = new System.Drawing.Size(84, 24);
             this.ButtonConnect.TabIndex = 2;
             this.ButtonConnect.Text = "Connect";
             this.ButtonConnect.UseVisualStyleBackColor = true;
@@ -73,52 +72,48 @@ namespace RiseHax.WinForms
             this.GroupSysBotConnection.Controls.Add(this.TextBoxPort);
             this.GroupSysBotConnection.Controls.Add(this.ButtonConnect);
             this.GroupSysBotConnection.Controls.Add(this.TextBoxIP);
-            this.GroupSysBotConnection.Location = new System.Drawing.Point(664, 341);
+            this.GroupSysBotConnection.Location = new System.Drawing.Point(829, 440);
             this.GroupSysBotConnection.Name = "GroupSysBotConnection";
-            this.GroupSysBotConnection.Size = new System.Drawing.Size(133, 107);
+            this.GroupSysBotConnection.Size = new System.Drawing.Size(163, 119);
             this.GroupSysBotConnection.TabIndex = 3;
             this.GroupSysBotConnection.TabStop = false;
             this.GroupSysBotConnection.Text = "Connection";
-            this.GroupSysBotConnection.Enter += new System.EventHandler(this.GroupConnection_Enter);
             // 
             // LabelPort
             // 
             this.LabelPort.AccessibleName = "LabelPort";
             this.LabelPort.AutoSize = true;
-            this.LabelPort.Location = new System.Drawing.Point(5, 57);
+            this.LabelPort.Location = new System.Drawing.Point(9, 57);
             this.LabelPort.Name = "LabelPort";
             this.LabelPort.Size = new System.Drawing.Size(29, 13);
             this.LabelPort.TabIndex = 5;
             this.LabelPort.Text = "Port:";
-            this.LabelPort.Click += new System.EventHandler(this.LabelPort_Click);
             // 
             // LabelIP
             // 
             this.LabelIP.AccessibleName = "LabelIP";
             this.LabelIP.AutoSize = true;
-            this.LabelIP.Location = new System.Drawing.Point(14, 31);
+            this.LabelIP.Location = new System.Drawing.Point(18, 31);
             this.LabelIP.Name = "LabelIP";
             this.LabelIP.Size = new System.Drawing.Size(20, 13);
             this.LabelIP.TabIndex = 4;
             this.LabelIP.Text = "IP:";
-            this.LabelIP.Click += new System.EventHandler(this.LabelIP_Click);
             // 
             // TextBoxPort
             // 
             this.TextBoxPort.AccessibleName = "TextBoxPort";
-            this.TextBoxPort.Location = new System.Drawing.Point(40, 54);
+            this.TextBoxPort.Location = new System.Drawing.Point(44, 54);
             this.TextBoxPort.Name = "TextBoxPort";
-            this.TextBoxPort.Size = new System.Drawing.Size(87, 20);
+            this.TextBoxPort.Size = new System.Drawing.Size(96, 20);
             this.TextBoxPort.TabIndex = 3;
             this.TextBoxPort.Text = "6000";
-            this.TextBoxPort.TextChanged += new System.EventHandler(this.TextBoxPort_TextChanged);
             // 
             // GroupSysBotStatus
             // 
             this.GroupSysBotStatus.AccessibleName = "GroupSysBotStatus";
-            this.GroupSysBotStatus.Location = new System.Drawing.Point(3, 341);
+            this.GroupSysBotStatus.Location = new System.Drawing.Point(6, 440);
             this.GroupSysBotStatus.Name = "GroupSysBotStatus";
-            this.GroupSysBotStatus.Size = new System.Drawing.Size(655, 107);
+            this.GroupSysBotStatus.Size = new System.Drawing.Size(817, 119);
             this.GroupSysBotStatus.TabIndex = 4;
             this.GroupSysBotStatus.TabStop = false;
             this.GroupSysBotStatus.Text = "Status";
@@ -129,10 +124,10 @@ namespace RiseHax.WinForms
             this.TabControlSysBot.Controls.Add(this.TabSysBot1Player);
             this.TabControlSysBot.Controls.Add(this.TabSysBot2Items);
             this.TabControlSysBot.Controls.Add(this.TabSysBot3Quest);
-            this.TabControlSysBot.Location = new System.Drawing.Point(3, 3);
+            this.TabControlSysBot.Location = new System.Drawing.Point(2, 3);
             this.TabControlSysBot.Name = "TabControlSysBot";
             this.TabControlSysBot.SelectedIndex = 0;
-            this.TabControlSysBot.Size = new System.Drawing.Size(794, 332);
+            this.TabControlSysBot.Size = new System.Drawing.Size(990, 431);
             this.TabControlSysBot.TabIndex = 0;
             // 
             // TabSysBot1Player
@@ -141,7 +136,7 @@ namespace RiseHax.WinForms
             this.TabSysBot1Player.Location = new System.Drawing.Point(4, 22);
             this.TabSysBot1Player.Name = "TabSysBot1Player";
             this.TabSysBot1Player.Padding = new System.Windows.Forms.Padding(3);
-            this.TabSysBot1Player.Size = new System.Drawing.Size(786, 306);
+            this.TabSysBot1Player.Size = new System.Drawing.Size(982, 405);
             this.TabSysBot1Player.TabIndex = 0;
             this.TabSysBot1Player.Text = "Player";
             this.TabSysBot1Player.UseVisualStyleBackColor = true;
@@ -152,7 +147,7 @@ namespace RiseHax.WinForms
             this.TabSysBot2Items.Location = new System.Drawing.Point(4, 22);
             this.TabSysBot2Items.Name = "TabSysBot2Items";
             this.TabSysBot2Items.Padding = new System.Windows.Forms.Padding(3);
-            this.TabSysBot2Items.Size = new System.Drawing.Size(629, 245);
+            this.TabSysBot2Items.Size = new System.Drawing.Size(982, 405);
             this.TabSysBot2Items.TabIndex = 1;
             this.TabSysBot2Items.Text = "Items";
             this.TabSysBot2Items.UseVisualStyleBackColor = true;
@@ -163,7 +158,7 @@ namespace RiseHax.WinForms
             this.TabSysBot3Quest.Location = new System.Drawing.Point(4, 22);
             this.TabSysBot3Quest.Name = "TabSysBot3Quest";
             this.TabSysBot3Quest.Padding = new System.Windows.Forms.Padding(3);
-            this.TabSysBot3Quest.Size = new System.Drawing.Size(786, 306);
+            this.TabSysBot3Quest.Size = new System.Drawing.Size(982, 405);
             this.TabSysBot3Quest.TabIndex = 2;
             this.TabSysBot3Quest.Text = "Quest";
             this.TabSysBot3Quest.UseVisualStyleBackColor = true;
@@ -172,7 +167,7 @@ namespace RiseHax.WinForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(997, 563);
             this.Controls.Add(this.TabControlSysBot);
             this.Controls.Add(this.GroupSysBotStatus);
             this.Controls.Add(this.GroupSysBotConnection);

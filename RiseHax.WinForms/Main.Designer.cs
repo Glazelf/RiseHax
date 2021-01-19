@@ -57,7 +57,7 @@ namespace RiseHax.WinForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(286, 166);
+            this.ClientSize = new System.Drawing.Size(292, 170);
             this.Controls.Add(this.btnSaveEdit);
             this.Controls.Add(this.btnLiveHax);
             this.Icon = global::RiseHax.WinForms.Properties.Resources.icon;
