@@ -14,6 +14,7 @@
     <AssemblyName>RiseHax</AssemblyName>
     <StartupObject>RiseHax.WinForms.Program</StartupObject>
     <PackageId>RiseHax.WinForms</PackageId>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net46|AnyCPU'">
@@ -54,6 +55,11 @@
   <ItemGroup>
     <Folder Include="Resources\img\" />
     <Folder Include="SysBot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RiseHax.Core\RiseHax.Core.csproj" />
+    <ProjectReference Include="..\RiseHax.Injection\RiseHax.Injection.csproj" />
   </ItemGroup>
 
 </Project>

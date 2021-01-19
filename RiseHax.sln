@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiseHax.WinForms", "RiseHax
 		{C09D9018-B332-4DDE-A5F2-0296DF490FDD} = {C09D9018-B332-4DDE-A5F2-0296DF490FDD}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiseHax.Core", "RiseHax.Core\RiseHax.Core.csproj", "{10C4CE06-FE22-4D38-964B-B3F1B3860ED5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiseHax.Core", "RiseHax.Core\RiseHax.Core.csproj", "{10C4CE06-FE22-4D38-964B-B3F1B3860ED5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiseHax.Injection", "RiseHax.Injection\RiseHax.Injection.csproj", "{C09D9018-B332-4DDE-A5F2-0296DF490FDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiseHax.Injection", "RiseHax.Injection\RiseHax.Injection.csproj", "{C09D9018-B332-4DDE-A5F2-0296DF490FDD}"
 	ProjectSection(ProjectDependencies) = postProject
 		{10C4CE06-FE22-4D38-964B-B3F1B3860ED5} = {10C4CE06-FE22-4D38-964B-B3F1B3860ED5}
 	EndProjectSection
