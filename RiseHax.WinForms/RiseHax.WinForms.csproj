@@ -8,7 +8,7 @@
     <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
     <ApplicationIcon>icon.ico</ApplicationIcon>
     <Authors>Glaze</Authors>
-    <PackageIcon>RiseLogo.ico</PackageIcon>
+    <PackageIcon>icon.ico</PackageIcon>
     <PackageProjectUrl>https://github.com/Glazelf/RiseHax</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Glazelf/RiseHax</RepositoryUrl>
     <AssemblyName>RiseHax</AssemblyName>
@@ -44,7 +44,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Resources\RiseLogo.ico">
+    <None Include="icon.ico">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
@@ -52,7 +52,7 @@
 
   <ItemGroup>
     <Folder Include="Resources\img\" />
-    <Folder Include="Subforms\SysBot\" />
+    <Folder Include="SysBot\" />
   </ItemGroup>
 
 </Project>

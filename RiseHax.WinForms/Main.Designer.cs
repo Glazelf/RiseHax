@@ -27,7 +27,7 @@ namespace RiseHax.WinForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            this.Icon = Properties.Resources.icon;
             this.ButtonLiveHax = new System.Windows.Forms.Button();
             this.ButtonSaveEdit = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -57,7 +57,6 @@ namespace RiseHax.WinForms
             this.ClientSize = new System.Drawing.Size(286, 166);
             this.Controls.Add(this.ButtonSaveEdit);
             this.Controls.Add(this.ButtonLiveHax);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.Text = "RiseHax";
             this.ResumeLayout(false);
