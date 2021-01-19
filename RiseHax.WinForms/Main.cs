@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace RiseHax.WinForms
@@ -19,8 +19,8 @@ namespace RiseHax.WinForms
 
         private void BtnLiveHax_Click(object sender, EventArgs e)
         {
-            var SysBotUIForm = new SysBotUI();
-            SysBotUIForm.Show();
+            var t = new Thread(() => Application.Run(new SysBotUI()));
+            t.Start();
             Close();
         }
 
