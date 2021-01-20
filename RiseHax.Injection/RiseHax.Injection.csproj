@@ -8,6 +8,10 @@
     <NoWarn>1701;1702;1416</NoWarn>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="NETStandard.Library" Version="2.0.3" />
   </ItemGroup>
