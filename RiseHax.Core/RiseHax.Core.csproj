@@ -10,10 +10,14 @@
 
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
+
   <ItemGroup>
+    <PackageReference Include="LibUsbDotNet" Version="2.2.29" />
     <PackageReference Include="NETStandard.Library" Version="2.0.3" />
+    <PackageReference Include="NLog" Version="4.7.7" />
   </ItemGroup>
 
   <ItemGroup>
