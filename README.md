@@ -12,4 +12,4 @@ Have questions? Join my Discord.
 <a href="https://discord.gg/2gkybyu"><img src="https://canary.discordapp.com/api/guilds/549214833858576395/widget.png?style=banner2"></a>
 
 ## Credits
-[Kurt](https://github.com/kwsch): Creating [SysBot](https://github.com/kwsch/SysBot.NET), on which most of this program's core logic is built or in some cases simply "liberately inspired on".
+[Kurt](https://github.com/kwsch): Creating [SysBot](https://github.com/kwsch/SysBot.NET), on which most of this program's core logic is based or in some cases simply "liberately inspired on".
