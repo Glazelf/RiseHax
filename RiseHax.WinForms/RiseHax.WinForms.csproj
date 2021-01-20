@@ -19,7 +19,14 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net46|AnyCPU'">
     <PlatformTarget>x86</PlatformTarget>
+    <NoWarn>1701;1702;</NoWarn>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="SysBot\**" />
+    <EmbeddedResource Remove="SysBot\**" />
+    <None Remove="SysBot\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
@@ -54,12 +61,17 @@
 
   <ItemGroup>
     <Folder Include="Resources\img\" />
-    <Folder Include="SysBot\" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\RiseHax.Core\RiseHax.Core.csproj" />
     <ProjectReference Include="..\RiseHax.Injection\RiseHax.Injection.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0-windows'">
+    <PackageReference Include="System.Configuration.ConfigurationManager">
+      <Version>5.0.0</Version>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
