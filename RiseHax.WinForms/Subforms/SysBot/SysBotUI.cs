@@ -7,6 +7,7 @@ using System;
 using System.Windows.Forms;
 using System.Net.Sockets;
 using System.IO;
+using System.Threading;
 
 namespace RiseHax.WinForms
 {
@@ -16,42 +17,49 @@ namespace RiseHax.WinForms
 
         private static readonly string WorkingDirectory = Application.StartupPath;
         private static readonly string ConfigPath = Path.Combine(WorkingDirectory, "config.json");
+        
 
         public SysBotUI()
         {
             InitializeComponent();
-            if (File.Exists(ConfigPath))
-            {
-                var lines = File.ReadAllText(ConfigPath);
-                var prog = JsonConvert.DeserializeObject<ProgramConfig>(lines);
-            }
-            else
-            {
-                var hub = new HunterHubConfig();
-            }
         }
 
         public Injector SwitchInjector = new Injector();
         public bool Connected = false;
-
-        private readonly InjectionType Type;
-        public readonly SysBot Bot = new();
-        private readonly Settings Settings = Settings.Default;
-
-        public string IP => Settings.SysBotIP;
-        public string Port => Settings.SysBotPort.ToString();
-
+        SwitchSocketAsync Connection;
+        readonly SwitchConnectionConfig cfg = new SwitchConnectionConfig();
 
         public void SysBotUI_Load(object sender, EventArgs e)
         {
+            
         }
 
-        private void ButtonConnect_Click(object sender, EventArgs e)
+        private async void ButtonConnect_ClickAsync(object sender, EventArgs e)
         {
             int Port = int.Parse(TextBoxPort.Text);
-            if (Connected == true)
+            if (Connected == false)
             {
+                cfg.IP = TextBoxIP.Text;
+                cfg.Port = Port;
+                Connection = (SwitchSocketAsync)cfg.CreateAsynchronous();
+                Connection.Connect();
+                byte[] MegaPotion = await Connection.ReadBytesAsync(DataOffsets.MegaPotionOffset, 2, CancellationToken.None);
+                System.Diagnostics.Debug.WriteLine(MegaPotion);
+                //QuestSysBotPouchMegaPotionCount = MegaPotionCountRead;
+                TextBoxIP.Enabled = false;
+                TextBoxPort.Enabled = false;
 
+                QuestSysBotMonsterHPCount.Enabled = true;
+                QuestSysBotPlayerHPCount.Enabled = true;
+                QuestSysBotPouchMegaPotionCount.Enabled = true;
+                ButtonSysbotQuestRead.Enabled = true;
+
+                Connected = true;
+                ButtonConnect.Text = "Diconnect";
+            }
+            else
+            {
+                Connection.Disconnect();
                 // Toggle buttons and fields
                 TextBoxIP.Enabled = true;
                 TextBoxPort.Enabled = true;
@@ -63,20 +71,6 @@ namespace RiseHax.WinForms
 
                 Connected = false;
                 ButtonConnect.Text = "Connect";
-            }
-            else
-            {
-
-                TextBoxIP.Enabled = false;
-                TextBoxPort.Enabled = false;
-
-                QuestSysBotMonsterHPCount.Enabled = true;
-                QuestSysBotPlayerHPCount.Enabled = true;
-                QuestSysBotPouchMegaPotionCount.Enabled = true;
-                ButtonSysbotQuestRead.Enabled = true;
-
-                Connected = true;
-                ButtonConnect.Text = "Diconnect";
             }
         }
 
