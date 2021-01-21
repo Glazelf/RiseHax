@@ -11,9 +11,5 @@ namespace RiseHax.Hunter
         private const string Bots = nameof(Bots);
         private const string Integration = nameof(Integration);
         private const string Debug = nameof(Debug);
-
-        [Category(Operation)]
-        [TypeConverter(typeof(ExpandableObjectConverter))]
-        public FolderSettings Folder { get; set; } = new();
     }
 }
