@@ -36,6 +36,7 @@ namespace RiseHax.WinForms
             this.LabelIP = new System.Windows.Forms.Label();
             this.TextBoxPort = new System.Windows.Forms.TextBox();
             this.GroupSysBotStatus = new System.Windows.Forms.GroupBox();
+            this.ButtonSysbotQuestRead = new System.Windows.Forms.Button();
             this.TabControlSysBot = new System.Windows.Forms.TabControl();
             this.TabSysBot1Player = new System.Windows.Forms.TabPage();
             this.TabSysBot2Items = new System.Windows.Forms.TabPage();
@@ -49,7 +50,7 @@ namespace RiseHax.WinForms
             this.GroupQuestSysBotMonster = new System.Windows.Forms.GroupBox();
             this.QuestSysBotMonsterHPCount = new System.Windows.Forms.NumericUpDown();
             this.QuestSysBotMonsterHPLabel = new System.Windows.Forms.Label();
-            this.ButtonSysbotQuestRead = new System.Windows.Forms.Button();
+            this.TabSysBot4Log = new System.Windows.Forms.TabPage();
             this.GroupSysBotConnection.SuspendLayout();
             this.GroupSysBotStatus.SuspendLayout();
             this.TabControlSysBot.SuspendLayout();
@@ -90,7 +91,7 @@ namespace RiseHax.WinForms
             this.GroupSysBotConnection.Controls.Add(this.TextBoxPort);
             this.GroupSysBotConnection.Controls.Add(this.ButtonConnect);
             this.GroupSysBotConnection.Controls.Add(this.TextBoxIP);
-            this.GroupSysBotConnection.Location = new System.Drawing.Point(829, 440);
+            this.GroupSysBotConnection.Location = new System.Drawing.Point(614, 440);
             this.GroupSysBotConnection.Name = "GroupSysBotConnection";
             this.GroupSysBotConnection.Size = new System.Drawing.Size(163, 119);
             this.GroupSysBotConnection.TabIndex = 3;
@@ -130,12 +131,24 @@ namespace RiseHax.WinForms
             // 
             this.GroupSysBotStatus.AccessibleName = "GroupSysBotStatus";
             this.GroupSysBotStatus.Controls.Add(this.ButtonSysbotQuestRead);
-            this.GroupSysBotStatus.Location = new System.Drawing.Point(6, 440);
+            this.GroupSysBotStatus.Location = new System.Drawing.Point(12, 436);
             this.GroupSysBotStatus.Name = "GroupSysBotStatus";
-            this.GroupSysBotStatus.Size = new System.Drawing.Size(817, 119);
+            this.GroupSysBotStatus.Size = new System.Drawing.Size(596, 119);
             this.GroupSysBotStatus.TabIndex = 4;
             this.GroupSysBotStatus.TabStop = false;
             this.GroupSysBotStatus.Text = "Status";
+            // 
+            // ButtonSysbotQuestRead
+            // 
+            this.ButtonSysbotQuestRead.AccessibleName = "ButtonSysbotQuestRead";
+            this.ButtonSysbotQuestRead.Enabled = false;
+            this.ButtonSysbotQuestRead.Location = new System.Drawing.Point(521, 85);
+            this.ButtonSysbotQuestRead.Name = "ButtonSysbotQuestRead";
+            this.ButtonSysbotQuestRead.Size = new System.Drawing.Size(75, 23);
+            this.ButtonSysbotQuestRead.TabIndex = 14;
+            this.ButtonSysbotQuestRead.Text = "Refresh All";
+            this.ButtonSysbotQuestRead.UseVisualStyleBackColor = true;
+            this.ButtonSysbotQuestRead.Click += new System.EventHandler(this.ButtonSysbotQuestRead_Click);
             // 
             // TabControlSysBot
             // 
@@ -143,10 +156,11 @@ namespace RiseHax.WinForms
             this.TabControlSysBot.Controls.Add(this.TabSysBot1Player);
             this.TabControlSysBot.Controls.Add(this.TabSysBot2Items);
             this.TabControlSysBot.Controls.Add(this.TabSysBot3Quest);
+            this.TabControlSysBot.Controls.Add(this.TabSysBot4Log);
             this.TabControlSysBot.Location = new System.Drawing.Point(2, 3);
             this.TabControlSysBot.Name = "TabControlSysBot";
             this.TabControlSysBot.SelectedIndex = 0;
-            this.TabControlSysBot.Size = new System.Drawing.Size(990, 431);
+            this.TabControlSysBot.Size = new System.Drawing.Size(775, 431);
             this.TabControlSysBot.TabIndex = 0;
             // 
             // TabSysBot1Player
@@ -155,7 +169,7 @@ namespace RiseHax.WinForms
             this.TabSysBot1Player.Location = new System.Drawing.Point(4, 22);
             this.TabSysBot1Player.Name = "TabSysBot1Player";
             this.TabSysBot1Player.Padding = new System.Windows.Forms.Padding(3);
-            this.TabSysBot1Player.Size = new System.Drawing.Size(982, 405);
+            this.TabSysBot1Player.Size = new System.Drawing.Size(767, 405);
             this.TabSysBot1Player.TabIndex = 0;
             this.TabSysBot1Player.Text = "Player";
             this.TabSysBot1Player.UseVisualStyleBackColor = true;
@@ -166,7 +180,7 @@ namespace RiseHax.WinForms
             this.TabSysBot2Items.Location = new System.Drawing.Point(4, 22);
             this.TabSysBot2Items.Name = "TabSysBot2Items";
             this.TabSysBot2Items.Padding = new System.Windows.Forms.Padding(3);
-            this.TabSysBot2Items.Size = new System.Drawing.Size(982, 405);
+            this.TabSysBot2Items.Size = new System.Drawing.Size(767, 405);
             this.TabSysBot2Items.TabIndex = 1;
             this.TabSysBot2Items.Text = "Items";
             this.TabSysBot2Items.UseVisualStyleBackColor = true;
@@ -180,7 +194,7 @@ namespace RiseHax.WinForms
             this.TabSysBot3Quest.Location = new System.Drawing.Point(4, 22);
             this.TabSysBot3Quest.Name = "TabSysBot3Quest";
             this.TabSysBot3Quest.Padding = new System.Windows.Forms.Padding(3);
-            this.TabSysBot3Quest.Size = new System.Drawing.Size(982, 405);
+            this.TabSysBot3Quest.Size = new System.Drawing.Size(767, 405);
             this.TabSysBot3Quest.TabIndex = 2;
             this.TabSysBot3Quest.Text = "Quest";
             this.TabSysBot3Quest.UseVisualStyleBackColor = true;
@@ -192,7 +206,7 @@ namespace RiseHax.WinForms
             this.GroupQuestSysBotPouch.Controls.Add(this.QuestSysBotPouchMegaPotionCount);
             this.GroupQuestSysBotPouch.Location = new System.Drawing.Point(608, 6);
             this.GroupQuestSysBotPouch.Name = "GroupQuestSysBotPouch";
-            this.GroupQuestSysBotPouch.Size = new System.Drawing.Size(368, 393);
+            this.GroupQuestSysBotPouch.Size = new System.Drawing.Size(153, 393);
             this.GroupQuestSysBotPouch.TabIndex = 4;
             this.GroupQuestSysBotPouch.TabStop = false;
             this.GroupQuestSysBotPouch.Text = "Item Pouch";
@@ -301,23 +315,22 @@ namespace RiseHax.WinForms
             this.QuestSysBotMonsterHPLabel.TabIndex = 7;
             this.QuestSysBotMonsterHPLabel.Text = "Health:";
             // 
-            // ButtonSysbotQuestRead
+            // TabSysBot4Log
             // 
-            this.ButtonSysbotQuestRead.AccessibleName = "ButtonSysbotQuestRead";
-            this.ButtonSysbotQuestRead.Enabled = false;
-            this.ButtonSysbotQuestRead.Location = new System.Drawing.Point(736, 90);
-            this.ButtonSysbotQuestRead.Name = "ButtonSysbotQuestRead";
-            this.ButtonSysbotQuestRead.Size = new System.Drawing.Size(75, 23);
-            this.ButtonSysbotQuestRead.TabIndex = 14;
-            this.ButtonSysbotQuestRead.Text = "Refresh All";
-            this.ButtonSysbotQuestRead.UseVisualStyleBackColor = true;
-            this.ButtonSysbotQuestRead.Click += new System.EventHandler(this.ButtonSysbotQuestRead_Click);
+            this.TabSysBot4Log.AccessibleName = "TabSysBot4Log";
+            this.TabSysBot4Log.Location = new System.Drawing.Point(4, 22);
+            this.TabSysBot4Log.Name = "TabSysBot4Log";
+            this.TabSysBot4Log.Padding = new System.Windows.Forms.Padding(3);
+            this.TabSysBot4Log.Size = new System.Drawing.Size(767, 405);
+            this.TabSysBot4Log.TabIndex = 3;
+            this.TabSysBot4Log.Text = "Log";
+            this.TabSysBot4Log.UseVisualStyleBackColor = true;
             // 
             // SysBotUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 562);
+            this.ClientSize = new System.Drawing.Size(787, 562);
             this.Controls.Add(this.TabControlSysBot);
             this.Controls.Add(this.GroupSysBotStatus);
             this.Controls.Add(this.GroupSysBotConnection);
@@ -366,5 +379,6 @@ namespace RiseHax.WinForms
         private System.Windows.Forms.NumericUpDown QuestSysBotMonsterHPCount;
         private System.Windows.Forms.Label QuestSysBotMonsterHPLabel;
         private System.Windows.Forms.Button ButtonSysbotQuestRead;
+        private System.Windows.Forms.TabPage TabSysBot4Log;
     }
 }
