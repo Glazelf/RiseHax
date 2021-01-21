@@ -2,20 +2,18 @@
 using RiseHax.Core;
 using RiseHax.Injection;
 using RiseHax.Hunter;
+using RiseHax.WinForms.Properties;
 using System;
 using System.Windows.Forms;
 using System.Net.Sockets;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace RiseHax.WinForms
 {
     public partial class SysBotUI : Form
     {
 #pragma warning disable CA1416 // Do not catch Win7 warning
+
         private static readonly string WorkingDirectory = Application.StartupPath;
         private static readonly string ConfigPath = Path.Combine(WorkingDirectory, "config.json");
 
@@ -35,7 +33,14 @@ namespace RiseHax.WinForms
 
         public Injector SwitchInjector = new Injector();
         public bool Connected = false;
-        
+
+        private readonly InjectionType Type;
+        public readonly SysBot Bot = new();
+        private readonly Settings Settings = Settings.Default;
+
+        public string IP => Settings.SysBotIP;
+        public string Port => Settings.SysBotPort.ToString();
+
 
         public void SysBotUI_Load(object sender, EventArgs e)
         {
@@ -58,7 +63,6 @@ namespace RiseHax.WinForms
 
                 Connected = false;
                 ButtonConnect.Text = "Connect";
-
             }
             else
             {
