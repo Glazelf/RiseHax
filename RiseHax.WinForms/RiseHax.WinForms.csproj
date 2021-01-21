@@ -69,8 +69,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\RiseHax.Core\RiseHax.Core.csproj" />
     <ProjectReference Include="..\RiseHax.Injection\RiseHax.Injection.csproj" />
+    <ProjectReference Include="..\RiseHax.Hunter\RiseHax.Hunter.csproj" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net5.0-windows'">

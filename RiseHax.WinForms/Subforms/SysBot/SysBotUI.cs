@@ -1,18 +1,42 @@
-﻿using RiseHax.Core;
+﻿using Newtonsoft.Json;
+using RiseHax.Core;
+using RiseHax.Injection;
+using RiseHax.Hunter;
 using System;
 using System.Windows.Forms;
+using System.Net.Sockets;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace RiseHax.WinForms
 {
     public partial class SysBotUI : Form
     {
+#pragma warning disable CA1416 // Do not catch Win7 warning
+        private static readonly string WorkingDirectory = Application.StartupPath;
+        private static readonly string ConfigPath = Path.Combine(WorkingDirectory, "config.json");
+
         public SysBotUI()
         {
             InitializeComponent();
+            if (File.Exists(ConfigPath))
+            {
+                var lines = File.ReadAllText(ConfigPath);
+                var prog = JsonConvert.DeserializeObject<ProgramConfig>(lines);
+            }
+            else
+            {
+                var hub = new HunterHubConfig();
+                hub.Folder.CreateDefaults(WorkingDirectory);
+            }
         }
 
-        SwitchConnection SwitchSocket = new SwitchConnection();
+        public Injector SwitchInjector = new Injector();
         public bool Connected = false;
+        
 
         public void SysBotUI_Load(object sender, EventArgs e)
         {
@@ -23,7 +47,8 @@ namespace RiseHax.WinForms
             int Port = int.Parse(TextBoxPort.Text);
             if (Connected == true)
             {
-                SwitchSocket.Connect(TextBoxIP.Text, Port, true);
+
+                // Toggle buttons and fields
                 TextBoxIP.Enabled = true;
                 TextBoxPort.Enabled = true;
 
@@ -34,10 +59,11 @@ namespace RiseHax.WinForms
 
                 Connected = false;
                 ButtonConnect.Text = "Connect";
+
             }
             else
             {
-                SwitchSocket.Connect(TextBoxIP.Text, Port, false);
+
                 TextBoxIP.Enabled = false;
                 TextBoxPort.Enabled = false;
 
