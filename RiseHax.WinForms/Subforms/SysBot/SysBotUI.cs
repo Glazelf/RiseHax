@@ -30,7 +30,6 @@ namespace RiseHax.WinForms
             else
             {
                 var hub = new HunterHubConfig();
-                hub.Folder.CreateDefaults(WorkingDirectory);
             }
         }
 
