@@ -43,10 +43,13 @@ namespace RiseHax.WinForms
                 cfg.Port = Port;
                 Connection = (SwitchSocketAsync)cfg.CreateAsynchronous();
                 Connection.Connect();
+
                 byte[] MegaPotionByte = await Connection.ReadBytesAsync(DataOffsets.MegaPotionOffset, 1, CancellationToken.None);
-                
                 SysBotLog.Text += MegaPotionByte[0].ToString();
-                QuestSysBotPouchMegaPotionCount.Value = MegaPotionByte[0];
+                //QuestSysBotPouchMegaPotionCount.Value = MegaPotionByte[0];
+                byte[] HunterHPByte = await Connection.ReadBytesAsync(DataOffsets.HunterHPOffset, 1, CancellationToken.None);
+                SysBotLog.Text += HunterHPByte[0].ToString();
+
                 TextBoxIP.Enabled = false;
                 TextBoxPort.Enabled = false;
 
@@ -54,6 +57,7 @@ namespace RiseHax.WinForms
                 QuestSysBotPlayerHPCount.Enabled = true;
                 QuestSysBotPouchMegaPotionCount.Enabled = true;
                 ButtonSysbotQuestRead.Enabled = true;
+                QuestSysBotTriesRemaining.Enabled = true;
 
                 Connected = true;
                 ButtonConnect.Text = "Diconnect";
@@ -69,6 +73,7 @@ namespace RiseHax.WinForms
                 QuestSysBotPlayerHPCount.Enabled = false;
                 QuestSysBotPouchMegaPotionCount.Enabled = false;
                 ButtonSysbotQuestRead.Enabled = false;
+                QuestSysBotTriesRemaining.Enabled = false;
 
                 Connected = false;
                 ButtonConnect.Text = "Connect";
