@@ -8,7 +8,7 @@ Check the [releases](https://github.com/Glazelf/RiseHax/releases) page for relea
 Expect nothing and your expectations can only be positively met.
 
 ## Support
-Have questions? Join my Discord.  
+Have questions? Either [create a discussion](https://github.com/Glazelf/RiseHax/discussions/categories/questions) or join my Discord.  
 <a href="https://discord.gg/2gkybyu"><img src="https://canary.discordapp.com/api/guilds/549214833858576395/widget.png?style=banner2"></a>
 
 ## Credits
