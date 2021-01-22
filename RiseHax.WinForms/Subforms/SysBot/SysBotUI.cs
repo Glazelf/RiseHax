@@ -43,9 +43,10 @@ namespace RiseHax.WinForms
                 cfg.Port = Port;
                 Connection = (SwitchSocketAsync)cfg.CreateAsynchronous();
                 Connection.Connect();
-                byte[] MegaPotion = await Connection.ReadBytesAsync(DataOffsets.MegaPotionOffset, 2, CancellationToken.None);
-                System.Diagnostics.Debug.WriteLine(MegaPotion);
-                //QuestSysBotPouchMegaPotionCount = MegaPotionCountRead;
+                byte[] MegaPotionByte = await Connection.ReadBytesAsync(DataOffsets.MegaPotionOffset, 1, CancellationToken.None);
+                
+                SysBotLog.Text += MegaPotionByte[0].ToString();
+                QuestSysBotPouchMegaPotionCount.Value = MegaPotionByte[0];
                 TextBoxIP.Enabled = false;
                 TextBoxPort.Enabled = false;
 
