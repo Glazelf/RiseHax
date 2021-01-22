@@ -51,6 +51,7 @@ namespace RiseHax.WinForms
             this.QuestSysBotMonsterHPCount = new System.Windows.Forms.NumericUpDown();
             this.QuestSysBotMonsterHPLabel = new System.Windows.Forms.Label();
             this.TabSysBot4Log = new System.Windows.Forms.TabPage();
+            this.SysBotLog = new System.Windows.Forms.RichTextBox();
             this.GroupSysBotConnection.SuspendLayout();
             this.GroupSysBotStatus.SuspendLayout();
             this.TabControlSysBot.SuspendLayout();
@@ -61,6 +62,7 @@ namespace RiseHax.WinForms
             ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotPlayerHPCount)).BeginInit();
             this.GroupQuestSysBotMonster.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotMonsterHPCount)).BeginInit();
+            this.TabSysBot4Log.SuspendLayout();
             this.SuspendLayout();
             // 
             // TextBoxIP
@@ -318,6 +320,7 @@ namespace RiseHax.WinForms
             // TabSysBot4Log
             // 
             this.TabSysBot4Log.AccessibleName = "TabSysBot4Log";
+            this.TabSysBot4Log.Controls.Add(this.SysBotLog);
             this.TabSysBot4Log.Location = new System.Drawing.Point(4, 22);
             this.TabSysBot4Log.Name = "TabSysBot4Log";
             this.TabSysBot4Log.Padding = new System.Windows.Forms.Padding(3);
@@ -326,11 +329,21 @@ namespace RiseHax.WinForms
             this.TabSysBot4Log.Text = "Log";
             this.TabSysBot4Log.UseVisualStyleBackColor = true;
             // 
+            // SysBotLog
+            // 
+            this.SysBotLog.AccessibleName = "SysBotLog";
+            this.SysBotLog.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.SysBotLog.Location = new System.Drawing.Point(6, 6);
+            this.SysBotLog.Name = "SysBotLog";
+            this.SysBotLog.Size = new System.Drawing.Size(755, 399);
+            this.SysBotLog.TabIndex = 5;
+            this.SysBotLog.Text = "Waiting for log...";
+            // 
             // SysBotUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 562);
+            this.ClientSize = new System.Drawing.Size(782, 563);
             this.Controls.Add(this.TabControlSysBot);
             this.Controls.Add(this.GroupSysBotStatus);
             this.Controls.Add(this.GroupSysBotConnection);
@@ -352,6 +365,7 @@ namespace RiseHax.WinForms
             this.GroupQuestSysBotMonster.ResumeLayout(false);
             this.GroupQuestSysBotMonster.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotMonsterHPCount)).EndInit();
+            this.TabSysBot4Log.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -380,5 +394,6 @@ namespace RiseHax.WinForms
         private System.Windows.Forms.Label QuestSysBotMonsterHPLabel;
         private System.Windows.Forms.Button ButtonSysbotQuestRead;
         private System.Windows.Forms.TabPage TabSysBot4Log;
+        private System.Windows.Forms.RichTextBox SysBotLog;
     }
 }
