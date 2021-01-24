@@ -2,12 +2,8 @@
 using RiseHax.Core;
 using RiseHax.Injection;
 using RiseHax.Hunter;
-using RiseHax.WinForms.Properties;
 using System;
 using System.Windows.Forms;
-using System.Net.Sockets;
-using System.IO;
-using System.Threading;
 
 namespace RiseHax.WinForms
 {
@@ -16,7 +12,7 @@ namespace RiseHax.WinForms
 #pragma warning disable CA1416 // Do not catch Win7 warning
 
         private static readonly string WorkingDirectory = Application.StartupPath;
-        private static readonly string ConfigPath = Path.Combine(WorkingDirectory, "config.json");
+        //private static readonly string ConfigPath = Path.Combine(WorkingDirectory, "config.json");
         
 
         public SysBotUI()
@@ -25,30 +21,33 @@ namespace RiseHax.WinForms
         }
 
         public Injector SwitchInjector = new Injector();
-        public bool Connected = false;
-        SwitchSocketAsync Connection;
         readonly SwitchConnectionConfig cfg = new SwitchConnectionConfig();
+        readonly PointerHandler PointerHandler = new PointerHandler();
+        public bool Connected = false;
+        public ISwitchConnectionSync Connection;
 
         public void SysBotUI_Load(object sender, EventArgs e)
         {
             
         }
 
-        private async void ButtonConnect_ClickAsync(object sender, EventArgs e)
+        private void ButtonConnect_Click(object sender, EventArgs e)
         {
             int Port = int.Parse(TextBoxPort.Text);
             if (Connected == false)
             {
                 cfg.IP = TextBoxIP.Text;
                 cfg.Port = Port;
-                Connection = (SwitchSocketAsync)cfg.CreateAsynchronous();
+                Connection = cfg.CreateSync();
                 Connection.Connect();
+                uint OffsetHunterHP = (uint)PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterHP);
+                byte[] byteArray = Connection.ReadBytesAbsolute(OffsetHunterHP, 4);
+                uint HunterHP = Connection.ReadBytesAbsolute(OffsetHunterHP, 1)[0];
+                SysBotLog.Text += " " +HunterHP.ToString();
 
-                byte[] MegaPotionByte = await Connection.ReadBytesAsync(DataOffsets.MegaPotionOffset, 1, CancellationToken.None);
-                SysBotLog.Text += MegaPotionByte[0].ToString();
+                //byte[] MegaPotionByte = Connection.ReadBytes(OffsetMegaPotion, 1);
+                //SysBotLog.Text += MegaPotionByte[0].ToString();
                 //QuestSysBotPouchMegaPotionCount.Value = MegaPotionByte[0];
-                byte[] HunterHPByte = await Connection.ReadBytesAsync(DataOffsets.HunterHPOffset, 1, CancellationToken.None);
-                SysBotLog.Text += HunterHPByte[0].ToString();
 
                 TextBoxIP.Enabled = false;
                 TextBoxPort.Enabled = false;

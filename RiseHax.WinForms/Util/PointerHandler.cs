@@ -72,5 +72,17 @@ namespace RiseHax.WinForms
             string hexValue = "0x" + decValue.ToString("X");
             return hexValue;
         }
+
+        public ulong ConvertLittleEndian(byte[] array)
+        {
+            int pos = 0;
+            ulong result = 0;
+            foreach (byte by in array)
+            {
+                result |= ((ulong)by) << pos;
+                pos += 8;
+            }
+            return result;
+        }
     }
 }

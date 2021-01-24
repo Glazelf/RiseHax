@@ -86,7 +86,7 @@ namespace RiseHax.WinForms
             this.ButtonConnect.TabIndex = 2;
             this.ButtonConnect.Text = "Connect";
             this.ButtonConnect.UseVisualStyleBackColor = true;
-            this.ButtonConnect.Click += new System.EventHandler(this.ButtonConnect_ClickAsync);
+            this.ButtonConnect.Click += new System.EventHandler(this.ButtonConnect_Click);
             // 
             // GroupSysBotConnection
             // 
