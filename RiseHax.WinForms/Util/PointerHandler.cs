@@ -69,7 +69,7 @@ namespace RiseHax.WinForms
 
         public string DecimalToHex(ulong decValue)
         {
-            string hexValue = "0x" + decValue.ToString("X");
+            string hexValue = decValue.ToString("X");
             return hexValue;
         }
 
