@@ -26,6 +26,8 @@ namespace RiseHax.WinForms
         public bool Connected = false;
         public ISwitchConnectionSync Connection;
 
+        ulong OffsetHunterHP;
+
         public void SysBotUI_Load(object sender, EventArgs e)
         {
             
@@ -47,7 +49,7 @@ namespace RiseHax.WinForms
                 TextBoxPort.Enabled = false;
 
                 QuestSysBotMonsterHPCount.Enabled = true;
-                QuestSysBotPlayerHPCount.Enabled = true;
+                QuestSysBotHunterHPCount.Enabled = true;
                 QuestSysBotPouchMegaPotionCount.Enabled = true;
                 ButtonSysbotQuestRead.Enabled = true;
                 QuestSysBotTriesRemaining.Enabled = true;
@@ -63,7 +65,7 @@ namespace RiseHax.WinForms
                 TextBoxPort.Enabled = true;
 
                 QuestSysBotMonsterHPCount.Enabled = false;
-                QuestSysBotPlayerHPCount.Enabled = false;
+                QuestSysBotHunterHPCount.Enabled = false;
                 QuestSysBotPouchMegaPotionCount.Enabled = false;
                 ButtonSysbotQuestRead.Enabled = false;
                 QuestSysBotTriesRemaining.Enabled = false;
@@ -83,9 +85,12 @@ namespace RiseHax.WinForms
 
         }
 
-        private void QuestSysBotPlayerHPCount_ValueChanged(object sender, EventArgs e)
+        private void QuestSysBotHunterHPCount_ValueChanged(object sender, EventArgs e)
         {
-
+            byte value = Convert.ToByte(QuestSysBotHunterHPCount.Value);
+            byte[] byteArray = new byte[1];
+            byteArray[0] = value;
+            Connection.WriteBytesAbsolute(byteArray, OffsetHunterHP);
         }
 
         private void ButtonSysbotQuestRead_Click(object sender, EventArgs e)
@@ -95,10 +100,10 @@ namespace RiseHax.WinForms
 
         private void ReloadValues()
         {
-            ulong OffsetHunterHP = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterHP);
+            OffsetHunterHP = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterHP);
 
             uint HunterHP = Connection.ReadBytesAbsolute(OffsetHunterHP, 1)[0];
-            QuestSysBotPlayerHPCount.Value = HunterHP;
+            QuestSysBotHunterHPCount.Value = HunterHP;
         }
     }
 }
