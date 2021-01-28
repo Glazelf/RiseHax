@@ -46,9 +46,9 @@ namespace RiseHax.WinForms
             this.QuestSysBotPouchTriesLabel = new System.Windows.Forms.Label();
             this.QuestSysBotPouchMegaPotionLabel = new System.Windows.Forms.Label();
             this.QuestSysBotPouchMegaPotionCount = new System.Windows.Forms.NumericUpDown();
-            this.GroupQuestSysBotPlayer = new System.Windows.Forms.GroupBox();
-            this.QuestSysBotPlayerHPCount = new System.Windows.Forms.NumericUpDown();
-            this.QuestSysBotPlayerHP = new System.Windows.Forms.Label();
+            this.GroupQuestSysBotHunter = new System.Windows.Forms.GroupBox();
+            this.QuestSysBotHunterHPCount = new System.Windows.Forms.NumericUpDown();
+            this.QuestSysBotHunterHP = new System.Windows.Forms.Label();
             this.GroupQuestSysBotMonster = new System.Windows.Forms.GroupBox();
             this.QuestSysBotMonsterHPCount = new System.Windows.Forms.NumericUpDown();
             this.QuestSysBotMonsterHPLabel = new System.Windows.Forms.Label();
@@ -61,8 +61,8 @@ namespace RiseHax.WinForms
             this.GroupQuestSysBotPouch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotTriesRemaining)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotPouchMegaPotionCount)).BeginInit();
-            this.GroupQuestSysBotPlayer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotPlayerHPCount)).BeginInit();
+            this.GroupQuestSysBotHunter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotHunterHPCount)).BeginInit();
             this.GroupQuestSysBotMonster.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotMonsterHPCount)).BeginInit();
             this.TabSysBot4Log.SuspendLayout();
@@ -194,7 +194,7 @@ namespace RiseHax.WinForms
             // 
             this.TabSysBot3Quest.AccessibleName = "TabSysBot3Quest";
             this.TabSysBot3Quest.Controls.Add(this.GroupQuestSysBotPouch);
-            this.TabSysBot3Quest.Controls.Add(this.GroupQuestSysBotPlayer);
+            this.TabSysBot3Quest.Controls.Add(this.GroupQuestSysBotHunter);
             this.TabSysBot3Quest.Controls.Add(this.GroupQuestSysBotMonster);
             this.TabSysBot3Quest.Location = new System.Drawing.Point(4, 22);
             this.TabSysBot3Quest.Name = "TabSysBot3Quest";
@@ -262,47 +262,47 @@ namespace RiseHax.WinForms
             this.QuestSysBotPouchMegaPotionCount.TabIndex = 0;
             this.QuestSysBotPouchMegaPotionCount.ValueChanged += new System.EventHandler(this.QuestSysBotPouchMegaPotionCount_ValueChanged);
             // 
-            // GroupQuestSysBotPlayer
+            // GroupQuestSysBotHunter
             // 
-            this.GroupQuestSysBotPlayer.AccessibleName = "QuestSysBotPlayer";
-            this.GroupQuestSysBotPlayer.Controls.Add(this.QuestSysBotPlayerHPCount);
-            this.GroupQuestSysBotPlayer.Controls.Add(this.QuestSysBotPlayerHP);
-            this.GroupQuestSysBotPlayer.Location = new System.Drawing.Point(299, 6);
-            this.GroupQuestSysBotPlayer.Name = "GroupQuestSysBotPlayer";
-            this.GroupQuestSysBotPlayer.Size = new System.Drawing.Size(303, 393);
-            this.GroupQuestSysBotPlayer.TabIndex = 3;
-            this.GroupQuestSysBotPlayer.TabStop = false;
-            this.GroupQuestSysBotPlayer.Text = "Player";
+            this.GroupQuestSysBotHunter.AccessibleName = "QuestSysBotHunter";
+            this.GroupQuestSysBotHunter.Controls.Add(this.QuestSysBotHunterHPCount);
+            this.GroupQuestSysBotHunter.Controls.Add(this.QuestSysBotHunterHP);
+            this.GroupQuestSysBotHunter.Location = new System.Drawing.Point(299, 6);
+            this.GroupQuestSysBotHunter.Name = "GroupQuestSysBotHunter";
+            this.GroupQuestSysBotHunter.Size = new System.Drawing.Size(303, 393);
+            this.GroupQuestSysBotHunter.TabIndex = 3;
+            this.GroupQuestSysBotHunter.TabStop = false;
+            this.GroupQuestSysBotHunter.Text = "Hunter";
             // 
-            // QuestSysBotPlayerHPCount
+            // QuestSysBotHunterHPCount
             // 
-            this.QuestSysBotPlayerHPCount.AccessibleName = "QuestSysBotPlayerHPCount";
-            this.QuestSysBotPlayerHPCount.Enabled = false;
-            this.QuestSysBotPlayerHPCount.Location = new System.Drawing.Point(53, 22);
-            this.QuestSysBotPlayerHPCount.Maximum = new decimal(new int[] {
+            this.QuestSysBotHunterHPCount.AccessibleName = "QuestSysBotHunterHPCount";
+            this.QuestSysBotHunterHPCount.Enabled = false;
+            this.QuestSysBotHunterHPCount.Location = new System.Drawing.Point(53, 22);
+            this.QuestSysBotHunterHPCount.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.QuestSysBotPlayerHPCount.Name = "QuestSysBotPlayerHPCount";
-            this.QuestSysBotPlayerHPCount.Size = new System.Drawing.Size(55, 20);
-            this.QuestSysBotPlayerHPCount.TabIndex = 6;
-            this.QuestSysBotPlayerHPCount.Value = new decimal(new int[] {
+            this.QuestSysBotHunterHPCount.Name = "QuestSysBotHunterHPCount";
+            this.QuestSysBotHunterHPCount.Size = new System.Drawing.Size(55, 20);
+            this.QuestSysBotHunterHPCount.TabIndex = 6;
+            this.QuestSysBotHunterHPCount.Value = new decimal(new int[] {
             100,
             0,
             0,
             0});
-            this.QuestSysBotPlayerHPCount.ValueChanged += new System.EventHandler(this.QuestSysBotPlayerHPCount_ValueChanged);
+            this.QuestSysBotHunterHPCount.ValueChanged += new System.EventHandler(this.QuestSysBotHunterHPCount_ValueChanged);
             // 
-            // QuestSysBotPlayerHP
+            // QuestSysBotHunterHP
             // 
-            this.QuestSysBotPlayerHP.AccessibleName = "QuestSysBotPlayerHPLabel";
-            this.QuestSysBotPlayerHP.AutoSize = true;
-            this.QuestSysBotPlayerHP.Location = new System.Drawing.Point(6, 24);
-            this.QuestSysBotPlayerHP.Name = "QuestSysBotPlayerHP";
-            this.QuestSysBotPlayerHP.Size = new System.Drawing.Size(41, 13);
-            this.QuestSysBotPlayerHP.TabIndex = 5;
-            this.QuestSysBotPlayerHP.Text = "Health:";
+            this.QuestSysBotHunterHP.AccessibleName = "QuestSysBotHunterHPLabel";
+            this.QuestSysBotHunterHP.AutoSize = true;
+            this.QuestSysBotHunterHP.Location = new System.Drawing.Point(6, 24);
+            this.QuestSysBotHunterHP.Name = "QuestSysBotHunterHP";
+            this.QuestSysBotHunterHP.Size = new System.Drawing.Size(41, 13);
+            this.QuestSysBotHunterHP.TabIndex = 5;
+            this.QuestSysBotHunterHP.Text = "Health:";
             // 
             // GroupQuestSysBotMonster
             // 
@@ -384,9 +384,9 @@ namespace RiseHax.WinForms
             this.GroupQuestSysBotPouch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotTriesRemaining)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotPouchMegaPotionCount)).EndInit();
-            this.GroupQuestSysBotPlayer.ResumeLayout(false);
-            this.GroupQuestSysBotPlayer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotPlayerHPCount)).EndInit();
+            this.GroupQuestSysBotHunter.ResumeLayout(false);
+            this.GroupQuestSysBotHunter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotHunterHPCount)).EndInit();
             this.GroupQuestSysBotMonster.ResumeLayout(false);
             this.GroupQuestSysBotMonster.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotMonsterHPCount)).EndInit();
@@ -411,10 +411,10 @@ namespace RiseHax.WinForms
         private System.Windows.Forms.NumericUpDown QuestSysBotPouchMegaPotionCount;
         private System.Windows.Forms.Label QuestSysBotPouchMegaPotionLabel;
         private System.Windows.Forms.GroupBox GroupQuestSysBotPouch;
-        private System.Windows.Forms.GroupBox GroupQuestSysBotPlayer;
+        private System.Windows.Forms.GroupBox GroupQuestSysBotHunter;
         private System.Windows.Forms.GroupBox GroupQuestSysBotMonster;
-        private System.Windows.Forms.NumericUpDown QuestSysBotPlayerHPCount;
-        private System.Windows.Forms.Label QuestSysBotPlayerHP;
+        private System.Windows.Forms.NumericUpDown QuestSysBotHunterHPCount;
+        private System.Windows.Forms.Label QuestSysBotHunterHP;
         private System.Windows.Forms.NumericUpDown QuestSysBotMonsterHPCount;
         private System.Windows.Forms.Label QuestSysBotMonsterHPLabel;
         private System.Windows.Forms.Button ButtonSysbotQuestRead;
