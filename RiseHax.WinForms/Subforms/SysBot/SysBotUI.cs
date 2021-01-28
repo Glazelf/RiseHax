@@ -40,10 +40,11 @@ namespace RiseHax.WinForms
                 cfg.Port = Port;
                 Connection = cfg.CreateSync();
                 Connection.Connect();
-                uint OffsetHunterHP = (uint)PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterHP);
+                ulong OffsetHunterHP = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterHP);
+                SysBotLog.Text += " " + OffsetHunterHP;
                 byte[] byteArray = Connection.ReadBytesAbsolute(OffsetHunterHP, 4);
                 uint HunterHP = Connection.ReadBytesAbsolute(OffsetHunterHP, 1)[0];
-                SysBotLog.Text += " " +HunterHP.ToString();
+                SysBotLog.Text += " " + HunterHP.ToString();
 
                 //byte[] MegaPotionByte = Connection.ReadBytes(OffsetMegaPotion, 1);
                 //SysBotLog.Text += MegaPotionByte[0].ToString();
