@@ -40,15 +40,8 @@ namespace RiseHax.WinForms
                 cfg.Port = Port;
                 Connection = cfg.CreateSync();
                 Connection.Connect();
-                ulong OffsetHunterHP = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterHP);
-                SysBotLog.Text += " " + OffsetHunterHP;
-                byte[] byteArray = Connection.ReadBytesAbsolute(OffsetHunterHP, 4);
-                uint HunterHP = Connection.ReadBytesAbsolute(OffsetHunterHP, 1)[0];
-                SysBotLog.Text += " " + HunterHP.ToString();
 
-                //byte[] MegaPotionByte = Connection.ReadBytes(OffsetMegaPotion, 1);
-                //SysBotLog.Text += MegaPotionByte[0].ToString();
-                //QuestSysBotPouchMegaPotionCount.Value = MegaPotionByte[0];
+                ReloadValues();
 
                 TextBoxIP.Enabled = false;
                 TextBoxPort.Enabled = false;
@@ -97,7 +90,15 @@ namespace RiseHax.WinForms
 
         private void ButtonSysbotQuestRead_Click(object sender, EventArgs e)
         {
+            ReloadValues();
+        }
 
+        private void ReloadValues()
+        {
+            ulong OffsetHunterHP = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterHP);
+
+            uint HunterHP = Connection.ReadBytesAbsolute(OffsetHunterHP, 1)[0];
+            QuestSysBotPlayerHPCount.Value = HunterHP;
         }
     }
 }
