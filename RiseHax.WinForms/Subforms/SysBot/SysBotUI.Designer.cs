@@ -280,7 +280,7 @@ namespace RiseHax.WinForms
             this.QuestSysBotHunterHPCount.Enabled = false;
             this.QuestSysBotHunterHPCount.Location = new System.Drawing.Point(53, 22);
             this.QuestSysBotHunterHPCount.Maximum = new decimal(new int[] {
-            999,
+            255,
             0,
             0,
             0});
