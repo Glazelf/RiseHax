@@ -42,6 +42,7 @@ namespace RiseHax.WinForms
             this.TabSysBot2Items = new System.Windows.Forms.TabPage();
             this.TabSysBot3Quest = new System.Windows.Forms.TabPage();
             this.GroupQuestSysBotPouch = new System.Windows.Forms.GroupBox();
+            this.QuestSysBotTriesRemaining = new System.Windows.Forms.NumericUpDown();
             this.QuestSysBotPouchTriesLabel = new System.Windows.Forms.Label();
             this.QuestSysBotPouchMegaPotionLabel = new System.Windows.Forms.Label();
             this.QuestSysBotPouchMegaPotionCount = new System.Windows.Forms.NumericUpDown();
@@ -53,19 +54,18 @@ namespace RiseHax.WinForms
             this.QuestSysBotMonsterHPLabel = new System.Windows.Forms.Label();
             this.TabSysBot4Log = new System.Windows.Forms.TabPage();
             this.SysBotLog = new System.Windows.Forms.RichTextBox();
-            this.QuestSysBotTriesRemaining = new System.Windows.Forms.NumericUpDown();
             this.GroupSysBotConnection.SuspendLayout();
             this.GroupSysBotStatus.SuspendLayout();
             this.TabControlSysBot.SuspendLayout();
             this.TabSysBot3Quest.SuspendLayout();
             this.GroupQuestSysBotPouch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotTriesRemaining)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotPouchMegaPotionCount)).BeginInit();
             this.GroupQuestSysBotPlayer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotPlayerHPCount)).BeginInit();
             this.GroupQuestSysBotMonster.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotMonsterHPCount)).BeginInit();
             this.TabSysBot4Log.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotTriesRemaining)).BeginInit();
             this.SuspendLayout();
             // 
             // TextBoxIP
@@ -218,6 +218,15 @@ namespace RiseHax.WinForms
             this.GroupQuestSysBotPouch.TabStop = false;
             this.GroupQuestSysBotPouch.Text = "Item Pouch";
             // 
+            // QuestSysBotTriesRemaining
+            // 
+            this.QuestSysBotTriesRemaining.AccessibleName = "QuestSysBotTriesRemaining";
+            this.QuestSysBotTriesRemaining.Enabled = false;
+            this.QuestSysBotTriesRemaining.Location = new System.Drawing.Point(87, 59);
+            this.QuestSysBotTriesRemaining.Name = "QuestSysBotTriesRemaining";
+            this.QuestSysBotTriesRemaining.Size = new System.Drawing.Size(47, 20);
+            this.QuestSysBotTriesRemaining.TabIndex = 6;
+            // 
             // QuestSysBotPouchTriesLabel
             // 
             this.QuestSysBotPouchTriesLabel.AccessibleName = "QuestSysBotPouchTriesLabel";
@@ -354,14 +363,6 @@ namespace RiseHax.WinForms
             this.SysBotLog.TabIndex = 5;
             this.SysBotLog.Text = "Waiting for log...";
             // 
-            // QuestSysBotTriesRemaining
-            // 
-            this.QuestSysBotTriesRemaining.AccessibleName = "QuestSysBotTriesRemaining";
-            this.QuestSysBotTriesRemaining.Location = new System.Drawing.Point(87, 59);
-            this.QuestSysBotTriesRemaining.Name = "QuestSysBotTriesRemaining";
-            this.QuestSysBotTriesRemaining.Size = new System.Drawing.Size(47, 20);
-            this.QuestSysBotTriesRemaining.TabIndex = 6;
-            // 
             // SysBotUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -381,6 +382,7 @@ namespace RiseHax.WinForms
             this.TabSysBot3Quest.ResumeLayout(false);
             this.GroupQuestSysBotPouch.ResumeLayout(false);
             this.GroupQuestSysBotPouch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotTriesRemaining)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotPouchMegaPotionCount)).EndInit();
             this.GroupQuestSysBotPlayer.ResumeLayout(false);
             this.GroupQuestSysBotPlayer.PerformLayout();
@@ -389,7 +391,6 @@ namespace RiseHax.WinForms
             this.GroupQuestSysBotMonster.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotMonsterHPCount)).EndInit();
             this.TabSysBot4Log.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotTriesRemaining)).EndInit();
             this.ResumeLayout(false);
 
         }
