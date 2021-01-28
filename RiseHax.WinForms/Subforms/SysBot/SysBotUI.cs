@@ -27,6 +27,7 @@ namespace RiseHax.WinForms
         public ISwitchConnectionSync Connection;
 
         ulong OffsetHunterHP;
+        ulong OffsetHunterHPRecoverable;
 
         public void SysBotUI_Load(object sender, EventArgs e)
         {
@@ -91,6 +92,7 @@ namespace RiseHax.WinForms
             byte[] byteArray = new byte[1];
             byteArray[0] = value;
             Connection.WriteBytesAbsolute(byteArray, OffsetHunterHP);
+            Connection.WriteBytesAbsolute(byteArray, OffsetHunterHPRecoverable);
         }
 
         private void ButtonSysbotQuestRead_Click(object sender, EventArgs e)
@@ -101,6 +103,7 @@ namespace RiseHax.WinForms
         private void ReloadValues()
         {
             OffsetHunterHP = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterHP);
+            OffsetHunterHPRecoverable = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterHPRecoverable);
 
             uint HunterHP = Connection.ReadBytesAbsolute(OffsetHunterHP, 1)[0];
             QuestSysBotHunterHPCount.Value = HunterHP;

@@ -12,5 +12,6 @@ namespace RiseHax.Hunter
 
         // Pointers --> Use .ReadBytesAbsolute()
         public const string PointerHunterHP = "[[[main+CD73FA0]+390]+20]+10";
+        public const string PointerHunterHPRecoverable = "[[[main+CD76310]+D0]+118]+1C";
     }
 }
