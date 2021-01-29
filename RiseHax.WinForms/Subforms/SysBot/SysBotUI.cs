@@ -36,8 +36,10 @@ namespace RiseHax.WinForms
             OffsetHunterHPRecoverable = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterHPRecoverable);
             OffsetHunterCoordX = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterXCoord);
 
+            byte[] ByteArrayHunterCoordX = Connection.ReadBytesAbsolute(OffsetHunterCoordX, 4);
+
             uint HunterHP = Connection.ReadBytesAbsolute(OffsetHunterHP, 1)[0];
-            uint HunterCoordX = Connection.ReadBytesAbsolute(OffsetHunterCoordX, 1)[0];
+            int HunterCoordX = BitConverter.ToInt32(ByteArrayHunterCoordX, 0);
             QuestSysBotHunterHPCount.Value = HunterHP;
             SysBotHunterCoordXCount.Value = HunterCoordX;
         }
@@ -123,10 +125,10 @@ namespace RiseHax.WinForms
 
         private void SysBotHunterCoordXCount_ValueChanged(object sender, EventArgs e)
         {
-            byte value = Convert.ToByte(SysBotHunterCoordXCount.Value);
-            byte[] byteArray = new byte[1];
-            byteArray[0] = value;
-            Connection.WriteBytesAbsolute(byteArray, OffsetHunterCoordX);
+            int intValue = (int)SysBotHunterCoordXCount.Value;
+            byte[] intBytes = BitConverter.GetBytes(intValue);
+            byte[] result = intBytes;
+            Connection.WriteBytesAbsolute(result, OffsetHunterCoordX);
         }
     }
 }
