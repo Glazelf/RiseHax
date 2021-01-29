@@ -54,9 +54,17 @@ namespace RiseHax.WinForms
             this.QuestSysBotMonsterHPLabel = new System.Windows.Forms.Label();
             this.TabSysBot4Log = new System.Windows.Forms.TabPage();
             this.SysBotLog = new System.Windows.Forms.RichTextBox();
+            this.GroupSysBotHunterCoords = new System.Windows.Forms.GroupBox();
+            this.SysBotHunterCoordZCount = new System.Windows.Forms.NumericUpDown();
+            this.SysBotHunterCoordZLabel = new System.Windows.Forms.Label();
+            this.SysBotHunterCoordYCount = new System.Windows.Forms.NumericUpDown();
+            this.SysBotHunterCoordYLabel = new System.Windows.Forms.Label();
+            this.SysBotHunterCoordXCount = new System.Windows.Forms.NumericUpDown();
+            this.SysBotHunterCoordXLabel = new System.Windows.Forms.Label();
             this.GroupSysBotConnection.SuspendLayout();
             this.GroupSysBotStatus.SuspendLayout();
             this.TabControlSysBot.SuspendLayout();
+            this.TabSysBot1Player.SuspendLayout();
             this.TabSysBot3Quest.SuspendLayout();
             this.GroupQuestSysBotPouch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotTriesRemaining)).BeginInit();
@@ -66,6 +74,10 @@ namespace RiseHax.WinForms
             this.GroupQuestSysBotMonster.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotMonsterHPCount)).BeginInit();
             this.TabSysBot4Log.SuspendLayout();
+            this.GroupSysBotHunterCoords.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterCoordZCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterCoordYCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterCoordXCount)).BeginInit();
             this.SuspendLayout();
             // 
             // TextBoxIP
@@ -171,6 +183,7 @@ namespace RiseHax.WinForms
             // TabSysBot1Player
             // 
             this.TabSysBot1Player.AccessibleName = "TabSysBot1Player";
+            this.TabSysBot1Player.Controls.Add(this.GroupSysBotHunterCoords);
             this.TabSysBot1Player.Location = new System.Drawing.Point(4, 22);
             this.TabSysBot1Player.Name = "TabSysBot1Player";
             this.TabSysBot1Player.Padding = new System.Windows.Forms.Padding(3);
@@ -206,14 +219,14 @@ namespace RiseHax.WinForms
             // 
             // GroupQuestSysBotPouch
             // 
-            this.GroupQuestSysBotPouch.AccessibleName = "QuestSysBotPouch";
+            this.GroupQuestSysBotPouch.AccessibleName = "GroupQuestSysBotPouch";
             this.GroupQuestSysBotPouch.Controls.Add(this.QuestSysBotTriesRemaining);
             this.GroupQuestSysBotPouch.Controls.Add(this.QuestSysBotPouchTriesLabel);
             this.GroupQuestSysBotPouch.Controls.Add(this.QuestSysBotPouchMegaPotionLabel);
             this.GroupQuestSysBotPouch.Controls.Add(this.QuestSysBotPouchMegaPotionCount);
-            this.GroupQuestSysBotPouch.Location = new System.Drawing.Point(608, 6);
+            this.GroupQuestSysBotPouch.Location = new System.Drawing.Point(620, 6);
             this.GroupQuestSysBotPouch.Name = "GroupQuestSysBotPouch";
-            this.GroupQuestSysBotPouch.Size = new System.Drawing.Size(153, 393);
+            this.GroupQuestSysBotPouch.Size = new System.Drawing.Size(141, 393);
             this.GroupQuestSysBotPouch.TabIndex = 4;
             this.GroupQuestSysBotPouch.TabStop = false;
             this.GroupQuestSysBotPouch.Text = "Item Pouch";
@@ -264,12 +277,12 @@ namespace RiseHax.WinForms
             // 
             // GroupQuestSysBotHunter
             // 
-            this.GroupQuestSysBotHunter.AccessibleName = "QuestSysBotHunter";
+            this.GroupQuestSysBotHunter.AccessibleName = "GroupQuestSysBotHunter";
             this.GroupQuestSysBotHunter.Controls.Add(this.QuestSysBotHunterHPCount);
             this.GroupQuestSysBotHunter.Controls.Add(this.QuestSysBotHunterHP);
             this.GroupQuestSysBotHunter.Location = new System.Drawing.Point(299, 6);
             this.GroupQuestSysBotHunter.Name = "GroupQuestSysBotHunter";
-            this.GroupQuestSysBotHunter.Size = new System.Drawing.Size(303, 393);
+            this.GroupQuestSysBotHunter.Size = new System.Drawing.Size(315, 393);
             this.GroupQuestSysBotHunter.TabIndex = 3;
             this.GroupQuestSysBotHunter.TabStop = false;
             this.GroupQuestSysBotHunter.Text = "Hunter";
@@ -306,7 +319,7 @@ namespace RiseHax.WinForms
             // 
             // GroupQuestSysBotMonster
             // 
-            this.GroupQuestSysBotMonster.AccessibleName = "QuestSysBotMonster";
+            this.GroupQuestSysBotMonster.AccessibleName = "GroupQuestSysBotMonster";
             this.GroupQuestSysBotMonster.Controls.Add(this.QuestSysBotMonsterHPCount);
             this.GroupQuestSysBotMonster.Controls.Add(this.QuestSysBotMonsterHPLabel);
             this.GroupQuestSysBotMonster.Location = new System.Drawing.Point(6, 6);
@@ -363,6 +376,95 @@ namespace RiseHax.WinForms
             this.SysBotLog.TabIndex = 5;
             this.SysBotLog.Text = "Waiting for log...";
             // 
+            // GroupSysBotHunterCoords
+            // 
+            this.GroupSysBotHunterCoords.AccessibleName = "GroupSysBotHunterCoords";
+            this.GroupSysBotHunterCoords.Controls.Add(this.SysBotHunterCoordZCount);
+            this.GroupSysBotHunterCoords.Controls.Add(this.SysBotHunterCoordZLabel);
+            this.GroupSysBotHunterCoords.Controls.Add(this.SysBotHunterCoordYCount);
+            this.GroupSysBotHunterCoords.Controls.Add(this.SysBotHunterCoordYLabel);
+            this.GroupSysBotHunterCoords.Controls.Add(this.SysBotHunterCoordXCount);
+            this.GroupSysBotHunterCoords.Controls.Add(this.SysBotHunterCoordXLabel);
+            this.GroupSysBotHunterCoords.Location = new System.Drawing.Point(473, 365);
+            this.GroupSysBotHunterCoords.Name = "GroupSysBotHunterCoords";
+            this.GroupSysBotHunterCoords.Size = new System.Drawing.Size(291, 40);
+            this.GroupSysBotHunterCoords.TabIndex = 8;
+            this.GroupSysBotHunterCoords.TabStop = false;
+            this.GroupSysBotHunterCoords.Text = "Coordinates:";
+            // 
+            // SysBotHunterCoordZCount
+            // 
+            this.SysBotHunterCoordZCount.AccessibleName = "SysBotHunterCoordZCount";
+            this.SysBotHunterCoordZCount.Enabled = false;
+            this.SysBotHunterCoordZCount.Location = new System.Drawing.Point(211, 16);
+            this.SysBotHunterCoordZCount.Maximum = new decimal(new int[] {
+            2147483647,
+            0,
+            0,
+            0});
+            this.SysBotHunterCoordZCount.Name = "SysBotHunterCoordZCount";
+            this.SysBotHunterCoordZCount.Size = new System.Drawing.Size(74, 20);
+            this.SysBotHunterCoordZCount.TabIndex = 10;
+            // 
+            // SysBotHunterCoordZLabel
+            // 
+            this.SysBotHunterCoordZLabel.AccessibleName = "SysBotHunterCoordZLabel";
+            this.SysBotHunterCoordZLabel.AutoSize = true;
+            this.SysBotHunterCoordZLabel.Location = new System.Drawing.Point(193, 18);
+            this.SysBotHunterCoordZLabel.Name = "SysBotHunterCoordZLabel";
+            this.SysBotHunterCoordZLabel.Size = new System.Drawing.Size(17, 13);
+            this.SysBotHunterCoordZLabel.TabIndex = 9;
+            this.SysBotHunterCoordZLabel.Text = "Z:";
+            // 
+            // SysBotHunterCoordYCount
+            // 
+            this.SysBotHunterCoordYCount.AccessibleName = "SysBotHunterCoordYCount";
+            this.SysBotHunterCoordYCount.Enabled = false;
+            this.SysBotHunterCoordYCount.Location = new System.Drawing.Point(119, 16);
+            this.SysBotHunterCoordYCount.Maximum = new decimal(new int[] {
+            2147483647,
+            0,
+            0,
+            0});
+            this.SysBotHunterCoordYCount.Name = "SysBotHunterCoordYCount";
+            this.SysBotHunterCoordYCount.Size = new System.Drawing.Size(68, 20);
+            this.SysBotHunterCoordYCount.TabIndex = 8;
+            // 
+            // SysBotHunterCoordYLabel
+            // 
+            this.SysBotHunterCoordYLabel.AccessibleName = "SysBotHunterCoordYLabel";
+            this.SysBotHunterCoordYLabel.AutoSize = true;
+            this.SysBotHunterCoordYLabel.Location = new System.Drawing.Point(96, 18);
+            this.SysBotHunterCoordYLabel.Name = "SysBotHunterCoordYLabel";
+            this.SysBotHunterCoordYLabel.Size = new System.Drawing.Size(17, 13);
+            this.SysBotHunterCoordYLabel.TabIndex = 7;
+            this.SysBotHunterCoordYLabel.Text = "Y:";
+            // 
+            // SysBotHunterCoordXCount
+            // 
+            this.SysBotHunterCoordXCount.AccessibleName = "SysBotHunterCoordXCount";
+            this.SysBotHunterCoordXCount.Enabled = false;
+            this.SysBotHunterCoordXCount.Location = new System.Drawing.Point(26, 16);
+            this.SysBotHunterCoordXCount.Maximum = new decimal(new int[] {
+            2147483647,
+            0,
+            0,
+            0});
+            this.SysBotHunterCoordXCount.Name = "SysBotHunterCoordXCount";
+            this.SysBotHunterCoordXCount.Size = new System.Drawing.Size(64, 20);
+            this.SysBotHunterCoordXCount.TabIndex = 6;
+            this.SysBotHunterCoordXCount.ValueChanged += new System.EventHandler(this.SysBotHunterCoordXCount_ValueChanged);
+            // 
+            // SysBotHunterCoordXLabel
+            // 
+            this.SysBotHunterCoordXLabel.AccessibleName = "SysBotHunterCoordXLabel";
+            this.SysBotHunterCoordXLabel.AutoSize = true;
+            this.SysBotHunterCoordXLabel.Location = new System.Drawing.Point(6, 18);
+            this.SysBotHunterCoordXLabel.Name = "SysBotHunterCoordXLabel";
+            this.SysBotHunterCoordXLabel.Size = new System.Drawing.Size(17, 13);
+            this.SysBotHunterCoordXLabel.TabIndex = 5;
+            this.SysBotHunterCoordXLabel.Text = "X:";
+            // 
             // SysBotUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,6 +481,7 @@ namespace RiseHax.WinForms
             this.GroupSysBotConnection.PerformLayout();
             this.GroupSysBotStatus.ResumeLayout(false);
             this.TabControlSysBot.ResumeLayout(false);
+            this.TabSysBot1Player.ResumeLayout(false);
             this.TabSysBot3Quest.ResumeLayout(false);
             this.GroupQuestSysBotPouch.ResumeLayout(false);
             this.GroupQuestSysBotPouch.PerformLayout();
@@ -391,6 +494,11 @@ namespace RiseHax.WinForms
             this.GroupQuestSysBotMonster.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotMonsterHPCount)).EndInit();
             this.TabSysBot4Log.ResumeLayout(false);
+            this.GroupSysBotHunterCoords.ResumeLayout(false);
+            this.GroupSysBotHunterCoords.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterCoordZCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterCoordYCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterCoordXCount)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -422,5 +530,12 @@ namespace RiseHax.WinForms
         private System.Windows.Forms.RichTextBox SysBotLog;
         private System.Windows.Forms.Label QuestSysBotPouchTriesLabel;
         private System.Windows.Forms.NumericUpDown QuestSysBotTriesRemaining;
+        private System.Windows.Forms.GroupBox GroupSysBotHunterCoords;
+        private System.Windows.Forms.NumericUpDown SysBotHunterCoordZCount;
+        private System.Windows.Forms.Label SysBotHunterCoordZLabel;
+        private System.Windows.Forms.NumericUpDown SysBotHunterCoordYCount;
+        private System.Windows.Forms.Label SysBotHunterCoordYLabel;
+        private System.Windows.Forms.NumericUpDown SysBotHunterCoordXCount;
+        private System.Windows.Forms.Label SysBotHunterCoordXLabel;
     }
 }
