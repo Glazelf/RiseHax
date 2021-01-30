@@ -1,7 +1,7 @@
-﻿using System;
-using System.Threading;
-using LibUsbDotNet;
+﻿using LibUsbDotNet;
 using LibUsbDotNet.Main;
+using System;
+using System.Threading;
 
 namespace RiseHax.Core
 {

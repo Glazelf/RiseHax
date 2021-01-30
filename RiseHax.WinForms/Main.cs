@@ -1,18 +1,12 @@
-﻿using Newtonsoft.Json;
-using RiseHax.Core;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RiseHax.WinForms
 {
     public partial class Main : Form
     {
-           
+
         public Main()
         {
             InitializeComponent();

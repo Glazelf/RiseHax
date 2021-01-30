@@ -1,6 +1,4 @@
-﻿using RiseHax.Core;
-
-namespace RiseHax.Hunter
+﻿namespace RiseHax.Hunter
 {
     public class ProgramConfig
     {
