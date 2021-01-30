@@ -108,7 +108,7 @@ namespace RiseHax.WinForms
             this.GroupSysBotConnection.Controls.Add(this.TextBoxPort);
             this.GroupSysBotConnection.Controls.Add(this.ButtonConnect);
             this.GroupSysBotConnection.Controls.Add(this.TextBoxIP);
-            this.GroupSysBotConnection.Location = new System.Drawing.Point(614, 440);
+            this.GroupSysBotConnection.Location = new System.Drawing.Point(370, 436);
             this.GroupSysBotConnection.Name = "GroupSysBotConnection";
             this.GroupSysBotConnection.Size = new System.Drawing.Size(163, 119);
             this.GroupSysBotConnection.TabIndex = 3;
@@ -150,7 +150,7 @@ namespace RiseHax.WinForms
             this.GroupSysBotStatus.Controls.Add(this.ButtonSysbotRead);
             this.GroupSysBotStatus.Location = new System.Drawing.Point(12, 436);
             this.GroupSysBotStatus.Name = "GroupSysBotStatus";
-            this.GroupSysBotStatus.Size = new System.Drawing.Size(596, 119);
+            this.GroupSysBotStatus.Size = new System.Drawing.Size(352, 119);
             this.GroupSysBotStatus.TabIndex = 4;
             this.GroupSysBotStatus.TabStop = false;
             this.GroupSysBotStatus.Text = "Status";
@@ -159,7 +159,7 @@ namespace RiseHax.WinForms
             // 
             this.ButtonSysbotRead.AccessibleName = "ButtonSysbotRead";
             this.ButtonSysbotRead.Enabled = false;
-            this.ButtonSysbotRead.Location = new System.Drawing.Point(521, 85);
+            this.ButtonSysbotRead.Location = new System.Drawing.Point(271, 90);
             this.ButtonSysbotRead.Name = "ButtonSysbotRead";
             this.ButtonSysbotRead.Size = new System.Drawing.Size(75, 23);
             this.ButtonSysbotRead.TabIndex = 14;
@@ -177,7 +177,7 @@ namespace RiseHax.WinForms
             this.TabControlSysBot.Location = new System.Drawing.Point(2, 3);
             this.TabControlSysBot.Name = "TabControlSysBot";
             this.TabControlSysBot.SelectedIndex = 0;
-            this.TabControlSysBot.Size = new System.Drawing.Size(775, 431);
+            this.TabControlSysBot.Size = new System.Drawing.Size(540, 431);
             this.TabControlSysBot.TabIndex = 0;
             // 
             // TabSysBot1Player
@@ -188,7 +188,7 @@ namespace RiseHax.WinForms
             this.TabSysBot1Player.Location = new System.Drawing.Point(4, 22);
             this.TabSysBot1Player.Name = "TabSysBot1Player";
             this.TabSysBot1Player.Padding = new System.Windows.Forms.Padding(3);
-            this.TabSysBot1Player.Size = new System.Drawing.Size(767, 405);
+            this.TabSysBot1Player.Size = new System.Drawing.Size(532, 405);
             this.TabSysBot1Player.TabIndex = 0;
             this.TabSysBot1Player.Text = "Player";
             this.TabSysBot1Player.UseVisualStyleBackColor = true;
@@ -202,7 +202,7 @@ namespace RiseHax.WinForms
             this.GroupSysBotHunterCoords.Controls.Add(this.SysBotHunterCoordYLabel);
             this.GroupSysBotHunterCoords.Controls.Add(this.SysBotHunterCoordXCount);
             this.GroupSysBotHunterCoords.Controls.Add(this.SysBotHunterCoordXLabel);
-            this.GroupSysBotHunterCoords.Location = new System.Drawing.Point(473, 365);
+            this.GroupSysBotHunterCoords.Location = new System.Drawing.Point(236, 362);
             this.GroupSysBotHunterCoords.Name = "GroupSysBotHunterCoords";
             this.GroupSysBotHunterCoords.Size = new System.Drawing.Size(291, 40);
             this.GroupSysBotHunterCoords.TabIndex = 8;
@@ -305,7 +305,7 @@ namespace RiseHax.WinForms
             this.TabSysBot2Items.Location = new System.Drawing.Point(4, 22);
             this.TabSysBot2Items.Name = "TabSysBot2Items";
             this.TabSysBot2Items.Padding = new System.Windows.Forms.Padding(3);
-            this.TabSysBot2Items.Size = new System.Drawing.Size(767, 405);
+            this.TabSysBot2Items.Size = new System.Drawing.Size(532, 405);
             this.TabSysBot2Items.TabIndex = 1;
             this.TabSysBot2Items.Text = "Items";
             this.TabSysBot2Items.UseVisualStyleBackColor = true;
@@ -318,7 +318,7 @@ namespace RiseHax.WinForms
             this.TabSysBot3Quest.Location = new System.Drawing.Point(4, 22);
             this.TabSysBot3Quest.Name = "TabSysBot3Quest";
             this.TabSysBot3Quest.Padding = new System.Windows.Forms.Padding(3);
-            this.TabSysBot3Quest.Size = new System.Drawing.Size(767, 405);
+            this.TabSysBot3Quest.Size = new System.Drawing.Size(532, 405);
             this.TabSysBot3Quest.TabIndex = 2;
             this.TabSysBot3Quest.Text = "Quest";
             this.TabSysBot3Quest.UseVisualStyleBackColor = true;
@@ -328,9 +328,9 @@ namespace RiseHax.WinForms
             this.GroupSysBotHunter.AccessibleName = "GroupSysBotHunter";
             this.GroupSysBotHunter.Controls.Add(this.SysBotHunterHPCount);
             this.GroupSysBotHunter.Controls.Add(this.SysBotHunterHP);
-            this.GroupSysBotHunter.Location = new System.Drawing.Point(391, 6);
+            this.GroupSysBotHunter.Location = new System.Drawing.Point(278, 6);
             this.GroupSysBotHunter.Name = "GroupSysBotHunter";
-            this.GroupSysBotHunter.Size = new System.Drawing.Size(373, 393);
+            this.GroupSysBotHunter.Size = new System.Drawing.Size(249, 393);
             this.GroupSysBotHunter.TabIndex = 3;
             this.GroupSysBotHunter.TabStop = false;
             this.GroupSysBotHunter.Text = "Hunter";
@@ -372,7 +372,7 @@ namespace RiseHax.WinForms
             this.GroupSysBotMonster.Controls.Add(this.SysBotMonsterHPLabel);
             this.GroupSysBotMonster.Location = new System.Drawing.Point(6, 6);
             this.GroupSysBotMonster.Name = "GroupSysBotMonster";
-            this.GroupSysBotMonster.Size = new System.Drawing.Size(379, 393);
+            this.GroupSysBotMonster.Size = new System.Drawing.Size(266, 393);
             this.GroupSysBotMonster.TabIndex = 2;
             this.GroupSysBotMonster.TabStop = false;
             this.GroupSysBotMonster.Text = "Monster";
@@ -409,7 +409,7 @@ namespace RiseHax.WinForms
             this.TabSysBot4Log.Location = new System.Drawing.Point(4, 22);
             this.TabSysBot4Log.Name = "TabSysBot4Log";
             this.TabSysBot4Log.Padding = new System.Windows.Forms.Padding(3);
-            this.TabSysBot4Log.Size = new System.Drawing.Size(767, 405);
+            this.TabSysBot4Log.Size = new System.Drawing.Size(532, 405);
             this.TabSysBot4Log.TabIndex = 3;
             this.TabSysBot4Log.Text = "Log";
             this.TabSysBot4Log.UseVisualStyleBackColor = true;
@@ -420,7 +420,7 @@ namespace RiseHax.WinForms
             this.SysBotLog.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.SysBotLog.Location = new System.Drawing.Point(6, 6);
             this.SysBotLog.Name = "SysBotLog";
-            this.SysBotLog.Size = new System.Drawing.Size(755, 399);
+            this.SysBotLog.Size = new System.Drawing.Size(521, 399);
             this.SysBotLog.TabIndex = 5;
             this.SysBotLog.Text = "Waiting for log...";
             // 
@@ -431,9 +431,9 @@ namespace RiseHax.WinForms
             this.GroupSysBotPouch.Controls.Add(this.SysBotPouchItem2);
             this.GroupSysBotPouch.Controls.Add(this.SysBotPouchItem1);
             this.GroupSysBotPouch.Controls.Add(this.SysBotPouchItem1Count);
-            this.GroupSysBotPouch.Location = new System.Drawing.Point(629, 3);
+            this.GroupSysBotPouch.Location = new System.Drawing.Point(385, 3);
             this.GroupSysBotPouch.Name = "GroupSysBotPouch";
-            this.GroupSysBotPouch.Size = new System.Drawing.Size(135, 356);
+            this.GroupSysBotPouch.Size = new System.Drawing.Size(142, 353);
             this.GroupSysBotPouch.TabIndex = 9;
             this.GroupSysBotPouch.TabStop = false;
             this.GroupSysBotPouch.Text = "Item Pouch";
@@ -490,7 +490,7 @@ namespace RiseHax.WinForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 563);
+            this.ClientSize = new System.Drawing.Size(542, 563);
             this.Controls.Add(this.TabControlSysBot);
             this.Controls.Add(this.GroupSysBotStatus);
             this.Controls.Add(this.GroupSysBotConnection);
