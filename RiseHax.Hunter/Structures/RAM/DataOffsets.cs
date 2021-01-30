@@ -12,6 +12,8 @@
         public const string PointerHunterHP = "[[[main+CD73FA0]+390]+20]+10";
         public const string PointerHunterHPRecoverable = "[[[main+CD76310]+D0]+118]+1C";
 
-        public const string PointerHunterCoords = "[[[main+CDBBF88]+A0]+18]+30";
+        public const string PointerHunterCoordX = "[[[main+CDBBF88]+A0]+18]+30";
+
+        public const string PointerItemPouchItem1 = "[[[main+CD7A060]+68]+70]+44";
     }
 }
