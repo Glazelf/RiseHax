@@ -15,5 +15,10 @@
         public const string PointerHunterCoordX = "[[[main+CDBBF88]+A0]+18]+30";
         // Item counts follow eachother, ad 0x08 to get the next item
         public const string PointerPouchItem1 = "[[[main+CD7A060]+68]+70]+44";
+        // Would preferably get all offsets from just the first item pointer
+        public const string PointerPouchItem2 = "[[[main+CD7A060]+68]+78]+44";
+        public const string PointerPouchItem3 = "[[[main+CD7A060]+68]+80]+44";
+        public const string PointerPouchItem4 = "[[[main+CD7A060]+68]+88]+44";
+        public const string PointerPouchItem5 = "[[[main+CD7A060]+68]+90]+44";
     }
 }
