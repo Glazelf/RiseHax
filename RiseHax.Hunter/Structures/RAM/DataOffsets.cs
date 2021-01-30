@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace RiseHax.Hunter
+﻿namespace RiseHax.Hunter
 {
     public static class DataOffsets
     {
@@ -14,6 +12,6 @@ namespace RiseHax.Hunter
         public const string PointerHunterHP = "[[[main+CD73FA0]+390]+20]+10";
         public const string PointerHunterHPRecoverable = "[[[main+CD76310]+D0]+118]+1C";
 
-        public const string PointerHunterXCoord = "[[[main+CDBBF88]+A0]+18]+30";
+        public const string PointerHunterCoords = "[[[main+CDBBF88]+A0]+18]+30";
     }
 }
