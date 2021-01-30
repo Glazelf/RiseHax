@@ -13,4 +13,8 @@ Have questions? Either [create a discussion](https://github.com/Glazelf/RiseHax/
 <a href="https://discord.gg/2gkybyu"><img src="https://canary.discordapp.com/api/guilds/549214833858576395/widget.png?style=banner2"></a>
 
 ## Credits
+**Contributions:**  
+[Red](https://github.com/hp3721): Finding a ton of pointers and actually understanding C#.  
+[Abyzab](https://github.com/abyzab): Finding more pointers and actually understanding C#.  
+**References:**  
 [Kurt](https://github.com/kwsch): Creating [SysBot](https://github.com/kwsch/SysBot.NET), on which most of this program's core logic is based or in some cases simply "liberately inspired on".
