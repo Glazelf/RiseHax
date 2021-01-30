@@ -36,7 +36,7 @@ namespace RiseHax.WinForms
             this.LabelIP = new System.Windows.Forms.Label();
             this.TextBoxPort = new System.Windows.Forms.TextBox();
             this.GroupSysBotStatus = new System.Windows.Forms.GroupBox();
-            this.ButtonSysbotQuestRead = new System.Windows.Forms.Button();
+            this.ButtonSysbotRead = new System.Windows.Forms.Button();
             this.TabControlSysBot = new System.Windows.Forms.TabControl();
             this.TabSysBot1Player = new System.Windows.Forms.TabPage();
             this.GroupSysBotHunterCoords = new System.Windows.Forms.GroupBox();
@@ -48,19 +48,19 @@ namespace RiseHax.WinForms
             this.SysBotHunterCoordXLabel = new System.Windows.Forms.Label();
             this.TabSysBot2Items = new System.Windows.Forms.TabPage();
             this.TabSysBot3Quest = new System.Windows.Forms.TabPage();
-            this.GroupQuestSysBotPouch = new System.Windows.Forms.GroupBox();
-            this.QuestSysBotTriesRemaining = new System.Windows.Forms.NumericUpDown();
-            this.QuestSysBotPouchTriesLabel = new System.Windows.Forms.Label();
-            this.QuestSysBotPouchMegaPotionLabel = new System.Windows.Forms.Label();
-            this.QuestSysBotPouchMegaPotionCount = new System.Windows.Forms.NumericUpDown();
-            this.GroupQuestSysBotHunter = new System.Windows.Forms.GroupBox();
-            this.QuestSysBotHunterHPCount = new System.Windows.Forms.NumericUpDown();
-            this.QuestSysBotHunterHP = new System.Windows.Forms.Label();
-            this.GroupQuestSysBotMonster = new System.Windows.Forms.GroupBox();
-            this.QuestSysBotMonsterHPCount = new System.Windows.Forms.NumericUpDown();
-            this.QuestSysBotMonsterHPLabel = new System.Windows.Forms.Label();
+            this.GroupSysBotHunter = new System.Windows.Forms.GroupBox();
+            this.SysBotHunterHPCount = new System.Windows.Forms.NumericUpDown();
+            this.SysBotHunterHP = new System.Windows.Forms.Label();
+            this.GroupSysBotMonster = new System.Windows.Forms.GroupBox();
+            this.SysBotMonsterHPCount = new System.Windows.Forms.NumericUpDown();
+            this.SysBotMonsterHPLabel = new System.Windows.Forms.Label();
             this.TabSysBot4Log = new System.Windows.Forms.TabPage();
             this.SysBotLog = new System.Windows.Forms.RichTextBox();
+            this.GroupSysBotPouch = new System.Windows.Forms.GroupBox();
+            this.SysBotPouchItem2Count = new System.Windows.Forms.NumericUpDown();
+            this.SysBotPouchItem2 = new System.Windows.Forms.Label();
+            this.SysBotPouchItem1 = new System.Windows.Forms.Label();
+            this.SysBotPouchItem1Count = new System.Windows.Forms.NumericUpDown();
             this.GroupSysBotConnection.SuspendLayout();
             this.GroupSysBotStatus.SuspendLayout();
             this.TabControlSysBot.SuspendLayout();
@@ -70,14 +70,14 @@ namespace RiseHax.WinForms
             ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterCoordYCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterCoordXCount)).BeginInit();
             this.TabSysBot3Quest.SuspendLayout();
-            this.GroupQuestSysBotPouch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotTriesRemaining)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotPouchMegaPotionCount)).BeginInit();
-            this.GroupQuestSysBotHunter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotHunterHPCount)).BeginInit();
-            this.GroupQuestSysBotMonster.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotMonsterHPCount)).BeginInit();
+            this.GroupSysBotHunter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterHPCount)).BeginInit();
+            this.GroupSysBotMonster.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotMonsterHPCount)).BeginInit();
             this.TabSysBot4Log.SuspendLayout();
+            this.GroupSysBotPouch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotPouchItem2Count)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotPouchItem1Count)).BeginInit();
             this.SuspendLayout();
             // 
             // TextBoxIP
@@ -147,7 +147,7 @@ namespace RiseHax.WinForms
             // GroupSysBotStatus
             // 
             this.GroupSysBotStatus.AccessibleName = "GroupSysBotStatus";
-            this.GroupSysBotStatus.Controls.Add(this.ButtonSysbotQuestRead);
+            this.GroupSysBotStatus.Controls.Add(this.ButtonSysbotRead);
             this.GroupSysBotStatus.Location = new System.Drawing.Point(12, 436);
             this.GroupSysBotStatus.Name = "GroupSysBotStatus";
             this.GroupSysBotStatus.Size = new System.Drawing.Size(596, 119);
@@ -155,17 +155,17 @@ namespace RiseHax.WinForms
             this.GroupSysBotStatus.TabStop = false;
             this.GroupSysBotStatus.Text = "Status";
             // 
-            // ButtonSysbotQuestRead
+            // ButtonSysbotRead
             // 
-            this.ButtonSysbotQuestRead.AccessibleName = "ButtonSysbotQuestRead";
-            this.ButtonSysbotQuestRead.Enabled = false;
-            this.ButtonSysbotQuestRead.Location = new System.Drawing.Point(521, 85);
-            this.ButtonSysbotQuestRead.Name = "ButtonSysbotQuestRead";
-            this.ButtonSysbotQuestRead.Size = new System.Drawing.Size(75, 23);
-            this.ButtonSysbotQuestRead.TabIndex = 14;
-            this.ButtonSysbotQuestRead.Text = "Refresh All";
-            this.ButtonSysbotQuestRead.UseVisualStyleBackColor = true;
-            this.ButtonSysbotQuestRead.Click += new System.EventHandler(this.ButtonSysbotQuestRead_Click);
+            this.ButtonSysbotRead.AccessibleName = "ButtonSysbotRead";
+            this.ButtonSysbotRead.Enabled = false;
+            this.ButtonSysbotRead.Location = new System.Drawing.Point(521, 85);
+            this.ButtonSysbotRead.Name = "ButtonSysbotRead";
+            this.ButtonSysbotRead.Size = new System.Drawing.Size(75, 23);
+            this.ButtonSysbotRead.TabIndex = 14;
+            this.ButtonSysbotRead.Text = "Refresh All";
+            this.ButtonSysbotRead.UseVisualStyleBackColor = true;
+            this.ButtonSysbotRead.Click += new System.EventHandler(this.ButtonSysbotQuestRead_Click);
             // 
             // TabControlSysBot
             // 
@@ -183,6 +183,7 @@ namespace RiseHax.WinForms
             // TabSysBot1Player
             // 
             this.TabSysBot1Player.AccessibleName = "TabSysBot1Player";
+            this.TabSysBot1Player.Controls.Add(this.GroupSysBotPouch);
             this.TabSysBot1Player.Controls.Add(this.GroupSysBotHunterCoords);
             this.TabSysBot1Player.Location = new System.Drawing.Point(4, 22);
             this.TabSysBot1Player.Name = "TabSysBot1Player";
@@ -312,9 +313,8 @@ namespace RiseHax.WinForms
             // TabSysBot3Quest
             // 
             this.TabSysBot3Quest.AccessibleName = "TabSysBot3Quest";
-            this.TabSysBot3Quest.Controls.Add(this.GroupQuestSysBotPouch);
-            this.TabSysBot3Quest.Controls.Add(this.GroupQuestSysBotHunter);
-            this.TabSysBot3Quest.Controls.Add(this.GroupQuestSysBotMonster);
+            this.TabSysBot3Quest.Controls.Add(this.GroupSysBotHunter);
+            this.TabSysBot3Quest.Controls.Add(this.GroupSysBotMonster);
             this.TabSysBot3Quest.Location = new System.Drawing.Point(4, 22);
             this.TabSysBot3Quest.Name = "TabSysBot3Quest";
             this.TabSysBot3Quest.Padding = new System.Windows.Forms.Padding(3);
@@ -323,142 +323,84 @@ namespace RiseHax.WinForms
             this.TabSysBot3Quest.Text = "Quest";
             this.TabSysBot3Quest.UseVisualStyleBackColor = true;
             // 
-            // GroupQuestSysBotPouch
+            // GroupSysBotHunter
             // 
-            this.GroupQuestSysBotPouch.AccessibleName = "GroupQuestSysBotPouch";
-            this.GroupQuestSysBotPouch.Controls.Add(this.QuestSysBotTriesRemaining);
-            this.GroupQuestSysBotPouch.Controls.Add(this.QuestSysBotPouchTriesLabel);
-            this.GroupQuestSysBotPouch.Controls.Add(this.QuestSysBotPouchMegaPotionLabel);
-            this.GroupQuestSysBotPouch.Controls.Add(this.QuestSysBotPouchMegaPotionCount);
-            this.GroupQuestSysBotPouch.Location = new System.Drawing.Point(620, 6);
-            this.GroupQuestSysBotPouch.Name = "GroupQuestSysBotPouch";
-            this.GroupQuestSysBotPouch.Size = new System.Drawing.Size(141, 393);
-            this.GroupQuestSysBotPouch.TabIndex = 4;
-            this.GroupQuestSysBotPouch.TabStop = false;
-            this.GroupQuestSysBotPouch.Text = "Item Pouch";
+            this.GroupSysBotHunter.AccessibleName = "GroupSysBotHunter";
+            this.GroupSysBotHunter.Controls.Add(this.SysBotHunterHPCount);
+            this.GroupSysBotHunter.Controls.Add(this.SysBotHunterHP);
+            this.GroupSysBotHunter.Location = new System.Drawing.Point(391, 6);
+            this.GroupSysBotHunter.Name = "GroupSysBotHunter";
+            this.GroupSysBotHunter.Size = new System.Drawing.Size(373, 393);
+            this.GroupSysBotHunter.TabIndex = 3;
+            this.GroupSysBotHunter.TabStop = false;
+            this.GroupSysBotHunter.Text = "Hunter";
             // 
-            // QuestSysBotTriesRemaining
+            // SysBotHunterHPCount
             // 
-            this.QuestSysBotTriesRemaining.AccessibleName = "QuestSysBotTriesRemaining";
-            this.QuestSysBotTriesRemaining.Enabled = false;
-            this.QuestSysBotTriesRemaining.Location = new System.Drawing.Point(87, 59);
-            this.QuestSysBotTriesRemaining.Name = "QuestSysBotTriesRemaining";
-            this.QuestSysBotTriesRemaining.Size = new System.Drawing.Size(47, 20);
-            this.QuestSysBotTriesRemaining.TabIndex = 6;
-            // 
-            // QuestSysBotPouchTriesLabel
-            // 
-            this.QuestSysBotPouchTriesLabel.AccessibleName = "QuestSysBotPouchTriesLabel";
-            this.QuestSysBotPouchTriesLabel.AutoSize = true;
-            this.QuestSysBotPouchTriesLabel.Location = new System.Drawing.Point(6, 61);
-            this.QuestSysBotPouchTriesLabel.Name = "QuestSysBotPouchTriesLabel";
-            this.QuestSysBotPouchTriesLabel.Size = new System.Drawing.Size(33, 13);
-            this.QuestSysBotPouchTriesLabel.TabIndex = 5;
-            this.QuestSysBotPouchTriesLabel.Text = "Tries:";
-            // 
-            // QuestSysBotPouchMegaPotionLabel
-            // 
-            this.QuestSysBotPouchMegaPotionLabel.AccessibleName = "QuestSysBotPouchMegaPotionLabel";
-            this.QuestSysBotPouchMegaPotionLabel.AutoSize = true;
-            this.QuestSysBotPouchMegaPotionLabel.Location = new System.Drawing.Point(6, 28);
-            this.QuestSysBotPouchMegaPotionLabel.Name = "QuestSysBotPouchMegaPotionLabel";
-            this.QuestSysBotPouchMegaPotionLabel.Size = new System.Drawing.Size(75, 13);
-            this.QuestSysBotPouchMegaPotionLabel.TabIndex = 1;
-            this.QuestSysBotPouchMegaPotionLabel.Text = "Mega Potions:";
-            // 
-            // QuestSysBotPouchMegaPotionCount
-            // 
-            this.QuestSysBotPouchMegaPotionCount.AccessibleName = "QuestSysBotPouchMegaPotionCount";
-            this.QuestSysBotPouchMegaPotionCount.Enabled = false;
-            this.QuestSysBotPouchMegaPotionCount.Location = new System.Drawing.Point(87, 24);
-            this.QuestSysBotPouchMegaPotionCount.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.QuestSysBotPouchMegaPotionCount.Name = "QuestSysBotPouchMegaPotionCount";
-            this.QuestSysBotPouchMegaPotionCount.Size = new System.Drawing.Size(46, 20);
-            this.QuestSysBotPouchMegaPotionCount.TabIndex = 0;
-            this.QuestSysBotPouchMegaPotionCount.ValueChanged += new System.EventHandler(this.QuestSysBotPouchMegaPotionCount_ValueChanged);
-            // 
-            // GroupQuestSysBotHunter
-            // 
-            this.GroupQuestSysBotHunter.AccessibleName = "GroupQuestSysBotHunter";
-            this.GroupQuestSysBotHunter.Controls.Add(this.QuestSysBotHunterHPCount);
-            this.GroupQuestSysBotHunter.Controls.Add(this.QuestSysBotHunterHP);
-            this.GroupQuestSysBotHunter.Location = new System.Drawing.Point(299, 6);
-            this.GroupQuestSysBotHunter.Name = "GroupQuestSysBotHunter";
-            this.GroupQuestSysBotHunter.Size = new System.Drawing.Size(315, 393);
-            this.GroupQuestSysBotHunter.TabIndex = 3;
-            this.GroupQuestSysBotHunter.TabStop = false;
-            this.GroupQuestSysBotHunter.Text = "Hunter";
-            // 
-            // QuestSysBotHunterHPCount
-            // 
-            this.QuestSysBotHunterHPCount.AccessibleName = "QuestSysBotHunterHPCount";
-            this.QuestSysBotHunterHPCount.Enabled = false;
-            this.QuestSysBotHunterHPCount.Location = new System.Drawing.Point(53, 22);
-            this.QuestSysBotHunterHPCount.Maximum = new decimal(new int[] {
+            this.SysBotHunterHPCount.AccessibleName = "SysBotHunterHPCount";
+            this.SysBotHunterHPCount.Enabled = false;
+            this.SysBotHunterHPCount.Location = new System.Drawing.Point(53, 22);
+            this.SysBotHunterHPCount.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
-            this.QuestSysBotHunterHPCount.Name = "QuestSysBotHunterHPCount";
-            this.QuestSysBotHunterHPCount.Size = new System.Drawing.Size(55, 20);
-            this.QuestSysBotHunterHPCount.TabIndex = 6;
-            this.QuestSysBotHunterHPCount.Value = new decimal(new int[] {
+            this.SysBotHunterHPCount.Name = "SysBotHunterHPCount";
+            this.SysBotHunterHPCount.Size = new System.Drawing.Size(55, 20);
+            this.SysBotHunterHPCount.TabIndex = 6;
+            this.SysBotHunterHPCount.Value = new decimal(new int[] {
             100,
             0,
             0,
             0});
-            this.QuestSysBotHunterHPCount.ValueChanged += new System.EventHandler(this.QuestSysBotHunterHPCount_ValueChanged);
+            this.SysBotHunterHPCount.ValueChanged += new System.EventHandler(this.SysBotHunterHPCount_ValueChanged);
             // 
-            // QuestSysBotHunterHP
+            // SysBotHunterHP
             // 
-            this.QuestSysBotHunterHP.AccessibleName = "QuestSysBotHunterHPLabel";
-            this.QuestSysBotHunterHP.AutoSize = true;
-            this.QuestSysBotHunterHP.Location = new System.Drawing.Point(6, 24);
-            this.QuestSysBotHunterHP.Name = "QuestSysBotHunterHP";
-            this.QuestSysBotHunterHP.Size = new System.Drawing.Size(41, 13);
-            this.QuestSysBotHunterHP.TabIndex = 5;
-            this.QuestSysBotHunterHP.Text = "Health:";
+            this.SysBotHunterHP.AccessibleName = "SysBotHunterHPLabel";
+            this.SysBotHunterHP.AutoSize = true;
+            this.SysBotHunterHP.Location = new System.Drawing.Point(6, 24);
+            this.SysBotHunterHP.Name = "SysBotHunterHP";
+            this.SysBotHunterHP.Size = new System.Drawing.Size(41, 13);
+            this.SysBotHunterHP.TabIndex = 5;
+            this.SysBotHunterHP.Text = "Health:";
             // 
-            // GroupQuestSysBotMonster
+            // GroupSysBotMonster
             // 
-            this.GroupQuestSysBotMonster.AccessibleName = "GroupQuestSysBotMonster";
-            this.GroupQuestSysBotMonster.Controls.Add(this.QuestSysBotMonsterHPCount);
-            this.GroupQuestSysBotMonster.Controls.Add(this.QuestSysBotMonsterHPLabel);
-            this.GroupQuestSysBotMonster.Location = new System.Drawing.Point(6, 6);
-            this.GroupQuestSysBotMonster.Name = "GroupQuestSysBotMonster";
-            this.GroupQuestSysBotMonster.Size = new System.Drawing.Size(287, 393);
-            this.GroupQuestSysBotMonster.TabIndex = 2;
-            this.GroupQuestSysBotMonster.TabStop = false;
-            this.GroupQuestSysBotMonster.Text = "Monster";
+            this.GroupSysBotMonster.AccessibleName = "GroupSysBotMonster";
+            this.GroupSysBotMonster.Controls.Add(this.SysBotMonsterHPCount);
+            this.GroupSysBotMonster.Controls.Add(this.SysBotMonsterHPLabel);
+            this.GroupSysBotMonster.Location = new System.Drawing.Point(6, 6);
+            this.GroupSysBotMonster.Name = "GroupSysBotMonster";
+            this.GroupSysBotMonster.Size = new System.Drawing.Size(379, 393);
+            this.GroupSysBotMonster.TabIndex = 2;
+            this.GroupSysBotMonster.TabStop = false;
+            this.GroupSysBotMonster.Text = "Monster";
             // 
-            // QuestSysBotMonsterHPCount
+            // SysBotMonsterHPCount
             // 
-            this.QuestSysBotMonsterHPCount.AccessibleName = "QuestSysBotMonsterHPCount";
-            this.QuestSysBotMonsterHPCount.Enabled = false;
-            this.QuestSysBotMonsterHPCount.Location = new System.Drawing.Point(53, 21);
-            this.QuestSysBotMonsterHPCount.Maximum = new decimal(new int[] {
+            this.SysBotMonsterHPCount.AccessibleName = "SysBotMonsterHPCount";
+            this.SysBotMonsterHPCount.Enabled = false;
+            this.SysBotMonsterHPCount.Location = new System.Drawing.Point(53, 21);
+            this.SysBotMonsterHPCount.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
-            this.QuestSysBotMonsterHPCount.Name = "QuestSysBotMonsterHPCount";
-            this.QuestSysBotMonsterHPCount.Size = new System.Drawing.Size(67, 20);
-            this.QuestSysBotMonsterHPCount.TabIndex = 8;
-            this.QuestSysBotMonsterHPCount.ValueChanged += new System.EventHandler(this.QuestSysBotMonsterHPCount_ValueChanged);
+            this.SysBotMonsterHPCount.Name = "SysBotMonsterHPCount";
+            this.SysBotMonsterHPCount.Size = new System.Drawing.Size(67, 20);
+            this.SysBotMonsterHPCount.TabIndex = 8;
+            this.SysBotMonsterHPCount.ValueChanged += new System.EventHandler(this.SysBotMonsterHPCount_ValueChanged);
             // 
-            // QuestSysBotMonsterHPLabel
+            // SysBotMonsterHPLabel
             // 
-            this.QuestSysBotMonsterHPLabel.AccessibleName = "QuestSysBotMonsterHPLabel";
-            this.QuestSysBotMonsterHPLabel.AutoSize = true;
-            this.QuestSysBotMonsterHPLabel.Location = new System.Drawing.Point(6, 22);
-            this.QuestSysBotMonsterHPLabel.Name = "QuestSysBotMonsterHPLabel";
-            this.QuestSysBotMonsterHPLabel.Size = new System.Drawing.Size(41, 13);
-            this.QuestSysBotMonsterHPLabel.TabIndex = 7;
-            this.QuestSysBotMonsterHPLabel.Text = "Health:";
+            this.SysBotMonsterHPLabel.AccessibleName = "SysBotMonsterHPLabel";
+            this.SysBotMonsterHPLabel.AutoSize = true;
+            this.SysBotMonsterHPLabel.Location = new System.Drawing.Point(6, 22);
+            this.SysBotMonsterHPLabel.Name = "SysBotMonsterHPLabel";
+            this.SysBotMonsterHPLabel.Size = new System.Drawing.Size(41, 13);
+            this.SysBotMonsterHPLabel.TabIndex = 7;
+            this.SysBotMonsterHPLabel.Text = "Health:";
             // 
             // TabSysBot4Log
             // 
@@ -481,6 +423,68 @@ namespace RiseHax.WinForms
             this.SysBotLog.Size = new System.Drawing.Size(755, 399);
             this.SysBotLog.TabIndex = 5;
             this.SysBotLog.Text = "Waiting for log...";
+            // 
+            // GroupSysBotPouch
+            // 
+            this.GroupSysBotPouch.AccessibleName = "GroupSysBotPouch";
+            this.GroupSysBotPouch.Controls.Add(this.SysBotPouchItem2Count);
+            this.GroupSysBotPouch.Controls.Add(this.SysBotPouchItem2);
+            this.GroupSysBotPouch.Controls.Add(this.SysBotPouchItem1);
+            this.GroupSysBotPouch.Controls.Add(this.SysBotPouchItem1Count);
+            this.GroupSysBotPouch.Location = new System.Drawing.Point(629, 3);
+            this.GroupSysBotPouch.Name = "GroupSysBotPouch";
+            this.GroupSysBotPouch.Size = new System.Drawing.Size(135, 356);
+            this.GroupSysBotPouch.TabIndex = 9;
+            this.GroupSysBotPouch.TabStop = false;
+            this.GroupSysBotPouch.Text = "Item Pouch";
+            // 
+            // SysBotPouchItem2Count
+            // 
+            this.SysBotPouchItem2Count.AccessibleName = "SysBotPouchItem2Count";
+            this.SysBotPouchItem2Count.Enabled = false;
+            this.SysBotPouchItem2Count.Location = new System.Drawing.Point(87, 60);
+            this.SysBotPouchItem2Count.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.SysBotPouchItem2Count.Name = "SysBotPouchItem2Count";
+            this.SysBotPouchItem2Count.Size = new System.Drawing.Size(46, 20);
+            this.SysBotPouchItem2Count.TabIndex = 3;
+            // 
+            // SysBotPouchItem2
+            // 
+            this.SysBotPouchItem2.AccessibleName = "QuestSysBotPouchItem2";
+            this.SysBotPouchItem2.AutoSize = true;
+            this.SysBotPouchItem2.Location = new System.Drawing.Point(6, 60);
+            this.SysBotPouchItem2.Name = "SysBotPouchItem2";
+            this.SysBotPouchItem2.Size = new System.Drawing.Size(39, 13);
+            this.SysBotPouchItem2.TabIndex = 2;
+            this.SysBotPouchItem2.Text = "Item 2:";
+            // 
+            // SysBotPouchItem1
+            // 
+            this.SysBotPouchItem1.AccessibleName = "SysBotPouchItem1";
+            this.SysBotPouchItem1.AutoSize = true;
+            this.SysBotPouchItem1.Location = new System.Drawing.Point(6, 28);
+            this.SysBotPouchItem1.Name = "SysBotPouchItem1";
+            this.SysBotPouchItem1.Size = new System.Drawing.Size(39, 13);
+            this.SysBotPouchItem1.TabIndex = 1;
+            this.SysBotPouchItem1.Text = "Item 1:";
+            // 
+            // SysBotPouchItem1Count
+            // 
+            this.SysBotPouchItem1Count.AccessibleName = "SysBotPouchItem1Count";
+            this.SysBotPouchItem1Count.Enabled = false;
+            this.SysBotPouchItem1Count.Location = new System.Drawing.Point(87, 24);
+            this.SysBotPouchItem1Count.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.SysBotPouchItem1Count.Name = "SysBotPouchItem1Count";
+            this.SysBotPouchItem1Count.Size = new System.Drawing.Size(46, 20);
+            this.SysBotPouchItem1Count.TabIndex = 0;
             // 
             // SysBotUI
             // 
@@ -505,17 +509,17 @@ namespace RiseHax.WinForms
             ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterCoordYCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterCoordXCount)).EndInit();
             this.TabSysBot3Quest.ResumeLayout(false);
-            this.GroupQuestSysBotPouch.ResumeLayout(false);
-            this.GroupQuestSysBotPouch.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotTriesRemaining)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotPouchMegaPotionCount)).EndInit();
-            this.GroupQuestSysBotHunter.ResumeLayout(false);
-            this.GroupQuestSysBotHunter.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotHunterHPCount)).EndInit();
-            this.GroupQuestSysBotMonster.ResumeLayout(false);
-            this.GroupQuestSysBotMonster.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.QuestSysBotMonsterHPCount)).EndInit();
+            this.GroupSysBotHunter.ResumeLayout(false);
+            this.GroupSysBotHunter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterHPCount)).EndInit();
+            this.GroupSysBotMonster.ResumeLayout(false);
+            this.GroupSysBotMonster.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotMonsterHPCount)).EndInit();
             this.TabSysBot4Log.ResumeLayout(false);
+            this.GroupSysBotPouch.ResumeLayout(false);
+            this.GroupSysBotPouch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotPouchItem2Count)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotPouchItem1Count)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -533,20 +537,15 @@ namespace RiseHax.WinForms
         private System.Windows.Forms.TabPage TabSysBot1Player;
         private System.Windows.Forms.TabPage TabSysBot2Items;
         private System.Windows.Forms.TabPage TabSysBot3Quest;
-        private System.Windows.Forms.NumericUpDown QuestSysBotPouchMegaPotionCount;
-        private System.Windows.Forms.Label QuestSysBotPouchMegaPotionLabel;
-        private System.Windows.Forms.GroupBox GroupQuestSysBotPouch;
-        private System.Windows.Forms.GroupBox GroupQuestSysBotHunter;
-        private System.Windows.Forms.GroupBox GroupQuestSysBotMonster;
-        private System.Windows.Forms.NumericUpDown QuestSysBotHunterHPCount;
-        private System.Windows.Forms.Label QuestSysBotHunterHP;
-        private System.Windows.Forms.NumericUpDown QuestSysBotMonsterHPCount;
-        private System.Windows.Forms.Label QuestSysBotMonsterHPLabel;
-        private System.Windows.Forms.Button ButtonSysbotQuestRead;
+        private System.Windows.Forms.GroupBox GroupSysBotHunter;
+        private System.Windows.Forms.GroupBox GroupSysBotMonster;
+        private System.Windows.Forms.NumericUpDown SysBotHunterHPCount;
+        private System.Windows.Forms.Label SysBotHunterHP;
+        private System.Windows.Forms.NumericUpDown SysBotMonsterHPCount;
+        private System.Windows.Forms.Label SysBotMonsterHPLabel;
+        private System.Windows.Forms.Button ButtonSysbotRead;
         private System.Windows.Forms.TabPage TabSysBot4Log;
         private System.Windows.Forms.RichTextBox SysBotLog;
-        private System.Windows.Forms.Label QuestSysBotPouchTriesLabel;
-        private System.Windows.Forms.NumericUpDown QuestSysBotTriesRemaining;
         private System.Windows.Forms.GroupBox GroupSysBotHunterCoords;
         private System.Windows.Forms.NumericUpDown SysBotHunterCoordZCount;
         private System.Windows.Forms.Label SysBotHunterCoordZLabel;
@@ -554,5 +553,10 @@ namespace RiseHax.WinForms
         private System.Windows.Forms.Label SysBotHunterCoordYLabel;
         private System.Windows.Forms.NumericUpDown SysBotHunterCoordXCount;
         private System.Windows.Forms.Label SysBotHunterCoordXLabel;
+        private System.Windows.Forms.GroupBox GroupSysBotPouch;
+        private System.Windows.Forms.NumericUpDown SysBotPouchItem2Count;
+        private System.Windows.Forms.Label SysBotPouchItem2;
+        private System.Windows.Forms.Label SysBotPouchItem1;
+        private System.Windows.Forms.NumericUpDown SysBotPouchItem1Count;
     }
 }
