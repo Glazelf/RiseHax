@@ -25,9 +25,14 @@ namespace RiseHax.WinForms
         public bool Connected = false;
         public ISwitchConnectionSync Connection;
 
+        // Declare offsets
         ulong OffsetHunterHP;
         ulong OffsetHunterHPRecoverable;
-        ulong OffsetHunterCoords;
+        ulong OffsetHunterCoordX;
+        ulong OffsetHunterCoordY;
+        ulong OffsetHunterCoordZ;
+        ulong OffsetHunterPouchItem1;
+        ulong OffsetHunterPouchItem2;
 
         public void SysBotUI_Load(object sender, EventArgs e)
         {
@@ -53,11 +58,10 @@ namespace RiseHax.WinForms
                 SysBotHunterCoordYCount.Enabled = true;
                 SysBotHunterCoordZCount.Enabled = true;
                 // Quest
-                QuestSysBotMonsterHPCount.Enabled = true;
-                QuestSysBotHunterHPCount.Enabled = true;
-                QuestSysBotPouchMegaPotionCount.Enabled = true;
-                ButtonSysbotQuestRead.Enabled = true;
-                QuestSysBotTriesRemaining.Enabled = true;
+                SysBotMonsterHPCount.Enabled = true;
+                SysBotHunterHPCount.Enabled = true;
+                SysBotPouchItem1Count.Enabled = true;
+                ButtonSysbotRead.Enabled = true;
 
                 Connected = true;
                 ButtonConnect.Text = "Diconnect";
@@ -73,30 +77,29 @@ namespace RiseHax.WinForms
                 SysBotHunterCoordYCount.Enabled = false;
                 SysBotHunterCoordZCount.Enabled = false;
                 // Quest
-                QuestSysBotMonsterHPCount.Enabled = false;
-                QuestSysBotHunterHPCount.Enabled = false;
-                QuestSysBotPouchMegaPotionCount.Enabled = false;
-                ButtonSysbotQuestRead.Enabled = false;
-                QuestSysBotTriesRemaining.Enabled = false;
+                SysBotMonsterHPCount.Enabled = false;
+                SysBotHunterHPCount.Enabled = false;
+                SysBotPouchItem1Count.Enabled = false;
+                ButtonSysbotRead.Enabled = false;
 
                 Connected = false;
                 ButtonConnect.Text = "Connect";
             }
         }
 
-        private void QuestSysBotMonsterHPCount_ValueChanged(object sender, EventArgs e)
+        private void SysBotMonsterHPCount_ValueChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void QuestSysBotPouchMegaPotionCount_ValueChanged(object sender, EventArgs e)
+        private void SysBotPouchMegaPotionCount_ValueChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void QuestSysBotHunterHPCount_ValueChanged(object sender, EventArgs e)
+        private void SysBotHunterHPCount_ValueChanged(object sender, EventArgs e)
         {
-            byte value = Convert.ToByte(QuestSysBotHunterHPCount.Value);
+            byte value = Convert.ToByte(SysBotHunterHPCount.Value);
             byte[] byteArray = new byte[1];
             byteArray[0] = value;
             Connection.WriteBytesAbsolute(byteArray, OffsetHunterHP);
@@ -110,44 +113,55 @@ namespace RiseHax.WinForms
 
         private void SysBotHunterCoordXCount_ValueChanged(object sender, EventArgs e)
         {
-            WriteCoords();
+            float floatX = (float)SysBotHunterCoordXCount.Value;
+            byte[] Bytes = BitConverter.GetBytes(floatX);
+            Connection.WriteBytesAbsolute(Bytes, OffsetHunterCoordX);
         }
 
         private void SysBotHunterCoordYCount_ValueChanged(object sender, EventArgs e)
         {
-            WriteCoords();
+            float floatY = (float)SysBotHunterCoordYCount.Value;
+            byte[] Bytes = BitConverter.GetBytes(floatY);
+            Connection.WriteBytesAbsolute(Bytes, OffsetHunterCoordY);
         }
 
         private void SysBotHunterCoordZCount_ValueChanged(object sender, EventArgs e)
         {
-            WriteCoords();
+            float floatZ = (float)SysBotHunterCoordZCount.Value;
+            byte[] Bytes = BitConverter.GetBytes(floatZ);
+            Connection.WriteBytesAbsolute(Bytes, OffsetHunterCoordZ);
         }
 
         private void ReloadValues()
         {
-            OffsetHunterHP = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterHP);
+            ulong OffsetHunterHP = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterHP);
             OffsetHunterHPRecoverable = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterHPRecoverable);
-            OffsetHunterCoords = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterCoords);
+            OffsetHunterCoordX = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterCoordX);
+            OffsetHunterCoordY = OffsetHunterCoordX + 0x4;
+            OffsetHunterCoordZ = OffsetHunterCoordX + 0x8;
 
-            byte[] ByteArrayHunterCoords = Connection.ReadBytesAbsolute(OffsetHunterCoords, 12);
-            float HunterCoordX = BitConverter.ToSingle(ByteArrayHunterCoords, 0);
-            float HunterCoordY = BitConverter.ToSingle(ByteArrayHunterCoords, 4);
-            float HunterCoordZ = BitConverter.ToSingle(ByteArrayHunterCoords, 8);
+            byte[] ByteArrayHunterCoordX = Connection.ReadBytesAbsolute(OffsetHunterCoordX, 4);
+            byte[] ByteArrayHunterCoordY = Connection.ReadBytesAbsolute(OffsetHunterCoordY, 4);
+            byte[] ByteArrayHunterCoordZ = Connection.ReadBytesAbsolute(OffsetHunterCoordZ, 4);
+            float HunterCoordX = BitConverter.ToSingle(ByteArrayHunterCoordX, 0);
+            float HunterCoordY = BitConverter.ToSingle(ByteArrayHunterCoordY, 0);
+            float HunterCoordZ = BitConverter.ToSingle(ByteArrayHunterCoordZ, 0);
 
             uint HunterHP = Connection.ReadBytesAbsolute(OffsetHunterHP, 1)[0];
-            QuestSysBotHunterHPCount.Value = HunterHP;
+            SysBotHunterHPCount.Value = HunterHP;
             SysBotHunterCoordXCount.Value = (decimal)HunterCoordX;
             SysBotHunterCoordYCount.Value = (decimal)HunterCoordY;
             SysBotHunterCoordZCount.Value = (decimal)HunterCoordZ;
         }
 
+        // Currently unused since writing all coords at once is funky and reading them back out afterwards creates an infinite loop
         private void WriteCoords()
         {
             float floatX = (float)SysBotHunterCoordXCount.Value;
             float floatY = (float)SysBotHunterCoordYCount.Value;
             float floatZ = (float)SysBotHunterCoordZCount.Value;
             byte[] Bytes = ByteArrays.Combine(BitConverter.GetBytes(floatX), BitConverter.GetBytes(floatY), BitConverter.GetBytes(floatZ));
-            Connection.WriteBytesAbsolute(Bytes, OffsetHunterCoords);
+            Connection.WriteBytesAbsolute(Bytes, OffsetHunterCoordX);
         }
     }
 }
