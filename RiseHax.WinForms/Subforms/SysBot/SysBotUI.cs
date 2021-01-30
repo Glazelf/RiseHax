@@ -189,10 +189,15 @@ namespace RiseHax.WinForms
             OffsetHunterHP = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterHP);
             OffsetHunterHPRecoverable = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterHPRecoverable);
             OffsetHunterPouchItem1 = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerPouchItem1);
-            OffsetHunterPouchItem2 = OffsetHunterPouchItem1 + 0x08;
-            OffsetHunterPouchItem3 = OffsetHunterPouchItem1 + 0x10;
-            OffsetHunterPouchItem4 = OffsetHunterPouchItem1 + 0x18;
-            OffsetHunterPouchItem5 = OffsetHunterPouchItem1 + 0x20;
+            // Would preferably get all offsets from just the first item pointer
+            OffsetHunterPouchItem2 = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerPouchItem2);
+            OffsetHunterPouchItem3 = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerPouchItem3);
+            OffsetHunterPouchItem4 = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerPouchItem4);
+            OffsetHunterPouchItem5 = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerPouchItem5);
+            // OffsetHunterPouchItem2 = OffsetHunterPouchItem1 + 0x08;
+            // OffsetHunterPouchItem3 = OffsetHunterPouchItem1 + 0x10;
+            // OffsetHunterPouchItem4 = OffsetHunterPouchItem1 + 0x18;
+            // OffsetHunterPouchItem5 = OffsetHunterPouchItem1 + 0x20;
             OffsetHunterCoordX = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterCoordX);
             OffsetHunterCoordY = OffsetHunterCoordX + 0x4;
             OffsetHunterCoordZ = OffsetHunterCoordX + 0x8;
