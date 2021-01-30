@@ -1,7 +1,6 @@
-﻿using Newtonsoft.Json;
-using RiseHax.Core;
-using RiseHax.Injection;
+﻿using RiseHax.Core;
 using RiseHax.Hunter;
+using RiseHax.Injection;
 using System;
 using System.Windows.Forms;
 
@@ -13,7 +12,7 @@ namespace RiseHax.WinForms
 
         private static readonly string WorkingDirectory = Application.StartupPath;
         //private static readonly string ConfigPath = Path.Combine(WorkingDirectory, "config.json");
-        
+
 
         public SysBotUI()
         {
@@ -28,25 +27,11 @@ namespace RiseHax.WinForms
 
         ulong OffsetHunterHP;
         ulong OffsetHunterHPRecoverable;
-        ulong OffsetHunterCoordX;
-
-        private void ReloadValues()
-        {
-            OffsetHunterHP = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterHP);
-            OffsetHunterHPRecoverable = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterHPRecoverable);
-            OffsetHunterCoordX = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterXCoord);
-
-            byte[] ByteArrayHunterCoordX = Connection.ReadBytesAbsolute(OffsetHunterCoordX, 4);
-
-            uint HunterHP = Connection.ReadBytesAbsolute(OffsetHunterHP, 1)[0];
-            int HunterCoordX = BitConverter.ToInt32(ByteArrayHunterCoordX, 0);
-            QuestSysBotHunterHPCount.Value = HunterHP;
-            SysBotHunterCoordXCount.Value = HunterCoordX;
-        }
+        ulong OffsetHunterCoords;
 
         public void SysBotUI_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void ButtonConnect_Click(object sender, EventArgs e)
@@ -93,7 +78,7 @@ namespace RiseHax.WinForms
                 QuestSysBotPouchMegaPotionCount.Enabled = false;
                 ButtonSysbotQuestRead.Enabled = false;
                 QuestSysBotTriesRemaining.Enabled = false;
-                
+
                 Connected = false;
                 ButtonConnect.Text = "Connect";
             }
@@ -125,10 +110,44 @@ namespace RiseHax.WinForms
 
         private void SysBotHunterCoordXCount_ValueChanged(object sender, EventArgs e)
         {
-            int intValue = (int)SysBotHunterCoordXCount.Value;
-            byte[] intBytes = BitConverter.GetBytes(intValue);
-            byte[] result = intBytes;
-            Connection.WriteBytesAbsolute(result, OffsetHunterCoordX);
+            WriteCoords();
+        }
+
+        private void SysBotHunterCoordYCount_ValueChanged(object sender, EventArgs e)
+        {
+            WriteCoords();
+        }
+
+        private void SysBotHunterCoordZCount_ValueChanged(object sender, EventArgs e)
+        {
+            WriteCoords();
+        }
+
+        private void ReloadValues()
+        {
+            OffsetHunterHP = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterHP);
+            OffsetHunterHPRecoverable = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterHPRecoverable);
+            OffsetHunterCoords = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterCoords);
+
+            byte[] ByteArrayHunterCoords = Connection.ReadBytesAbsolute(OffsetHunterCoords, 12);
+            float HunterCoordX = BitConverter.ToSingle(ByteArrayHunterCoords, 0);
+            float HunterCoordY = BitConverter.ToSingle(ByteArrayHunterCoords, 4);
+            float HunterCoordZ = BitConverter.ToSingle(ByteArrayHunterCoords, 8);
+
+            uint HunterHP = Connection.ReadBytesAbsolute(OffsetHunterHP, 1)[0];
+            QuestSysBotHunterHPCount.Value = HunterHP;
+            SysBotHunterCoordXCount.Value = (decimal)HunterCoordX;
+            SysBotHunterCoordYCount.Value = (decimal)HunterCoordY;
+            SysBotHunterCoordZCount.Value = (decimal)HunterCoordZ;
+        }
+
+        private void WriteCoords()
+        {
+            float floatX = (float)SysBotHunterCoordXCount.Value;
+            float floatY = (float)SysBotHunterCoordYCount.Value;
+            float floatZ = (float)SysBotHunterCoordZCount.Value;
+            byte[] Bytes = ByteArrays.Combine(BitConverter.GetBytes(floatX), BitConverter.GetBytes(floatY), BitConverter.GetBytes(floatZ));
+            Connection.WriteBytesAbsolute(Bytes, OffsetHunterCoords);
         }
     }
 }
