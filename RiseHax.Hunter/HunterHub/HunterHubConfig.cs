@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-
-// ReSharper disable AutoPropertyCanBeMadeGetOnly.Global
+﻿// ReSharper disable AutoPropertyCanBeMadeGetOnly.Global
 
 namespace RiseHax.Hunter
 {
