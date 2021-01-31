@@ -1,13 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net46;net5.0-windows</TargetFrameworks>
+    <TargetFrameworks>net47;net5.0-windows</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="SysBot.Base">
+      <HintPath>..\References\SysBot.Base.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 
 
 

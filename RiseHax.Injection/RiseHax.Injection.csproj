@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net46;net5.0-windows</TargetFrameworks>
+    <TargetFrameworks>net47;net5.0-windows</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net46|AnyCPU'">
@@ -16,6 +16,13 @@
 
   <ItemGroup>
     <PackageReference Include="NETStandard.Library" Version="2.0.3" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Reference Include="SysBot.Base">
+      <HintPath>..\References\SysBot.Base.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
