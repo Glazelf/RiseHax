@@ -2,9 +2,9 @@
 
 namespace RiseHax.WinForms
 {
-    class ByteArrays
+    class BytesHandler
     {
-        public static byte[] Combine(byte[] first, byte[] second, byte[] third)
+        public static byte[] CombineArrays(byte[] first, byte[] second, byte[] third)
         {
             byte[] ret = new byte[first.Length + second.Length + third.Length];
             Buffer.BlockCopy(first, 0, ret, 0, first.Length);
