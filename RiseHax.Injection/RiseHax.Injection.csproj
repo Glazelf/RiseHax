@@ -13,16 +13,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-
   <ItemGroup>
     <PackageReference Include="NETStandard.Library" Version="2.0.3" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <Reference Include="SysBot.Base">
-      <HintPath>..\References\SysBot.Base.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
   <ItemGroup>
