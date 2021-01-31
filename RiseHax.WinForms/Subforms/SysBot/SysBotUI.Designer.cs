@@ -228,7 +228,7 @@ namespace RiseHax.WinForms
             this.SysBotPouchItem5Count.Enabled = false;
             this.SysBotPouchItem5Count.Location = new System.Drawing.Point(87, 160);
             this.SysBotPouchItem5Count.Maximum = new decimal(new int[] {
-            99,
+            65536,
             0,
             0,
             0});
@@ -253,7 +253,7 @@ namespace RiseHax.WinForms
             this.SysBotPouchItem4Count.Enabled = false;
             this.SysBotPouchItem4Count.Location = new System.Drawing.Point(87, 127);
             this.SysBotPouchItem4Count.Maximum = new decimal(new int[] {
-            99,
+            65536,
             0,
             0,
             0});
@@ -278,7 +278,7 @@ namespace RiseHax.WinForms
             this.SysBotPouchItem3Count.Enabled = false;
             this.SysBotPouchItem3Count.Location = new System.Drawing.Point(87, 94);
             this.SysBotPouchItem3Count.Maximum = new decimal(new int[] {
-            99,
+            65536,
             0,
             0,
             0});
@@ -303,7 +303,7 @@ namespace RiseHax.WinForms
             this.SysBotPouchItem2Count.Enabled = false;
             this.SysBotPouchItem2Count.Location = new System.Drawing.Point(87, 60);
             this.SysBotPouchItem2Count.Maximum = new decimal(new int[] {
-            99,
+            65536,
             0,
             0,
             0});
@@ -338,7 +338,7 @@ namespace RiseHax.WinForms
             this.SysBotPouchItem1Count.Enabled = false;
             this.SysBotPouchItem1Count.Location = new System.Drawing.Point(87, 24);
             this.SysBotPouchItem1Count.Maximum = new decimal(new int[] {
-            99,
+            65536,
             0,
             0,
             0});
