@@ -69,7 +69,7 @@ namespace RiseHax.WinForms
                 SysBotHunterHPCount.Enabled = true;
 
                 Connected = true;
-                ButtonConnect.Text = "Diconnect";
+                ButtonConnect.Text = "Disconnect";
             }
             else
             {
@@ -202,7 +202,7 @@ namespace RiseHax.WinForms
             SysBotPouchItem4Count.Value = PouchItem4Count;
             SysBotPouchItem5Count.Value = PouchItem5Count;
 
-            //Coordinates
+            // Coordinates
             float HunterCoordX = BitConverter.ToSingle(Connection.ReadBytesAbsolute(OffsetHunterCoordX, 4), 0);
             float HunterCoordY = BitConverter.ToSingle(Connection.ReadBytesAbsolute(OffsetHunterCoordY, 4), 0);
             float HunterCoordZ = BitConverter.ToSingle(Connection.ReadBytesAbsolute(OffsetHunterCoordZ, 4), 0);
@@ -230,10 +230,10 @@ namespace RiseHax.WinForms
             int numHunterItems = 24;
 
             ulong[] itemCountAddresses = new ulong[numHunterItems];
-            ulong pouchAdress = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerPouchItems);
+            ulong pouchAddress = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerPouchItems);
             for (uint i = 0; i < numHunterItems; i++)
             {
-                itemCountAddresses[i] = pouchAdress + i * 0x60;
+                itemCountAddresses[i] = pouchAddress + i * 0x60;
             }
             return itemCountAddresses;
         }
