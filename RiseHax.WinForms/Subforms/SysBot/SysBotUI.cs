@@ -230,10 +230,10 @@ namespace RiseHax.WinForms
             int numHunterItems = 24;
 
             ulong[] itemCountAddresses = new ulong[numHunterItems];
-            ulong pouchAdress = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerPouchItems);
+            ulong pouchAddress = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerPouchItems);
             for (uint i = 0; i < numHunterItems; i++)
             {
-                itemCountAddresses[i] = pouchAdress + i * 0x60;
+                itemCountAddresses[i] = pouchAddress + i * 0x60;
             }
             return itemCountAddresses;
         }
