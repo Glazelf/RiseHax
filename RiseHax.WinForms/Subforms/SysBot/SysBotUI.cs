@@ -1,4 +1,4 @@
-﻿using RiseHax.Core;
+﻿using SysBot.Base;
 using RiseHax.Hunter;
 using RiseHax.Injection;
 using System;

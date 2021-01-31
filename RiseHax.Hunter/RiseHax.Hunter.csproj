@@ -9,10 +9,6 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\RiseHax.Core\RiseHax.Core.csproj" />
-  </ItemGroup>
-
 
 
 </Project>

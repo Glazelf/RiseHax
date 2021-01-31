@@ -38,10 +38,6 @@
     </EmbeddedResource>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\RiseHax.Core\RiseHax.Core.csproj" />
-  </ItemGroup>
-
   <ItemGroup Condition="'$(TargetFramework)' == 'net5.0-windows'">
     <PackageReference Include="System.Configuration.ConfigurationManager">
       <Version>5.0.0</Version>
