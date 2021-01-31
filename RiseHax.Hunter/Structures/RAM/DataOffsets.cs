@@ -11,9 +11,9 @@
         // Pointers --> Use .ReadBytesAbsolute()
         public const string PointerHunterHP = "[[[main+CD73FA0]+390]+20]+10";
         public const string PointerHunterHPRecoverable = "[[[main+CD76310]+D0]+118]+1C";
-        // Coords are directly after eachother, 4 bytes each so add 0x4 to get the next coord
+        // Co-ords are directly after each other, 4 bytes each so add 0x04 to get the next co-ord.
         public const string PointerHunterCoordX = "[[[main+CDBBF88]+A0]+18]+30";
-        // Item counts follow eachother, ad 0x08 to get the next item
+        // Item counts follow each other, add 0x08 to get the next item.
         public const string PointerPouchItems = "[[[main+CD7A060]+68]+70]+44";
     }
 }
