@@ -11,7 +11,7 @@ namespace RiseHax.WinForms
 #pragma warning disable CA1416 // Do not catch Win7 warning
 
         private static readonly string WorkingDirectory = Application.StartupPath;
-        //private static readonly string ConfigPath = Path.Combine(WorkingDirectory, "config.json");
+        //private static readonly string ConfigPath = Path.CombineArrays(WorkingDirectory, "config.json");
 
 
         public SysBotUI()
@@ -28,15 +28,11 @@ namespace RiseHax.WinForms
         // Declare offsets
         ulong OffsetHunterHP;
         ulong OffsetHunterHPRecoverable;
-        ulong OffsetHunterPouchItem1;
-        ulong OffsetHunterPouchItem2;
-        ulong OffsetHunterPouchItem3;
-        ulong OffsetHunterPouchItem4;
-        ulong OffsetHunterPouchItem5;
+        ulong[] OffsetPouchItemCounts;
         ulong OffsetHunterCoordX;
         ulong OffsetHunterCoordY;
         ulong OffsetHunterCoordZ;
-        
+
         public void SysBotUI_Load(object sender, EventArgs e)
         {
 
@@ -126,7 +122,7 @@ namespace RiseHax.WinForms
             byte value = Convert.ToByte(SysBotPouchItem1Count.Value);
             byte[] byteArray = new byte[1];
             byteArray[0] = value;
-            Connection.WriteBytesAbsolute(byteArray, OffsetHunterPouchItem1);
+            Connection.WriteBytesAbsolute(byteArray, OffsetPouchItemCounts[0]);
         }
 
         private void SysBotPouchItem2Count_ValueChanged(object sender, EventArgs e)
@@ -134,7 +130,7 @@ namespace RiseHax.WinForms
             byte value = Convert.ToByte(SysBotPouchItem2Count.Value);
             byte[] byteArray = new byte[1];
             byteArray[0] = value;
-            Connection.WriteBytesAbsolute(byteArray, OffsetHunterPouchItem2);
+            Connection.WriteBytesAbsolute(byteArray, OffsetPouchItemCounts[1]);
         }
 
         private void SysBotPouchItem3Count_ValueChanged(object sender, EventArgs e)
@@ -142,7 +138,7 @@ namespace RiseHax.WinForms
             byte value = Convert.ToByte(SysBotPouchItem3Count.Value);
             byte[] byteArray = new byte[1];
             byteArray[0] = value;
-            Connection.WriteBytesAbsolute(byteArray, OffsetHunterPouchItem3);
+            Connection.WriteBytesAbsolute(byteArray, OffsetPouchItemCounts[2]);
         }
 
         private void SysBotPouchItem4Count_ValueChanged(object sender, EventArgs e)
@@ -150,7 +146,7 @@ namespace RiseHax.WinForms
             byte value = Convert.ToByte(SysBotPouchItem4Count.Value);
             byte[] byteArray = new byte[1];
             byteArray[0] = value;
-            Connection.WriteBytesAbsolute(byteArray, OffsetHunterPouchItem4);
+            Connection.WriteBytesAbsolute(byteArray, OffsetPouchItemCounts[3]);
         }
 
         private void SysBotPouchItem5Count_ValueChanged(object sender, EventArgs e)
@@ -158,7 +154,7 @@ namespace RiseHax.WinForms
             byte value = Convert.ToByte(SysBotPouchItem5Count.Value);
             byte[] byteArray = new byte[1];
             byteArray[0] = value;
-            Connection.WriteBytesAbsolute(byteArray, OffsetHunterPouchItem5);
+            Connection.WriteBytesAbsolute(byteArray, OffsetPouchItemCounts[4]);
         }
 
         // Coordinate writing
@@ -188,26 +184,18 @@ namespace RiseHax.WinForms
             // Get offsets from pointers
             OffsetHunterHP = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterHP);
             OffsetHunterHPRecoverable = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterHPRecoverable);
-            OffsetHunterPouchItem1 = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerPouchItem1);
             // Would preferably get all offsets from just the first item pointer
-            OffsetHunterPouchItem2 = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerPouchItem2);
-            OffsetHunterPouchItem3 = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerPouchItem3);
-            OffsetHunterPouchItem4 = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerPouchItem4);
-            OffsetHunterPouchItem5 = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerPouchItem5);
-            // OffsetHunterPouchItem2 = OffsetHunterPouchItem1 + 0x08;
-            // OffsetHunterPouchItem3 = OffsetHunterPouchItem1 + 0x10;
-            // OffsetHunterPouchItem4 = OffsetHunterPouchItem1 + 0x18;
-            // OffsetHunterPouchItem5 = OffsetHunterPouchItem1 + 0x20;
+            OffsetPouchItemCounts = GetItemPouchCounts();
             OffsetHunterCoordX = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerHunterCoordX);
             OffsetHunterCoordY = OffsetHunterCoordX + 0x4;
             OffsetHunterCoordZ = OffsetHunterCoordX + 0x8;
 
             // Pouch items
-            uint PouchItem1Count = Connection.ReadBytesAbsolute(OffsetHunterPouchItem1, 1)[0];
-            uint PouchItem2Count = Connection.ReadBytesAbsolute(OffsetHunterPouchItem2, 1)[0];
-            uint PouchItem3Count = Connection.ReadBytesAbsolute(OffsetHunterPouchItem3, 1)[0];
-            uint PouchItem4Count = Connection.ReadBytesAbsolute(OffsetHunterPouchItem4, 1)[0];
-            uint PouchItem5Count = Connection.ReadBytesAbsolute(OffsetHunterPouchItem5, 1)[0];
+            uint PouchItem1Count = Connection.ReadBytesAbsolute(OffsetPouchItemCounts[0], 1)[0];
+            uint PouchItem2Count = Connection.ReadBytesAbsolute(OffsetPouchItemCounts[1], 1)[0];
+            uint PouchItem3Count = Connection.ReadBytesAbsolute(OffsetPouchItemCounts[2], 1)[0];
+            uint PouchItem4Count = Connection.ReadBytesAbsolute(OffsetPouchItemCounts[3], 1)[0];
+            uint PouchItem5Count = Connection.ReadBytesAbsolute(OffsetPouchItemCounts[4], 1)[0];
             SysBotPouchItem1Count.Value = PouchItem1Count;
             SysBotPouchItem2Count.Value = PouchItem2Count;
             SysBotPouchItem3Count.Value = PouchItem3Count;
@@ -215,12 +203,9 @@ namespace RiseHax.WinForms
             SysBotPouchItem5Count.Value = PouchItem5Count;
 
             //Coordinates
-            byte[] ByteArrayHunterCoordX = Connection.ReadBytesAbsolute(OffsetHunterCoordX, 4);
-            byte[] ByteArrayHunterCoordY = Connection.ReadBytesAbsolute(OffsetHunterCoordY, 4);
-            byte[] ByteArrayHunterCoordZ = Connection.ReadBytesAbsolute(OffsetHunterCoordZ, 4);
-            float HunterCoordX = BitConverter.ToSingle(ByteArrayHunterCoordX, 0);
-            float HunterCoordY = BitConverter.ToSingle(ByteArrayHunterCoordY, 0);
-            float HunterCoordZ = BitConverter.ToSingle(ByteArrayHunterCoordZ, 0);
+            float HunterCoordX = BitConverter.ToSingle(Connection.ReadBytesAbsolute(OffsetHunterCoordX, 4), 0);
+            float HunterCoordY = BitConverter.ToSingle(Connection.ReadBytesAbsolute(OffsetHunterCoordY, 4), 0);
+            float HunterCoordZ = BitConverter.ToSingle(Connection.ReadBytesAbsolute(OffsetHunterCoordZ, 4), 0);
             SysBotHunterCoordXCount.Value = (decimal)HunterCoordX;
             SysBotHunterCoordYCount.Value = (decimal)HunterCoordY;
             SysBotHunterCoordZCount.Value = (decimal)HunterCoordZ;
@@ -236,8 +221,21 @@ namespace RiseHax.WinForms
             float floatX = (float)SysBotHunterCoordXCount.Value;
             float floatY = (float)SysBotHunterCoordYCount.Value;
             float floatZ = (float)SysBotHunterCoordZCount.Value;
-            byte[] Bytes = ByteArrays.Combine(BitConverter.GetBytes(floatX), BitConverter.GetBytes(floatY), BitConverter.GetBytes(floatZ));
+            byte[] Bytes = BytesHandler.CombineArrays(BitConverter.GetBytes(floatX), BitConverter.GetBytes(floatY), BitConverter.GetBytes(floatZ));
             Connection.WriteBytesAbsolute(Bytes, OffsetHunterCoordX);
+        }
+
+        private ulong[] GetItemPouchCounts()
+        {
+            int numHunterItems = 24;
+
+            ulong[] itemCountAddresses = new ulong[numHunterItems];
+            ulong pouchAdress = PointerHandler.GetPointerAddress(Connection, DataOffsets.PointerPouchItems);
+            for (uint i = 0; i < numHunterItems; i++)
+            {
+                itemCountAddresses[i] = pouchAdress + i * 0x60;
+            }
+            return itemCountAddresses;
         }
     }
 }
