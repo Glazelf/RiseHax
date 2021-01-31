@@ -6,6 +6,7 @@ namespace RiseHax.WinForms
 {
     class PointerHandler
     {
+#pragma warning disable CA1416 // Do not catch Win7 warning
         private static bool IsNum(char c) => (uint)(c - '0') <= 9;
         private static bool IsHexUpper(char c) => (uint)(c - 'A') <= 5;
         private static bool IsHexLower(char c) => (uint)(c - 'a') <= 5;
