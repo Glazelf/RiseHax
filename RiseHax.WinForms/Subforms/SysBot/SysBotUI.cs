@@ -70,6 +70,7 @@ namespace RiseHax.WinForms
 
                 Connected = true;
                 ButtonConnect.Text = "Disconnect";
+                SysBotLog.Text += Environment.NewLine + "Successfully connected.";
             }
             else
             {
@@ -94,6 +95,7 @@ namespace RiseHax.WinForms
 
                 Connected = false;
                 ButtonConnect.Text = "Connect";
+                SysBotLog.Text += Environment.NewLine + "Successfully disconnected.";
             }
         }
         private void ButtonSysbotRead_Click(object sender, EventArgs e)
@@ -213,6 +215,8 @@ namespace RiseHax.WinForms
             // HP
             uint HunterHP = sb.ReadBytesAbsolute(OffsetHunterHP, 1)[0];
             SysBotHunterHPCount.Value = HunterHP;
+
+            SysBotLog.Text += Environment.NewLine + "Successfully reloaded values.";
         }
 
         // Currently unused since writing all coords at once is funky and reading them back out afterwards creates an infinite loop
