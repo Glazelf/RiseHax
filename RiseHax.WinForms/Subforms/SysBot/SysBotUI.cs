@@ -68,6 +68,8 @@ namespace RiseHax.WinForms
                 SysBotMonsterHPCount.Enabled = true;
                 SysBotHunterHPCount.Enabled = true;
 
+                StatusConnection.ForeColor = System.Drawing.Color.Green;
+                StatusConnection.Text = "Connected";
                 Connected = true;
                 ButtonConnect.Text = "Disconnect";
                 SysBotLog.Text += Environment.NewLine + "Successfully connected.";
@@ -93,6 +95,8 @@ namespace RiseHax.WinForms
                 SysBotMonsterHPCount.Enabled = false;
                 SysBotHunterHPCount.Enabled = false;
 
+                StatusConnection.ForeColor = System.Drawing.Color.Red;
+                StatusConnection.Text = "Disconnected";
                 Connected = false;
                 ButtonConnect.Text = "Connect";
                 SysBotLog.Text += Environment.NewLine + "Successfully disconnected.";
@@ -216,7 +220,7 @@ namespace RiseHax.WinForms
             uint HunterHP = sb.ReadBytesAbsolute(OffsetHunterHP, 1)[0];
             SysBotHunterHPCount.Value = HunterHP;
 
-            SysBotLog.Text += Environment.NewLine + "Successfully reloaded values.";
+            SysBotLog.Text += Environment.NewLine + "Successfully loaded values.";
         }
 
         // Currently unused since writing all coords at once is funky and reading them back out afterwards creates an infinite loop
