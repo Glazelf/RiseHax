@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace RiseHax.WinForms
+namespace RiseHax.Hunter
 {
-    class BytesHandler
+    public class BytesHandler
     {
         public static byte[] CombineArrays(byte[] first, byte[] second, byte[] third)
         {

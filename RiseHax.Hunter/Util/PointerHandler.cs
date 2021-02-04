@@ -2,9 +2,9 @@
 using System;
 using System.Linq;
 
-namespace RiseHax.WinForms
+namespace RiseHax.Hunter
 {
-    class PointerHandler
+    public class PointerHandler
     {
 #pragma warning disable CA1416 // Do not catch Win7 warning
         private static bool IsNum(char c) => (uint)(c - '0') <= 9;
