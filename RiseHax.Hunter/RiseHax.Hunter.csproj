@@ -9,4 +9,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="SysBot.Base">
+      <HintPath>..\References\SysBot.Base.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
