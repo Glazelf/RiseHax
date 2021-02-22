@@ -32,6 +32,7 @@ namespace RiseHax.WinForms
         ulong OffsetHunterCoordX;
         ulong OffsetHunterCoordY;
         ulong OffsetHunterCoordZ;
+        ulong OffsetMonster1HP;
 
         public void SysBotUI_Load(object sender, EventArgs e)
         {
@@ -65,8 +66,9 @@ namespace RiseHax.WinForms
                 SysBotHunterCoordYCount.Enabled = true;
                 SysBotHunterCoordZCount.Enabled = true;
                 // Quest
-                SysBotMonsterHPCount.Enabled = true;
+                SysBotMonster1HPCount.Enabled = true;
                 SysBotHunterHPCount.Enabled = true;
+                SysBotHunterStaminaCount.Enabled = true;
 
                 StatusConnection.ForeColor = System.Drawing.Color.Green;
                 StatusConnection.Text = "Connected";
@@ -92,8 +94,9 @@ namespace RiseHax.WinForms
                 SysBotHunterCoordYCount.Enabled = false;
                 SysBotHunterCoordZCount.Enabled = false;
                 // Quest
-                SysBotMonsterHPCount.Enabled = false;
+                SysBotMonster1HPCount.Enabled = false;
                 SysBotHunterHPCount.Enabled = false;
+                SysBotHunterStaminaCount.Enabled = false;
 
                 StatusConnection.ForeColor = System.Drawing.Color.Red;
                 StatusConnection.Text = "Disconnected";
@@ -108,95 +111,82 @@ namespace RiseHax.WinForms
         }
 
         // HP writing
-        private void SysBotMonsterHPCount_ValueChanged(object sender, EventArgs e)
+        private void SysBotMonster1HPCount_ValueChanged(object sender, EventArgs e)
         {
-
+            BytesHandler.WriteFloat((float)SysBotMonster1HPCount.Value, OffsetMonster1HP, sb);
         }
 
         private void SysBotHunterHPCount_ValueChanged(object sender, EventArgs e)
         {
-            byte value = Convert.ToByte(SysBotHunterHPCount.Value);
-            byte[] byteArray = new byte[1];
-            byteArray[0] = value;
-            sb.WriteBytesAbsolute(byteArray, OffsetHunterHP);
-            sb.WriteBytesAbsolute(byteArray, OffsetHunterHPRecoverable);
+            BytesHandler.WriteUInt((uint)SysBotHunterHPCount.Value, OffsetHunterHP, sb);
+            BytesHandler.WriteUInt((uint)SysBotHunterHPCount.Value, OffsetHunterHPRecoverable, sb);
         }
 
         // Pouch item writing
         private void SysBotPouchItem1Count_ValueChanged(object sender, EventArgs e)
         {
-            byte value = Convert.ToByte(SysBotPouchItem1Count.Value);
-            byte[] byteArray = new byte[1];
-            byteArray[0] = value;
-            sb.WriteBytesAbsolute(byteArray, OffsetPouchItemCounts[0]);
+            BytesHandler.WriteUInt((uint)SysBotPouchItem1Count.Value, OffsetPouchItemCounts[0], sb);
         }
 
         private void SysBotPouchItem2Count_ValueChanged(object sender, EventArgs e)
         {
-            byte value = Convert.ToByte(SysBotPouchItem2Count.Value);
-            byte[] byteArray = new byte[1];
-            byteArray[0] = value;
-            sb.WriteBytesAbsolute(byteArray, OffsetPouchItemCounts[1]);
+            BytesHandler.WriteUInt((uint)SysBotPouchItem2Count.Value, OffsetPouchItemCounts[1], sb);
         }
 
         private void SysBotPouchItem3Count_ValueChanged(object sender, EventArgs e)
         {
-            byte value = Convert.ToByte(SysBotPouchItem3Count.Value);
-            byte[] byteArray = new byte[1];
-            byteArray[0] = value;
-            sb.WriteBytesAbsolute(byteArray, OffsetPouchItemCounts[2]);
+            BytesHandler.WriteUInt((uint)SysBotPouchItem3Count.Value, OffsetPouchItemCounts[2], sb);
         }
 
         private void SysBotPouchItem4Count_ValueChanged(object sender, EventArgs e)
         {
-            byte value = Convert.ToByte(SysBotPouchItem4Count.Value);
-            byte[] byteArray = new byte[1];
-            byteArray[0] = value;
-            sb.WriteBytesAbsolute(byteArray, OffsetPouchItemCounts[3]);
+            BytesHandler.WriteUInt((uint)SysBotPouchItem4Count.Value, OffsetPouchItemCounts[3], sb);
         }
 
         private void SysBotPouchItem5Count_ValueChanged(object sender, EventArgs e)
         {
-            byte value = Convert.ToByte(SysBotPouchItem5Count.Value);
-            byte[] byteArray = new byte[1];
-            byteArray[0] = value;
-            sb.WriteBytesAbsolute(byteArray, OffsetPouchItemCounts[4]);
+            BytesHandler.WriteUInt((uint)SysBotPouchItem5Count.Value, OffsetPouchItemCounts[4], sb);
         }
 
         // Coordinate writing
         private void SysBotHunterCoordXCount_ValueChanged(object sender, EventArgs e)
         {
-            float floatX = (float)SysBotHunterCoordXCount.Value;
-            byte[] Bytes = BitConverter.GetBytes(floatX);
-            sb.WriteBytesAbsolute(Bytes, OffsetHunterCoordX);
+            BytesHandler.WriteFloat((float)SysBotHunterCoordXCount.Value, OffsetHunterCoordX, sb);
         }
 
         private void SysBotHunterCoordYCount_ValueChanged(object sender, EventArgs e)
         {
-            float floatY = (float)SysBotHunterCoordYCount.Value;
-            byte[] Bytes = BitConverter.GetBytes(floatY);
-            sb.WriteBytesAbsolute(Bytes, OffsetHunterCoordY);
+            BytesHandler.WriteFloat((float)SysBotHunterCoordYCount.Value, OffsetHunterCoordY, sb);
         }
 
         private void SysBotHunterCoordZCount_ValueChanged(object sender, EventArgs e)
         {
-            float floatZ = (float)SysBotHunterCoordZCount.Value;
-            byte[] Bytes = BitConverter.GetBytes(floatZ);
-            sb.WriteBytesAbsolute(Bytes, OffsetHunterCoordZ);
+            BytesHandler.WriteFloat((float)SysBotHunterCoordZCount.Value, OffsetHunterCoordZ, sb);
         }
 
         private void ReloadValues()
         {
-            // Get offsets from pointers
+            //// Get offsets from pointers
+            // Hunter
             OffsetHunterHP = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerHunterHP);
             OffsetHunterHPRecoverable = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerHunterHPRecoverable);
-            // Would preferably get all offsets from just the first item pointer
+            // Pouch, would preferably get all offsets from just the first item pointer
             OffsetPouchItemCounts = GetItemPouchCounts();
+
+            // Co-ordinates
             OffsetHunterCoordX = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerHunterCoordX);
             OffsetHunterCoordY = OffsetHunterCoordX + 0x4;
             OffsetHunterCoordZ = OffsetHunterCoordX + 0x8;
 
-            // Pouch items
+            // Monsters
+            OffsetMonster1HP = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerMonsterHP);
+
+
+            //// Read values from offsets
+            // Hunter
+            uint HunterHP = sb.ReadBytesAbsolute(OffsetHunterHP, 1)[0];
+            SysBotHunterHPCount.Value = HunterHP;
+            // Pouch
             uint PouchItem1Count = sb.ReadBytesAbsolute(OffsetPouchItemCounts[0], 1)[0];
             uint PouchItem2Count = sb.ReadBytesAbsolute(OffsetPouchItemCounts[1], 1)[0];
             uint PouchItem3Count = sb.ReadBytesAbsolute(OffsetPouchItemCounts[2], 1)[0];
@@ -216,9 +206,9 @@ namespace RiseHax.WinForms
             SysBotHunterCoordYCount.Value = (decimal)HunterCoordY;
             SysBotHunterCoordZCount.Value = (decimal)HunterCoordZ;
 
-            // HP
-            uint HunterHP = sb.ReadBytesAbsolute(OffsetHunterHP, 1)[0];
-            SysBotHunterHPCount.Value = HunterHP;
+            // Monsters
+            float Monster1HP = BitConverter.ToSingle(sb.ReadBytesAbsolute(OffsetMonster1HP, 4), 0);
+            SysBotMonster1HPCount.Value = (decimal)Monster1HP;
 
             SysBotLog.Text += Environment.NewLine + "Successfully loaded values.";
         }
