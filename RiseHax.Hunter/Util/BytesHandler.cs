@@ -1,5 +1,5 @@
-﻿using System;
-using SysBot.Base;
+﻿using SysBot.Base;
+using System;
 
 namespace RiseHax.Hunter
 {
@@ -14,7 +14,7 @@ namespace RiseHax.Hunter
                              third.Length);
             return ret;
         }
-        
+
         public static void WriteUInt(uint input, ulong offset, ISwitchConnectionSync sb)
         {
             byte value = Convert.ToByte(input);
