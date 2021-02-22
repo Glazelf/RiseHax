@@ -179,7 +179,7 @@ namespace RiseHax.WinForms
             OffsetHunterCoordZ = OffsetHunterCoordX + 0x8;
 
             // Monsters
-            OffsetMonster1HP = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerMonsterHP);
+            OffsetMonster1HP = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerMonsters3HP);
 
 
             //// Read values from offsets
@@ -208,11 +208,7 @@ namespace RiseHax.WinForms
 
             // Monsters
             float Monster1HP = BitConverter.ToSingle(sb.ReadBytesAbsolute(OffsetMonster1HP, 4), 0);
-            
             SysBotMonster1HPCount.Value = (decimal)Monster1HP;
-            SysBotLog.Text += Environment.NewLine + "monster hp offset: " + OffsetMonster1HP;
-            SysBotLog.Text += Environment.NewLine + "monster hp float: " + Monster1HP;
-            SysBotLog.Text += Environment.NewLine + "monster hp decimal: " + (decimal)Monster1HP;
 
             SysBotLog.Text += Environment.NewLine + "Successfully loaded values.";
         }
