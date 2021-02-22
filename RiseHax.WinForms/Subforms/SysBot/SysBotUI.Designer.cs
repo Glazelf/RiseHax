@@ -524,6 +524,7 @@ namespace RiseHax.WinForms
             // SysBotHunterStaminaCount
             // 
             this.SysBotHunterStaminaCount.AccessibleName = "SysBotHunterStaminaCount";
+            this.SysBotHunterStaminaCount.Enabled = false;
             this.SysBotHunterStaminaCount.Location = new System.Drawing.Point(53, 54);
             this.SysBotHunterStaminaCount.Maximum = new decimal(new int[] {
             255,
