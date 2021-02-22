@@ -36,6 +36,8 @@ namespace RiseHax.WinForms
             this.LabelIP = new System.Windows.Forms.Label();
             this.TextBoxPort = new System.Windows.Forms.TextBox();
             this.GroupSysBotStatus = new System.Windows.Forms.GroupBox();
+            this.StatusConnection = new System.Windows.Forms.Label();
+            this.StatusConnectionLabel = new System.Windows.Forms.Label();
             this.ButtonSysbotRead = new System.Windows.Forms.Button();
             this.TabControlSysBot = new System.Windows.Forms.TabControl();
             this.TabSysBot1Player = new System.Windows.Forms.TabPage();
@@ -60,18 +62,16 @@ namespace RiseHax.WinForms
             this.TabSysBot2Items = new System.Windows.Forms.TabPage();
             this.TabSysBot3Quest = new System.Windows.Forms.TabPage();
             this.GroupSysBotHunter = new System.Windows.Forms.GroupBox();
+            this.SysBotHunterStaminaCount = new System.Windows.Forms.NumericUpDown();
+            this.SysBotHunterStaminaLabel = new System.Windows.Forms.Label();
             this.SysBotHunterHPCount = new System.Windows.Forms.NumericUpDown();
             this.SysBotHunterHP = new System.Windows.Forms.Label();
             this.GroupSysBotMonster = new System.Windows.Forms.GroupBox();
-            this.SysBotMonsterHPCount = new System.Windows.Forms.NumericUpDown();
+            this.SysBotQuestMonster1Image = new System.Windows.Forms.PictureBox();
+            this.SysBotMonster1HPCount = new System.Windows.Forms.NumericUpDown();
             this.SysBotMonsterHPLabel = new System.Windows.Forms.Label();
             this.TabSysBot4Log = new System.Windows.Forms.TabPage();
             this.SysBotLog = new System.Windows.Forms.RichTextBox();
-            this.SysBotQuestMonsterImage = new System.Windows.Forms.PictureBox();
-            this.SysBotHunterStaminaLabel = new System.Windows.Forms.Label();
-            this.SysBotHunterStaminaCount = new System.Windows.Forms.NumericUpDown();
-            this.StatusConnectionLabel = new System.Windows.Forms.Label();
-            this.StatusConnection = new System.Windows.Forms.Label();
             this.GroupSysBotConnection.SuspendLayout();
             this.GroupSysBotStatus.SuspendLayout();
             this.TabControlSysBot.SuspendLayout();
@@ -88,12 +88,12 @@ namespace RiseHax.WinForms
             ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterCoordXCount)).BeginInit();
             this.TabSysBot3Quest.SuspendLayout();
             this.GroupSysBotHunter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterStaminaCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterHPCount)).BeginInit();
             this.GroupSysBotMonster.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotMonsterHPCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotQuestMonster1Image)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotMonster1HPCount)).BeginInit();
             this.TabSysBot4Log.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotQuestMonsterImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterStaminaCount)).BeginInit();
             this.SuspendLayout();
             // 
             // TextBoxIP
@@ -172,6 +172,27 @@ namespace RiseHax.WinForms
             this.GroupSysBotStatus.TabIndex = 4;
             this.GroupSysBotStatus.TabStop = false;
             this.GroupSysBotStatus.Text = "Status";
+            // 
+            // StatusConnection
+            // 
+            this.StatusConnection.AccessibleName = "StatusConnection";
+            this.StatusConnection.AutoSize = true;
+            this.StatusConnection.ForeColor = System.Drawing.Color.Red;
+            this.StatusConnection.Location = new System.Drawing.Point(67, 16);
+            this.StatusConnection.Name = "StatusConnection";
+            this.StatusConnection.Size = new System.Drawing.Size(73, 13);
+            this.StatusConnection.TabIndex = 15;
+            this.StatusConnection.Text = "Disconnected";
+            // 
+            // StatusConnectionLabel
+            // 
+            this.StatusConnectionLabel.AccessibleName = "StatusConnectionLabel";
+            this.StatusConnectionLabel.AutoSize = true;
+            this.StatusConnectionLabel.Location = new System.Drawing.Point(6, 16);
+            this.StatusConnectionLabel.Name = "StatusConnectionLabel";
+            this.StatusConnectionLabel.Size = new System.Drawing.Size(64, 13);
+            this.StatusConnectionLabel.TabIndex = 10;
+            this.StatusConnectionLabel.Text = "Connection:";
             // 
             // ButtonSysbotRead
             // 
@@ -500,6 +521,34 @@ namespace RiseHax.WinForms
             this.GroupSysBotHunter.TabStop = false;
             this.GroupSysBotHunter.Text = "Hunter";
             // 
+            // SysBotHunterStaminaCount
+            // 
+            this.SysBotHunterStaminaCount.AccessibleName = "SysBotHunterStaminaCount";
+            this.SysBotHunterStaminaCount.Location = new System.Drawing.Point(53, 54);
+            this.SysBotHunterStaminaCount.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.SysBotHunterStaminaCount.Name = "SysBotHunterStaminaCount";
+            this.SysBotHunterStaminaCount.Size = new System.Drawing.Size(55, 20);
+            this.SysBotHunterStaminaCount.TabIndex = 7;
+            this.SysBotHunterStaminaCount.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // SysBotHunterStaminaLabel
+            // 
+            this.SysBotHunterStaminaLabel.AccessibleName = "SysBotHunterStaminaLabel";
+            this.SysBotHunterStaminaLabel.AutoSize = true;
+            this.SysBotHunterStaminaLabel.Location = new System.Drawing.Point(6, 56);
+            this.SysBotHunterStaminaLabel.Name = "SysBotHunterStaminaLabel";
+            this.SysBotHunterStaminaLabel.Size = new System.Drawing.Size(48, 13);
+            this.SysBotHunterStaminaLabel.TabIndex = 4;
+            this.SysBotHunterStaminaLabel.Text = "Stamina:";
+            // 
             // SysBotHunterHPCount
             // 
             this.SysBotHunterHPCount.AccessibleName = "SysBotHunterHPCount";
@@ -533,8 +582,8 @@ namespace RiseHax.WinForms
             // GroupSysBotMonster
             // 
             this.GroupSysBotMonster.AccessibleName = "GroupSysBotMonster";
-            this.GroupSysBotMonster.Controls.Add(this.SysBotQuestMonsterImage);
-            this.GroupSysBotMonster.Controls.Add(this.SysBotMonsterHPCount);
+            this.GroupSysBotMonster.Controls.Add(this.SysBotQuestMonster1Image);
+            this.GroupSysBotMonster.Controls.Add(this.SysBotMonster1HPCount);
             this.GroupSysBotMonster.Controls.Add(this.SysBotMonsterHPLabel);
             this.GroupSysBotMonster.Location = new System.Drawing.Point(6, 6);
             this.GroupSysBotMonster.Name = "GroupSysBotMonster";
@@ -543,20 +592,30 @@ namespace RiseHax.WinForms
             this.GroupSysBotMonster.TabStop = false;
             this.GroupSysBotMonster.Text = "Monster";
             // 
-            // SysBotMonsterHPCount
+            // SysBotQuestMonster1Image
             // 
-            this.SysBotMonsterHPCount.AccessibleName = "SysBotMonsterHPCount";
-            this.SysBotMonsterHPCount.Enabled = false;
-            this.SysBotMonsterHPCount.Location = new System.Drawing.Point(53, 101);
-            this.SysBotMonsterHPCount.Maximum = new decimal(new int[] {
+            this.SysBotQuestMonster1Image.AccessibleName = "SysBotQuestMonster1Image";
+            this.SysBotQuestMonster1Image.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SysBotQuestMonster1Image.Location = new System.Drawing.Point(6, 15);
+            this.SysBotQuestMonster1Image.Name = "SysBotQuestMonster1Image";
+            this.SysBotQuestMonster1Image.Size = new System.Drawing.Size(75, 75);
+            this.SysBotQuestMonster1Image.TabIndex = 9;
+            this.SysBotQuestMonster1Image.TabStop = false;
+            // 
+            // SysBotMonster1HPCount
+            // 
+            this.SysBotMonster1HPCount.AccessibleName = "SysBotMonster1HPCount";
+            this.SysBotMonster1HPCount.Enabled = false;
+            this.SysBotMonster1HPCount.Location = new System.Drawing.Point(53, 101);
+            this.SysBotMonster1HPCount.Maximum = new decimal(new int[] {
             99999,
             0,
             0,
             0});
-            this.SysBotMonsterHPCount.Name = "SysBotMonsterHPCount";
-            this.SysBotMonsterHPCount.Size = new System.Drawing.Size(67, 20);
-            this.SysBotMonsterHPCount.TabIndex = 8;
-            this.SysBotMonsterHPCount.ValueChanged += new System.EventHandler(this.SysBotMonsterHPCount_ValueChanged);
+            this.SysBotMonster1HPCount.Name = "SysBotMonster1HPCount";
+            this.SysBotMonster1HPCount.Size = new System.Drawing.Size(67, 20);
+            this.SysBotMonster1HPCount.TabIndex = 8;
+            this.SysBotMonster1HPCount.ValueChanged += new System.EventHandler(this.SysBotMonster1HPCount_ValueChanged);
             // 
             // SysBotMonsterHPLabel
             // 
@@ -589,65 +648,6 @@ namespace RiseHax.WinForms
             this.SysBotLog.Size = new System.Drawing.Size(521, 399);
             this.SysBotLog.TabIndex = 5;
             this.SysBotLog.Text = "Started application.";
-            // 
-            // SysBotQuestMonsterImage
-            // 
-            this.SysBotQuestMonsterImage.AccessibleName = "SysBotQuestMonsterImage";
-            this.SysBotQuestMonsterImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SysBotQuestMonsterImage.Location = new System.Drawing.Point(6, 15);
-            this.SysBotQuestMonsterImage.Name = "SysBotQuestMonsterImage";
-            this.SysBotQuestMonsterImage.Size = new System.Drawing.Size(75, 75);
-            this.SysBotQuestMonsterImage.TabIndex = 9;
-            this.SysBotQuestMonsterImage.TabStop = false;
-            // 
-            // SysBotHunterStaminaLabel
-            // 
-            this.SysBotHunterStaminaLabel.AccessibleName = "SysBotHunterStaminaLabel";
-            this.SysBotHunterStaminaLabel.AutoSize = true;
-            this.SysBotHunterStaminaLabel.Location = new System.Drawing.Point(6, 56);
-            this.SysBotHunterStaminaLabel.Name = "SysBotHunterStaminaLabel";
-            this.SysBotHunterStaminaLabel.Size = new System.Drawing.Size(48, 13);
-            this.SysBotHunterStaminaLabel.TabIndex = 4;
-            this.SysBotHunterStaminaLabel.Text = "Stamina:";
-            // 
-            // SysBotHunterStaminaCount
-            // 
-            this.SysBotHunterStaminaCount.AccessibleName = "SysBotHunterStaminaCount";
-            this.SysBotHunterStaminaCount.Location = new System.Drawing.Point(53, 54);
-            this.SysBotHunterStaminaCount.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.SysBotHunterStaminaCount.Name = "SysBotHunterStaminaCount";
-            this.SysBotHunterStaminaCount.Size = new System.Drawing.Size(55, 20);
-            this.SysBotHunterStaminaCount.TabIndex = 7;
-            this.SysBotHunterStaminaCount.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
-            // StatusConnectionLabel
-            // 
-            this.StatusConnectionLabel.AccessibleName = "StatusConnectionLabel";
-            this.StatusConnectionLabel.AutoSize = true;
-            this.StatusConnectionLabel.Location = new System.Drawing.Point(6, 16);
-            this.StatusConnectionLabel.Name = "StatusConnectionLabel";
-            this.StatusConnectionLabel.Size = new System.Drawing.Size(64, 13);
-            this.StatusConnectionLabel.TabIndex = 10;
-            this.StatusConnectionLabel.Text = "Connection:";
-            // 
-            // StatusConnection
-            // 
-            this.StatusConnection.AccessibleName = "StatusConnection";
-            this.StatusConnection.AutoSize = true;
-            this.StatusConnection.ForeColor = System.Drawing.Color.Red;
-            this.StatusConnection.Location = new System.Drawing.Point(67, 16);
-            this.StatusConnection.Name = "StatusConnection";
-            this.StatusConnection.Size = new System.Drawing.Size(73, 13);
-            this.StatusConnection.TabIndex = 15;
-            this.StatusConnection.Text = "Disconnected";
             // 
             // SysBotUI
             // 
@@ -682,13 +682,13 @@ namespace RiseHax.WinForms
             this.TabSysBot3Quest.ResumeLayout(false);
             this.GroupSysBotHunter.ResumeLayout(false);
             this.GroupSysBotHunter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterStaminaCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterHPCount)).EndInit();
             this.GroupSysBotMonster.ResumeLayout(false);
             this.GroupSysBotMonster.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotMonsterHPCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotQuestMonster1Image)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotMonster1HPCount)).EndInit();
             this.TabSysBot4Log.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotQuestMonsterImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterStaminaCount)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -710,7 +710,7 @@ namespace RiseHax.WinForms
         private System.Windows.Forms.GroupBox GroupSysBotMonster;
         private System.Windows.Forms.NumericUpDown SysBotHunterHPCount;
         private System.Windows.Forms.Label SysBotHunterHP;
-        private System.Windows.Forms.NumericUpDown SysBotMonsterHPCount;
+        private System.Windows.Forms.NumericUpDown SysBotMonster1HPCount;
         private System.Windows.Forms.Label SysBotMonsterHPLabel;
         private System.Windows.Forms.Button ButtonSysbotRead;
         private System.Windows.Forms.TabPage TabSysBot4Log;
@@ -733,7 +733,7 @@ namespace RiseHax.WinForms
         private System.Windows.Forms.Label QuestSysBotPouchItem4;
         private System.Windows.Forms.NumericUpDown SysBotPouchItem3Count;
         private System.Windows.Forms.Label QuestSysBotPouchItem3;
-        private System.Windows.Forms.PictureBox SysBotQuestMonsterImage;
+        private System.Windows.Forms.PictureBox SysBotQuestMonster1Image;
         private System.Windows.Forms.NumericUpDown SysBotHunterStaminaCount;
         private System.Windows.Forms.Label SysBotHunterStaminaLabel;
         private System.Windows.Forms.Label StatusConnection;
