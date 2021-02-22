@@ -15,13 +15,19 @@ namespace RiseHax.Hunter
             return ret;
         }
         
-        public static void WriteByte(uint input, ulong offset, ISwitchConnectionSync sb)
+        public static void WriteUInt(uint input, ulong offset, ISwitchConnectionSync sb)
         {
             byte value = Convert.ToByte(input);
             byte[] byteArray = new byte[1];
             byteArray[0] = value;
             sb.WriteBytesAbsolute(byteArray, offset);
             return;
+        }
+
+        public static void WriteFloat(float input, ulong offset, ISwitchConnectionSync sb)
+        {
+            byte[] Bytes = BitConverter.GetBytes(input);
+            sb.WriteBytesAbsolute(Bytes, offset);
         }
     }
 }
