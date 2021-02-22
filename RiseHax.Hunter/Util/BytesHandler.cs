@@ -1,4 +1,5 @@
 ﻿using System;
+using SysBot.Base;
 
 namespace RiseHax.Hunter
 {
@@ -12,6 +13,15 @@ namespace RiseHax.Hunter
             Buffer.BlockCopy(third, 0, ret, first.Length + second.Length,
                              third.Length);
             return ret;
+        }
+        
+        public static void WriteByte(uint input, ulong offset, ISwitchConnectionSync sb)
+        {
+            byte value = Convert.ToByte(input);
+            byte[] byteArray = new byte[1];
+            byteArray[0] = value;
+            sb.WriteBytesAbsolute(byteArray, offset);
+            return;
         }
     }
 }
