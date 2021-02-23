@@ -9,7 +9,7 @@ Since Monster Hunter: Rise isn't out yet and we don't work at Nintendo, there is
 For the first few months of the game being released we will have no proper indication of the risks either so use this tool fully at your own risk.
 
 ## Support
-Have questions? Either [create a discussion](https://github.com/Glazelf/RiseHax/discussions/categories/questions) or join my Discord.  
+Have questions? Either [create a discussion](https://github.com/Glazelf/RiseHax/discussions) or join my Discord.  
 <a href="https://discord.gg/2gkybyu"><img src="https://canary.discordapp.com/api/guilds/549214833858576395/widget.png?style=banner2"></a>
 
 ## Credits
