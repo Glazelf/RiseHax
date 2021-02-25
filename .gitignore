@@ -253,3 +253,6 @@ pip-log.txt
 
 # Shortcuts
 *.lnk
+
+# Private offsets/pointers
+RiseHax.Hunter/Structures/RAM/DataOffsets.cs
