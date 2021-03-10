@@ -7,7 +7,7 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
     <ApplicationIcon>icon.ico</ApplicationIcon>
-    <Authors>RiseHax.WinForms</Authors>
+    <Authors>Glaze</Authors>
     <PackageIcon>icon.ico</PackageIcon>
     <PackageProjectUrl></PackageProjectUrl>
     <RepositoryUrl></RepositoryUrl>
