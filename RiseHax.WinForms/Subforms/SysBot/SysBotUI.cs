@@ -3,6 +3,7 @@ using RiseHax.Injection;
 using SysBot.Base;
 using System;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace RiseHax.WinForms
 {
@@ -72,7 +73,7 @@ namespace RiseHax.WinForms
                 // Testing
                 QuestMonsterCounter.Enabled = true;
 
-                StatusConnection.ForeColor = System.Drawing.Color.Green;
+                StatusConnection.ForeColor = Color.Green;
                 StatusConnection.Text = "Connected";
                 Connected = true;
                 ButtonConnect.Text = "Disconnect";
@@ -102,7 +103,7 @@ namespace RiseHax.WinForms
                 // Testing
                 QuestMonsterCounter.Enabled = false;
 
-                StatusConnection.ForeColor = System.Drawing.Color.Red;
+                StatusConnection.ForeColor = Color.Red;
                 StatusConnection.Text = "Disconnected";
                 Connected = false;
                 ButtonConnect.Text = "Connect";
