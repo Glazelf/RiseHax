@@ -109,6 +109,7 @@ namespace RiseHax.WinForms
         {
             BytesHandler.WriteUInt((uint)SysBotHunterHPCount.Value, OffsetHunterHP, sb);
             BytesHandler.WriteUInt((uint)SysBotHunterHPCount.Value, OffsetHunterHPRecoverable, sb);
+            BytesHandler.WriteUInt(200, OffsetHunterHPMax, sb);
         }
 
         // Pouch item writing
