@@ -9,7 +9,7 @@ Pointers and offset data aren't publicly available in the source code, please us
 
 ## Support
 Have questions? Either [create a discussion](https://github.com/Glazelf/RiseHax/discussions) or join my Discord.  
-<a href="https://discord.gg/5NsYYuvm7D"><img src="https://canary.discordapp.com/api/guilds/826479009206108188/widget.png?style=banner2"></a>
+[<img src="https://canary.discordapp.com/api/guilds/826479009206108188/widget.png?style=banner2">](https://discord.gg/5NsYYuvm7D)
 
 ## Credits
 **Contributions:**  
