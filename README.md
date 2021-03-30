@@ -13,7 +13,7 @@ Have questions? Either [create a discussion](https://github.com/Glazelf/RiseHax/
 
 ## Credits
 **Contributions:**  
-[Red](https://github.com/hp3721): Finding 1 pointer and some coding assistance.  
-[Abyzab](https://github.com/abyzab): Finding more pointers and actually understanding C#.  
+[Red](https://github.com/hp3721): Helping develop for the initial demo build through finding a coordinate pointer and some coding help.  
+[Abyzab](https://github.com/abyzab): Finding monster related demo pointers so that monster HP can be freely edited and having actual C# knowledge.  
 **References:**  
 [Kurt](https://github.com/kwsch): Creating [SysBot](https://github.com/kwsch/SysBot.NET), on which most of this program's core logic is based or in some cases simply "liberately inspired on".
