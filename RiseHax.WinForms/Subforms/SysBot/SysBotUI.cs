@@ -173,7 +173,7 @@ namespace RiseHax.WinForms
             catch (Exception ex)
             {
                 SysBotHunterHPCount.Enabled = false;
-                SysBotLog.Text += Environment.NewLine + $"An error occurred:" + Environment.NewLine + ex;
+                SysBotLog.Text += Environment.NewLine + $"{ex.Message}\n{ex.StackTrace}";
             }
             // Pouch
             try
@@ -203,7 +203,7 @@ namespace RiseHax.WinForms
                 SysBotPouchItem3Count.Enabled = false;
                 SysBotPouchItem4Count.Enabled = false;
                 SysBotPouchItem5Count.Enabled = false;
-                SysBotLog.Text += Environment.NewLine + $"An error occurred:" + Environment.NewLine + ex;
+                SysBotLog.Text += Environment.NewLine + $"{ex.Message}\n{ex.StackTrace}";
             }
             // Coordinates
             try
@@ -226,7 +226,7 @@ namespace RiseHax.WinForms
                 SysBotHunterCoordXCount.Enabled = false;
                 SysBotHunterCoordYCount.Enabled = false;
                 SysBotHunterCoordZCount.Enabled = false;
-                SysBotLog.Text += Environment.NewLine + $"An error occurred:" + Environment.NewLine + ex;
+                SysBotLog.Text += Environment.NewLine + $"{ex.Message}\n{ex.StackTrace}";
             }
             // Monsters
             try
@@ -239,7 +239,7 @@ namespace RiseHax.WinForms
             catch (Exception ex)
             {
                 SysBotMonster1HPCount.Enabled = false;
-                SysBotLog.Text += Environment.NewLine + $"An error occurred:" + Environment.NewLine + ex;
+                SysBotLog.Text += Environment.NewLine + $"{ex.Message}\n{ex.StackTrace}";
             }
 
             SysBotLog.Text += Environment.NewLine + "Successfully loaded values.";
