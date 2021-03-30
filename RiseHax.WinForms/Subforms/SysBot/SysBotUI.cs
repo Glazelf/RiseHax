@@ -2,8 +2,8 @@
 using RiseHax.Injection;
 using SysBot.Base;
 using System;
-using System.Windows.Forms;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace RiseHax.WinForms
 {
@@ -58,18 +58,12 @@ namespace RiseHax.WinForms
                 TextBoxPort.Enabled = false;
                 ButtonSysbotRead.Enabled = true;
                 // Player
-                SysBotPouchItem1Count.Enabled = true;
-                SysBotPouchItem2Count.Enabled = true;
-                SysBotPouchItem3Count.Enabled = true;
-                SysBotPouchItem4Count.Enabled = true;
-                SysBotPouchItem5Count.Enabled = true;
-                SysBotHunterCoordXCount.Enabled = true;
-                SysBotHunterCoordYCount.Enabled = true;
-                SysBotHunterCoordZCount.Enabled = true;
+
+
                 // Quest
-                SysBotMonster1HPCount.Enabled = true;
-                SysBotHunterHPCount.Enabled = true;
-                SysBotHunterStaminaCount.Enabled = true;
+
+
+
                 // Testing
                 QuestMonsterCounter.Enabled = true;
 
@@ -97,9 +91,9 @@ namespace RiseHax.WinForms
                 SysBotHunterCoordYCount.Enabled = false;
                 SysBotHunterCoordZCount.Enabled = false;
                 // Quest
-                SysBotMonster1HPCount.Enabled = false;
                 SysBotHunterHPCount.Enabled = false;
                 SysBotHunterStaminaCount.Enabled = false;
+                SysBotMonster1HPCount.Enabled = false;
                 // Testing
                 QuestMonsterCounter.Enabled = false;
 
@@ -172,48 +166,82 @@ namespace RiseHax.WinForms
         private void ReloadValues()
         {
             //// Get offsets from pointers
-            // Hunter
-            OffsetHunterHP = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerHunterHP);
-            OffsetHunterHPRecoverable = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerHunterHPRecoverable);
-            // Pouch, would preferably get all offsets from just the first item pointer
-            OffsetPouchItemCounts = GetItemPouchCounts();
-
-            // Co-ordinates
-            OffsetHunterCoordX = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerHunterCoordX);
-            OffsetHunterCoordY = OffsetHunterCoordX + 0x4;
-            OffsetHunterCoordZ = OffsetHunterCoordX + 0x8;
-
-            // Monsters
-            OffsetMonster1HP = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerMonsters3HP);
-
-
-            //// Read values from offsets
-            // Hunter
-            uint HunterHP = sb.ReadBytesAbsolute(OffsetHunterHP, 1)[0];
-            SysBotHunterHPCount.Value = HunterHP;
+            // Hunter HP
+            try
+            {
+                OffsetHunterHP = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerHunterHP);
+                OffsetHunterHPRecoverable = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerHunterHPRecoverable);
+                uint HunterHP = sb.ReadBytesAbsolute(OffsetHunterHP, 1)[0];
+                SysBotHunterHPCount.Value = HunterHP;
+                SysBotHunterHPCount.Enabled = true;
+            }
+            catch (Exception)
+            {
+                SysBotHunterHPCount.Enabled = false;
+            }
             // Pouch
-            uint PouchItem1Count = sb.ReadBytesAbsolute(OffsetPouchItemCounts[0], 1)[0];
-            uint PouchItem2Count = sb.ReadBytesAbsolute(OffsetPouchItemCounts[1], 1)[0];
-            uint PouchItem3Count = sb.ReadBytesAbsolute(OffsetPouchItemCounts[2], 1)[0];
-            uint PouchItem4Count = sb.ReadBytesAbsolute(OffsetPouchItemCounts[3], 1)[0];
-            uint PouchItem5Count = sb.ReadBytesAbsolute(OffsetPouchItemCounts[4], 1)[0];
-            SysBotPouchItem1Count.Value = PouchItem1Count;
-            SysBotPouchItem2Count.Value = PouchItem2Count;
-            SysBotPouchItem3Count.Value = PouchItem3Count;
-            SysBotPouchItem4Count.Value = PouchItem4Count;
-            SysBotPouchItem5Count.Value = PouchItem5Count;
-
+            try
+            {
+                // Pouch, would preferably get all offsets from just the first item pointer
+                OffsetPouchItemCounts = GetItemPouchCounts();
+                uint PouchItem1Count = sb.ReadBytesAbsolute(OffsetPouchItemCounts[0], 1)[0];
+                uint PouchItem2Count = sb.ReadBytesAbsolute(OffsetPouchItemCounts[1], 1)[0];
+                uint PouchItem3Count = sb.ReadBytesAbsolute(OffsetPouchItemCounts[2], 1)[0];
+                uint PouchItem4Count = sb.ReadBytesAbsolute(OffsetPouchItemCounts[3], 1)[0];
+                uint PouchItem5Count = sb.ReadBytesAbsolute(OffsetPouchItemCounts[4], 1)[0];
+                SysBotPouchItem1Count.Value = PouchItem1Count;
+                SysBotPouchItem2Count.Value = PouchItem2Count;
+                SysBotPouchItem3Count.Value = PouchItem3Count;
+                SysBotPouchItem4Count.Value = PouchItem4Count;
+                SysBotPouchItem5Count.Value = PouchItem5Count;
+                SysBotPouchItem1Count.Enabled = true;
+                SysBotPouchItem2Count.Enabled = true;
+                SysBotPouchItem3Count.Enabled = true;
+                SysBotPouchItem4Count.Enabled = true;
+                SysBotPouchItem5Count.Enabled = true;
+            }
+            catch (Exception)
+            {
+                SysBotPouchItem1Count.Enabled = false;
+                SysBotPouchItem2Count.Enabled = false;
+                SysBotPouchItem3Count.Enabled = false;
+                SysBotPouchItem4Count.Enabled = false;
+                SysBotPouchItem5Count.Enabled = false;
+            }
             // Coordinates
-            float HunterCoordX = BitConverter.ToSingle(sb.ReadBytesAbsolute(OffsetHunterCoordX, 4), 0);
-            float HunterCoordY = BitConverter.ToSingle(sb.ReadBytesAbsolute(OffsetHunterCoordY, 4), 0);
-            float HunterCoordZ = BitConverter.ToSingle(sb.ReadBytesAbsolute(OffsetHunterCoordZ, 4), 0);
-            SysBotHunterCoordXCount.Value = (decimal)HunterCoordX;
-            SysBotHunterCoordYCount.Value = (decimal)HunterCoordY;
-            SysBotHunterCoordZCount.Value = (decimal)HunterCoordZ;
-
+            try
+            {
+                OffsetHunterCoordX = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerHunterCoordX);
+                OffsetHunterCoordY = OffsetHunterCoordX + 0x4;
+                OffsetHunterCoordZ = OffsetHunterCoordX + 0x8;
+                float HunterCoordX = BitConverter.ToSingle(sb.ReadBytesAbsolute(OffsetHunterCoordX, 4), 0);
+                float HunterCoordY = BitConverter.ToSingle(sb.ReadBytesAbsolute(OffsetHunterCoordY, 4), 0);
+                float HunterCoordZ = BitConverter.ToSingle(sb.ReadBytesAbsolute(OffsetHunterCoordZ, 4), 0);
+                SysBotHunterCoordXCount.Value = (decimal)HunterCoordX;
+                SysBotHunterCoordYCount.Value = (decimal)HunterCoordY;
+                SysBotHunterCoordZCount.Value = (decimal)HunterCoordZ;
+                SysBotHunterCoordXCount.Enabled = true;
+                SysBotHunterCoordYCount.Enabled = true;
+                SysBotHunterCoordZCount.Enabled = true;
+            }
+            catch (Exception)
+            {
+                SysBotHunterCoordXCount.Enabled = false;
+                SysBotHunterCoordYCount.Enabled = false;
+                SysBotHunterCoordZCount.Enabled = false;
+            }
             // Monsters
-            float Monster1HP = BitConverter.ToSingle(sb.ReadBytesAbsolute(OffsetMonster1HP, 4), 0);
-            SysBotMonster1HPCount.Value = (decimal)Monster1HP;
+            try
+            {
+                OffsetMonster1HP = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerMonsters3HP);
+                float Monster1HP = BitConverter.ToSingle(sb.ReadBytesAbsolute(OffsetMonster1HP, 4), 0);
+                SysBotMonster1HPCount.Value = (decimal)Monster1HP;
+                SysBotMonster1HPCount.Enabled = true;
+            }
+            catch (Exception)
+            {
+                SysBotMonster1HPCount.Enabled = false;
+            }
 
             SysBotLog.Text += Environment.NewLine + "Successfully loaded values.";
         }
