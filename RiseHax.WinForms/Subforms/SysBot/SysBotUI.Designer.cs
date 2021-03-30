@@ -133,7 +133,7 @@ namespace RiseHax.WinForms
             this.GroupSysBotConnection.Controls.Add(this.TextBoxIP);
             this.GroupSysBotConnection.Location = new System.Drawing.Point(370, 436);
             this.GroupSysBotConnection.Name = "GroupSysBotConnection";
-            this.GroupSysBotConnection.Size = new System.Drawing.Size(163, 119);
+            this.GroupSysBotConnection.Size = new System.Drawing.Size(168, 119);
             this.GroupSysBotConnection.TabIndex = 3;
             this.GroupSysBotConnection.TabStop = false;
             this.GroupSysBotConnection.Text = "Connection";
@@ -733,7 +733,7 @@ namespace RiseHax.WinForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(675, 702);
+            this.ClientSize = new System.Drawing.Size(544, 561);
             this.Controls.Add(this.SysBotTabControl);
             this.Controls.Add(this.GroupSysBotStatus);
             this.Controls.Add(this.GroupSysBotConnection);
