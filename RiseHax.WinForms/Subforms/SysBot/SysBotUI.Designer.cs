@@ -36,8 +36,6 @@ namespace RiseHax.WinForms
             this.LabelIP = new System.Windows.Forms.Label();
             this.TextBoxPort = new System.Windows.Forms.TextBox();
             this.GroupSysBotStatus = new System.Windows.Forms.GroupBox();
-            this.QuestMonsterCountLabel = new System.Windows.Forms.Label();
-            this.QuestMonsterCounter = new System.Windows.Forms.NumericUpDown();
             this.StatusConnection = new System.Windows.Forms.Label();
             this.StatusConnectionLabel = new System.Windows.Forms.Label();
             this.ButtonSysbotRead = new System.Windows.Forms.Button();
@@ -79,7 +77,6 @@ namespace RiseHax.WinForms
             this.SysBotLog = new System.Windows.Forms.RichTextBox();
             this.GroupSysBotConnection.SuspendLayout();
             this.GroupSysBotStatus.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.QuestMonsterCounter)).BeginInit();
             this.SysBotTabControl.SuspendLayout();
             this.TabSysBotPlayer.SuspendLayout();
             this.GroupSysBotPouch.SuspendLayout();
@@ -170,8 +167,6 @@ namespace RiseHax.WinForms
             // GroupSysBotStatus
             // 
             this.GroupSysBotStatus.AccessibleName = "GroupSysBotStatus";
-            this.GroupSysBotStatus.Controls.Add(this.QuestMonsterCountLabel);
-            this.GroupSysBotStatus.Controls.Add(this.QuestMonsterCounter);
             this.GroupSysBotStatus.Controls.Add(this.StatusConnection);
             this.GroupSysBotStatus.Controls.Add(this.StatusConnectionLabel);
             this.GroupSysBotStatus.Controls.Add(this.ButtonSysbotRead);
@@ -181,41 +176,6 @@ namespace RiseHax.WinForms
             this.GroupSysBotStatus.TabIndex = 4;
             this.GroupSysBotStatus.TabStop = false;
             this.GroupSysBotStatus.Text = "Status";
-            // 
-            // QuestMonsterCountLabel
-            // 
-            this.QuestMonsterCountLabel.AccessibleName = "QuestMonsterCountLabel";
-            this.QuestMonsterCountLabel.AutoSize = true;
-            this.QuestMonsterCountLabel.Location = new System.Drawing.Point(6, 57);
-            this.QuestMonsterCountLabel.Name = "QuestMonsterCountLabel";
-            this.QuestMonsterCountLabel.Size = new System.Drawing.Size(232, 13);
-            this.QuestMonsterCountLabel.TabIndex = 16;
-            this.QuestMonsterCountLabel.Text = "Monster count for current quest (Automate later)";
-            // 
-            // QuestMonsterCounter
-            // 
-            this.QuestMonsterCounter.AccessibleName = "QuestMonsterCounter";
-            this.QuestMonsterCounter.Enabled = false;
-            this.QuestMonsterCounter.Location = new System.Drawing.Point(244, 55);
-            this.QuestMonsterCounter.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.QuestMonsterCounter.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.QuestMonsterCounter.Name = "QuestMonsterCounter";
-            this.QuestMonsterCounter.Size = new System.Drawing.Size(67, 20);
-            this.QuestMonsterCounter.TabIndex = 5;
-            this.QuestMonsterCounter.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.QuestMonsterCounter.ValueChanged += new System.EventHandler(this.QuestMonsterCounter_ValueChanged);
             // 
             // StatusConnection
             // 
@@ -745,7 +705,6 @@ namespace RiseHax.WinForms
             this.GroupSysBotConnection.PerformLayout();
             this.GroupSysBotStatus.ResumeLayout(false);
             this.GroupSysBotStatus.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.QuestMonsterCounter)).EndInit();
             this.SysBotTabControl.ResumeLayout(false);
             this.TabSysBotPlayer.ResumeLayout(false);
             this.GroupSysBotPouch.ResumeLayout(false);
@@ -823,7 +782,5 @@ namespace RiseHax.WinForms
         private System.Windows.Forms.Label SysBotMonsterHPLabel;
         private System.Windows.Forms.TabPage SysBotQuestMonser2Tab;
         private System.Windows.Forms.TabPage SysBotQuestMonser3Tab;
-        private System.Windows.Forms.Label QuestMonsterCountLabel;
-        private System.Windows.Forms.NumericUpDown QuestMonsterCounter;
     }
 }

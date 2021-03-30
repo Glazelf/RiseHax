@@ -57,15 +57,6 @@ namespace RiseHax.WinForms
                 TextBoxIP.Enabled = false;
                 TextBoxPort.Enabled = false;
                 ButtonSysbotRead.Enabled = true;
-                // Player
-
-
-                // Quest
-
-
-
-                // Testing
-                QuestMonsterCounter.Enabled = true;
 
                 StatusConnection.ForeColor = Color.Green;
                 StatusConnection.Text = "Connected";
@@ -94,8 +85,6 @@ namespace RiseHax.WinForms
                 SysBotHunterHPCount.Enabled = false;
                 SysBotHunterStaminaCount.Enabled = false;
                 SysBotMonster1HPCount.Enabled = false;
-                // Testing
-                QuestMonsterCounter.Enabled = false;
 
                 StatusConnection.ForeColor = Color.Red;
                 StatusConnection.Text = "Disconnected";
@@ -267,20 +256,6 @@ namespace RiseHax.WinForms
                 itemCountAddresses[i] = pouchAddress + i * 0x60;
             }
             return itemCountAddresses;
-        }
-
-        // Handler for testing monster counter, should be obsolete later in development
-        private void QuestMonsterCounter_ValueChanged(object sender, EventArgs e)
-        {
-            switch (QuestMonsterCounter.Value)
-            {
-                case 2:
-                    OffsetMonster1HP = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerMonsters2HP);
-                    break;
-                case 3:
-                    OffsetMonster1HP = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerMonsters3HP);
-                    break;
-            }
         }
     }
 }
