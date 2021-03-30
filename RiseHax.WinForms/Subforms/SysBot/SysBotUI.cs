@@ -28,6 +28,7 @@ namespace RiseHax.WinForms
 
         // Declare offsets
         ulong OffsetHunterHP;
+        ulong OffsetHunterHPMax;
         ulong OffsetHunterHPRecoverable;
         ulong[] OffsetPouchItemCounts;
         ulong OffsetHunterCoordX;
@@ -159,7 +160,8 @@ namespace RiseHax.WinForms
             try
             {
                 OffsetHunterHP = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerHunterHP);
-                OffsetHunterHPRecoverable = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerHunterHPRecoverable);
+                OffsetHunterHPMax = OffsetHunterHP + 0x4;
+                OffsetHunterHPRecoverable = OffsetHunterHP + 0xC;
                 uint HunterHP = sb.ReadBytesAbsolute(OffsetHunterHP, 1)[0];
                 SysBotHunterHPCount.Value = HunterHP;
                 SysBotHunterHPCount.Enabled = true;
