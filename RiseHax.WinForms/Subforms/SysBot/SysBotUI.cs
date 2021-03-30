@@ -170,9 +170,10 @@ namespace RiseHax.WinForms
                 SysBotHunterHPCount.Value = HunterHP;
                 SysBotHunterHPCount.Enabled = true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 SysBotHunterHPCount.Enabled = false;
+                SysBotLog.Text += Environment.NewLine + $"An error occurred:" + Environment.NewLine + ex;
             }
             // Pouch
             try
@@ -195,13 +196,14 @@ namespace RiseHax.WinForms
                 SysBotPouchItem4Count.Enabled = true;
                 SysBotPouchItem5Count.Enabled = true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 SysBotPouchItem1Count.Enabled = false;
                 SysBotPouchItem2Count.Enabled = false;
                 SysBotPouchItem3Count.Enabled = false;
                 SysBotPouchItem4Count.Enabled = false;
                 SysBotPouchItem5Count.Enabled = false;
+                SysBotLog.Text += Environment.NewLine + $"An error occurred:" + Environment.NewLine + ex;
             }
             // Coordinates
             try
@@ -219,11 +221,12 @@ namespace RiseHax.WinForms
                 SysBotHunterCoordYCount.Enabled = true;
                 SysBotHunterCoordZCount.Enabled = true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 SysBotHunterCoordXCount.Enabled = false;
                 SysBotHunterCoordYCount.Enabled = false;
                 SysBotHunterCoordZCount.Enabled = false;
+                SysBotLog.Text += Environment.NewLine + $"An error occurred:" + Environment.NewLine + ex;
             }
             // Monsters
             try
@@ -233,9 +236,10 @@ namespace RiseHax.WinForms
                 SysBotMonster1HPCount.Value = (decimal)Monster1HP;
                 SysBotMonster1HPCount.Enabled = true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 SysBotMonster1HPCount.Enabled = false;
+                SysBotLog.Text += Environment.NewLine + $"An error occurred:" + Environment.NewLine + ex;
             }
 
             SysBotLog.Text += Environment.NewLine + "Successfully loaded values.";
