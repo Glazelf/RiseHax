@@ -26,9 +26,6 @@ namespace RiseHax.WinForms
         public bool Connected = false;
         public ISwitchConnectionSync sb;
 
-        // Variables
-        uint MaxHP = 250;
-
         // Declare offsets
         ulong OffsetHunterHP;
         ulong OffsetHunterHPMax;
@@ -112,7 +109,7 @@ namespace RiseHax.WinForms
         {
             BytesHandler.WriteUInt((uint)SysBotHunterHPCount.Value, OffsetHunterHP, sb);
             BytesHandler.WriteUInt((uint)SysBotHunterHPCount.Value, OffsetHunterHPRecoverable, sb);
-            BytesHandler.WriteUInt(MaxHP, OffsetHunterHPMax, sb);
+            BytesHandler.WriteUInt(GlobalVariables.MaxHP, OffsetHunterHPMax, sb);
         }
 
         // Pouch item writing
