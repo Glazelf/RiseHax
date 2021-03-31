@@ -164,8 +164,8 @@ namespace RiseHax.WinForms
             try
             {
                 OffsetHunterHP = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerHunterHP);
-                OffsetHunterHPMax = OffsetHunterHP + 0x4;
-                OffsetHunterHPRecoverable = OffsetHunterHP + 0xC;
+                OffsetHunterHPMax = OffsetHunterHP + DataOffsets.DistanceHPToHPMax;
+                OffsetHunterHPRecoverable = OffsetHunterHP + DataOffsets.DistanceHPToRecoverable;
                 uint HunterHP = sb.ReadBytesAbsolute(OffsetHunterHP, 1)[0];
                 SysBotHunterHPCount.Value = HunterHP;
                 SysBotHunterHPCount.Enabled = true;
@@ -209,8 +209,8 @@ namespace RiseHax.WinForms
             try
             {
                 OffsetHunterCoordX = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerHunterCoordX);
-                OffsetHunterCoordY = OffsetHunterCoordX + 0x4;
-                OffsetHunterCoordZ = OffsetHunterCoordX + 0x8;
+                OffsetHunterCoordY = OffsetHunterCoordX + DataOffsets.DistanceCoordinates;
+                OffsetHunterCoordZ = OffsetHunterCoordX + DataOffsets.DistanceCoordinates * 2;
                 float HunterCoordX = BitConverter.ToSingle(sb.ReadBytesAbsolute(OffsetHunterCoordX, 4), 0);
                 float HunterCoordY = BitConverter.ToSingle(sb.ReadBytesAbsolute(OffsetHunterCoordY, 4), 0);
                 float HunterCoordZ = BitConverter.ToSingle(sb.ReadBytesAbsolute(OffsetHunterCoordZ, 4), 0);
@@ -260,10 +260,10 @@ namespace RiseHax.WinForms
             int numHunterItems = 24;
 
             ulong[] itemCountAddresses = new ulong[numHunterItems];
-            ulong pouchAddress = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerPouchItem1Count);
+            ulong pouchAddress = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerPouchItem1) + DataOffsets.DistanceItemPouchTypeToCount;
             for (uint i = 0; i < numHunterItems; i++)
             {
-                itemCountAddresses[i] = pouchAddress + i * 0x60;
+                itemCountAddresses[i] = pouchAddress + i * DataOffsets.DistanceItemPouchCounts;
             }
             return itemCountAddresses;
         }
