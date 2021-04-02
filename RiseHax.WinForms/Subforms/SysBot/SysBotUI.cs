@@ -188,7 +188,7 @@ namespace RiseHax.WinForms
             try
             {
                 OffsetZeni = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerZeni);
-                uint Zeni = sb.ReadBytesAbsolute(OffsetZeni, 1)[0];
+                float Zeni = BitConverter.ToSingle(sb.ReadBytesAbsolute(OffsetZeni, 4), 0);
                 SysBotZeniCount.Value = (decimal)Zeni;
                 SysBotZeniCount.Enabled = true;
             }
