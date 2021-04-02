@@ -29,5 +29,10 @@ namespace RiseHax.Hunter
             byte[] Bytes = BitConverter.GetBytes(input);
             sb.WriteBytesAbsolute(Bytes, offset);
         }
+        public static void WriteDouble(double input, ulong offset, ISwitchConnectionSync sb)
+        {
+            byte[] Bytes = BitConverter.GetBytes(input);
+            sb.WriteBytesAbsolute(Bytes, offset);
+        }
     }
 }
