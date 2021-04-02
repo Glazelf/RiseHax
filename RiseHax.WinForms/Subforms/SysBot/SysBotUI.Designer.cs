@@ -738,6 +738,11 @@ namespace RiseHax.WinForms
             this.SysBotZeniCount.AccessibleName = "SysBotZeniCount";
             this.SysBotZeniCount.Enabled = false;
             this.SysBotZeniCount.Location = new System.Drawing.Point(54, 16);
+            this.SysBotZeniCount.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
             this.SysBotZeniCount.Name = "SysBotZeniCount";
             this.SysBotZeniCount.Size = new System.Drawing.Size(83, 20);
             this.SysBotZeniCount.TabIndex = 1;
@@ -758,6 +763,11 @@ namespace RiseHax.WinForms
             this.SysBotPointsCount.AccessibleName = "SysBotPointsCount";
             this.SysBotPointsCount.Enabled = false;
             this.SysBotPointsCount.Location = new System.Drawing.Point(54, 44);
+            this.SysBotPointsCount.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
             this.SysBotPointsCount.Name = "SysBotPointsCount";
             this.SysBotPointsCount.Size = new System.Drawing.Size(83, 20);
             this.SysBotPointsCount.TabIndex = 3;
