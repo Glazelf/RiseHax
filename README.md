@@ -1,10 +1,11 @@
 # RiseHax  
 This is a WIP save/memory editor for Monster Hunter: Rise for Nintendo Switch.
-Check the [releases page](https://github.com/Glazelf/RiseHax/releases) for releases when this is ready for any public use. If you really want to test before then, build the source code yourself.  
+Check the [releases page](https://github.com/Glazelf/RiseHax/releases) for releases and the [Issues page](https://github.com/Glazelf/RiseHax/issues) for general progress.
 
 ## Risks
 There is no easy way for us to test the ban risks of using this tool, especially online.  
 For the first few months of the game being released we will have no proper indication of the risks either so use this tool fully at your own risk. If you do discover anything relevant to the risks of using this, please contact us either through [Discord](https://discord.gg/5NsYYuvm7D) or [a discussion](https://github.com/Glazelf/RiseHax/discussions) so we can document it for future reference.  
+"Luckily" people are selling really poorly made hacks online so we can just look at them and see if they get people banned or not. :)  
 Pointers and offset data aren't publicly available in the source code, please use this tool and all the data that comes with it responsibly.
 
 ## Support
