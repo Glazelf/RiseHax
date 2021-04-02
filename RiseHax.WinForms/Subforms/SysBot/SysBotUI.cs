@@ -35,6 +35,8 @@ namespace RiseHax.WinForms
         ulong OffsetHunterCoordY;
         ulong OffsetHunterCoordZ;
         ulong OffsetMonster1HP;
+        ulong OffsetZeni;
+        ulong OffsetPoints;
 
         public void SysBotUI_Load(object sender, EventArgs e)
         {
@@ -74,6 +76,8 @@ namespace RiseHax.WinForms
                 TextBoxPort.Enabled = true;
                 ButtonSysbotRead.Enabled = false;
                 // Player
+                SysBotZeniCount.Enabled = false;
+                SysBotPointsCount.Enabled = false;
                 SysBotPouchItem1Count.Enabled = false;
                 SysBotPouchItem2Count.Enabled = false;
                 SysBotPouchItem3Count.Enabled = false;
@@ -154,10 +158,19 @@ namespace RiseHax.WinForms
             BytesHandler.WriteFloat((float)SysBotHunterCoordZCount.Value, OffsetHunterCoordZ, sb);
         }
 
+        private void SysBotZeniCount_ValueChanged(object sender, EventArgs e)
+        {
+            BytesHandler.WriteFloat((float)SysBotZeniCount.Value, OffsetZeni, sb);
+        }
+        private void SysBotPointsCount_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void ReloadValues()
         {
             //// Get offsets from pointers
-            // Hunter HP
+            // Player
             try
             {
                 OffsetHunterHP = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerHunterHP);
@@ -170,7 +183,19 @@ namespace RiseHax.WinForms
             catch (Exception ex)
             {
                 SysBotHunterHPCount.Enabled = false;
-                SysBotLog.Text += Environment.NewLine + $"{ex.Message}\n{ex.StackTrace}";
+                LogError(ex);
+            }
+            try
+            {
+                OffsetZeni = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerZeni);
+                uint Zeni = sb.ReadBytesAbsolute(OffsetZeni, 1)[0];
+                SysBotZeniCount.Value = (decimal)Zeni;
+                SysBotZeniCount.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                SysBotZeniCount.Enabled = false;
+                LogError(ex);
             }
             // Pouch
             try
@@ -200,7 +225,7 @@ namespace RiseHax.WinForms
                 SysBotPouchItem3Count.Enabled = false;
                 SysBotPouchItem4Count.Enabled = false;
                 SysBotPouchItem5Count.Enabled = false;
-                SysBotLog.Text += Environment.NewLine + $"{ex.Message}\n{ex.StackTrace}";
+                LogError(ex);
             }
             // Coordinates
             try
@@ -223,7 +248,7 @@ namespace RiseHax.WinForms
                 SysBotHunterCoordXCount.Enabled = false;
                 SysBotHunterCoordYCount.Enabled = false;
                 SysBotHunterCoordZCount.Enabled = false;
-                SysBotLog.Text += Environment.NewLine + $"{ex.Message}\n{ex.StackTrace}";
+                LogError(ex);
             }
             // Monsters
             try
@@ -236,7 +261,7 @@ namespace RiseHax.WinForms
             catch (Exception ex)
             {
                 SysBotMonster1HPCount.Enabled = false;
-                SysBotLog.Text += Environment.NewLine + $"{ex.Message}\n{ex.StackTrace}";
+                LogError(ex);
             }
 
             SysBotLog.Text += Environment.NewLine + "Successfully loaded values.";
@@ -263,6 +288,10 @@ namespace RiseHax.WinForms
                 itemCountAddresses[i] = pouchAddress + i * DataOffsets.DistanceItemPouchCounts;
             }
             return itemCountAddresses;
+        }
+        public void LogError(Exception ex)
+        {
+            SysBotLog.Text += Environment.NewLine + $"{ex.Message}\n{ex.StackTrace}";
         }
     }
 }
