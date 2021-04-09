@@ -67,13 +67,13 @@ namespace RiseHax.Hunter
             return address;
         }
 
-        public string DecimalToHex(ulong decValue)
+        public static string DecimalToHex(ulong decValue)
         {
             string hexValue = decValue.ToString("X");
             return hexValue;
         }
 
-        public ulong ConvertLittleEndian(byte[] array)
+        public static ulong ConvertLittleEndian(byte[] array)
         {
             int pos = 0;
             ulong result = 0;
