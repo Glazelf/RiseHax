@@ -45,8 +45,8 @@ namespace RiseHax.WinForms
             this.SysBotSlainTotalCount = new System.Windows.Forms.NumericUpDown();
             this.SysBotArenaQuestCount = new System.Windows.Forms.NumericUpDown();
             this.SysBotRampageQuestCount = new System.Windows.Forms.NumericUpDown();
-            this.SysBotHRQuestCount = new System.Windows.Forms.NumericUpDown();
-            this.SysBotLRQuestCount = new System.Windows.Forms.NumericUpDown();
+            this.SysBotHighRankQuestCount = new System.Windows.Forms.NumericUpDown();
+            this.SysBotLowRankQuestCount = new System.Windows.Forms.NumericUpDown();
             this.SysBotVillageQuestCount = new System.Windows.Forms.NumericUpDown();
             this.LabelSysBotCapturedTotal = new System.Windows.Forms.Label();
             this.LabelSysBotSlainTotal = new System.Windows.Forms.Label();
@@ -106,8 +106,8 @@ namespace RiseHax.WinForms
             ((System.ComponentModel.ISupportInitialize)(this.SysBotSlainTotalCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SysBotArenaQuestCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SysBotRampageQuestCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotHRQuestCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotLRQuestCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotHighRankQuestCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotLowRankQuestCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SysBotVillageQuestCount)).BeginInit();
             this.GroupSysBotCurrencies.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SysBotPointsCount)).BeginInit();
@@ -283,8 +283,8 @@ namespace RiseHax.WinForms
             this.GroupSysBotActivityLog.Controls.Add(this.SysBotSlainTotalCount);
             this.GroupSysBotActivityLog.Controls.Add(this.SysBotArenaQuestCount);
             this.GroupSysBotActivityLog.Controls.Add(this.SysBotRampageQuestCount);
-            this.GroupSysBotActivityLog.Controls.Add(this.SysBotHRQuestCount);
-            this.GroupSysBotActivityLog.Controls.Add(this.SysBotLRQuestCount);
+            this.GroupSysBotActivityLog.Controls.Add(this.SysBotHighRankQuestCount);
+            this.GroupSysBotActivityLog.Controls.Add(this.SysBotLowRankQuestCount);
             this.GroupSysBotActivityLog.Controls.Add(this.SysBotVillageQuestCount);
             this.GroupSysBotActivityLog.Controls.Add(this.LabelSysBotCapturedTotal);
             this.GroupSysBotActivityLog.Controls.Add(this.LabelSysBotSlainTotal);
@@ -303,6 +303,7 @@ namespace RiseHax.WinForms
             // SysBotSlainTotalCount
             // 
             this.SysBotSlainTotalCount.AccessibleName = "SysBotSlainTotalCount";
+            this.SysBotSlainTotalCount.Enabled = false;
             this.SysBotSlainTotalCount.Location = new System.Drawing.Point(79, 178);
             this.SysBotSlainTotalCount.Maximum = new decimal(new int[] {
             9999,
@@ -316,6 +317,7 @@ namespace RiseHax.WinForms
             // SysBotArenaQuestCount
             // 
             this.SysBotArenaQuestCount.AccessibleName = "SysBotArenaQuestCount";
+            this.SysBotArenaQuestCount.Enabled = false;
             this.SysBotArenaQuestCount.Location = new System.Drawing.Point(79, 142);
             this.SysBotArenaQuestCount.Maximum = new decimal(new int[] {
             9999,
@@ -329,6 +331,7 @@ namespace RiseHax.WinForms
             // SysBotRampageQuestCount
             // 
             this.SysBotRampageQuestCount.AccessibleName = "SysBotRampageQuestCount";
+            this.SysBotRampageQuestCount.Enabled = false;
             this.SysBotRampageQuestCount.Location = new System.Drawing.Point(79, 107);
             this.SysBotRampageQuestCount.Maximum = new decimal(new int[] {
             9999,
@@ -339,35 +342,38 @@ namespace RiseHax.WinForms
             this.SysBotRampageQuestCount.Size = new System.Drawing.Size(64, 20);
             this.SysBotRampageQuestCount.TabIndex = 12;
             // 
-            // SysBotHRQuestCount
+            // SysBotHighRankQuestCount
             // 
-            this.SysBotHRQuestCount.AccessibleName = "SysBotHRQuestCount";
-            this.SysBotHRQuestCount.Location = new System.Drawing.Point(79, 76);
-            this.SysBotHRQuestCount.Maximum = new decimal(new int[] {
+            this.SysBotHighRankQuestCount.AccessibleName = "SysBotHighRankQuestCount";
+            this.SysBotHighRankQuestCount.Enabled = false;
+            this.SysBotHighRankQuestCount.Location = new System.Drawing.Point(79, 76);
+            this.SysBotHighRankQuestCount.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
-            this.SysBotHRQuestCount.Name = "SysBotHRQuestCount";
-            this.SysBotHRQuestCount.Size = new System.Drawing.Size(64, 20);
-            this.SysBotHRQuestCount.TabIndex = 5;
+            this.SysBotHighRankQuestCount.Name = "SysBotHighRankQuestCount";
+            this.SysBotHighRankQuestCount.Size = new System.Drawing.Size(64, 20);
+            this.SysBotHighRankQuestCount.TabIndex = 5;
             // 
-            // SysBotLRQuestCount
+            // SysBotLowRankQuestCount
             // 
-            this.SysBotLRQuestCount.AccessibleName = "SysBotLRQuestCount";
-            this.SysBotLRQuestCount.Location = new System.Drawing.Point(79, 45);
-            this.SysBotLRQuestCount.Maximum = new decimal(new int[] {
+            this.SysBotLowRankQuestCount.AccessibleName = "SysBotLowRankQuestCount";
+            this.SysBotLowRankQuestCount.Enabled = false;
+            this.SysBotLowRankQuestCount.Location = new System.Drawing.Point(79, 45);
+            this.SysBotLowRankQuestCount.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
-            this.SysBotLRQuestCount.Name = "SysBotLRQuestCount";
-            this.SysBotLRQuestCount.Size = new System.Drawing.Size(64, 20);
-            this.SysBotLRQuestCount.TabIndex = 11;
+            this.SysBotLowRankQuestCount.Name = "SysBotLowRankQuestCount";
+            this.SysBotLowRankQuestCount.Size = new System.Drawing.Size(64, 20);
+            this.SysBotLowRankQuestCount.TabIndex = 11;
             // 
             // SysBotVillageQuestCount
             // 
             this.SysBotVillageQuestCount.AccessibleName = "SysBotVillageQuestCount";
+            this.SysBotVillageQuestCount.Enabled = false;
             this.SysBotVillageQuestCount.Location = new System.Drawing.Point(79, 14);
             this.SysBotVillageQuestCount.Maximum = new decimal(new int[] {
             9999,
@@ -977,6 +983,7 @@ namespace RiseHax.WinForms
             // SysBotCapturedTotalCount
             // 
             this.SysBotCapturedTotalCount.AccessibleName = "SysBotCapturedTotalCount";
+            this.SysBotCapturedTotalCount.Enabled = false;
             this.SysBotCapturedTotalCount.Location = new System.Drawing.Point(79, 215);
             this.SysBotCapturedTotalCount.Maximum = new decimal(new int[] {
             9999,
@@ -1000,6 +1007,7 @@ namespace RiseHax.WinForms
             // SysBotPlaytimeCount
             // 
             this.SysBotPlaytimeCount.AccessibleName = "SysBotPlaytimeCount";
+            this.SysBotPlaytimeCount.Enabled = false;
             this.SysBotPlaytimeCount.Location = new System.Drawing.Point(79, 247);
             this.SysBotPlaytimeCount.Maximum = new decimal(new int[] {
             1410065407,
@@ -1033,8 +1041,8 @@ namespace RiseHax.WinForms
             ((System.ComponentModel.ISupportInitialize)(this.SysBotSlainTotalCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SysBotArenaQuestCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SysBotRampageQuestCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotHRQuestCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotLRQuestCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotHighRankQuestCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotLowRankQuestCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SysBotVillageQuestCount)).EndInit();
             this.GroupSysBotCurrencies.ResumeLayout(false);
             this.GroupSysBotCurrencies.PerformLayout();
@@ -1135,8 +1143,8 @@ namespace RiseHax.WinForms
         private System.Windows.Forms.NumericUpDown SysBotSlainTotalCount;
         private System.Windows.Forms.NumericUpDown SysBotArenaQuestCount;
         private System.Windows.Forms.NumericUpDown SysBotRampageQuestCount;
-        private System.Windows.Forms.NumericUpDown SysBotHRQuestCount;
-        private System.Windows.Forms.NumericUpDown SysBotLRQuestCount;
+        private System.Windows.Forms.NumericUpDown SysBotHighRankQuestCount;
+        private System.Windows.Forms.NumericUpDown SysBotLowRankQuestCount;
         private System.Windows.Forms.NumericUpDown SysBotVillageQuestCount;
         private System.Windows.Forms.NumericUpDown SysBotCapturedTotalCount;
         private System.Windows.Forms.NumericUpDown SysBotPlaytimeCount;

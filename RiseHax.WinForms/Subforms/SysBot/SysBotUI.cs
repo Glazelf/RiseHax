@@ -30,6 +30,14 @@ namespace RiseHax.WinForms
         ulong OffsetHunterHP;
         ulong OffsetHunterHPMax;
         ulong OffsetHunterHPRecoverable;
+        ulong OffsetVillageQuestCount;
+        ulong OffsetLowRankQuestCount;
+        ulong OffsetHighRankQuestCount;
+        ulong OffsetRampageQuestCount;
+        ulong OffsetArenaQuestCount;
+        ulong OffsetSlainTotal;
+        ulong OffsetCapturedTotal;
+        ulong OffsetPlaytime;
         ulong[] OffsetPouchItemCounts;
         ulong OffsetHunterCoordX;
         ulong OffsetHunterCoordY;
@@ -195,6 +203,65 @@ namespace RiseHax.WinForms
             catch (Exception ex)
             {
                 SysBotZeniCount.Enabled = false;
+                LogError(ex);
+            }
+            // Activity Log
+            try
+            {
+                OffsetVillageQuestCount = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerActivityLog);
+                OffsetLowRankQuestCount = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerActivityLog + DataOffsets.DistanceLowRankQuestCount);
+                OffsetHighRankQuestCount = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerActivityLog + DataOffsets.DistanceHighRankQuestCount);
+                OffsetRampageQuestCount = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerActivityLog + DataOffsets.DistanceRampageQuestCount);
+                OffsetArenaQuestCount = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerActivityLog + DataOffsets.DistanceArenaQuestCount);
+                OffsetSlainTotal = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerActivityLog + DataOffsets.DistanceSlainTotal);
+                OffsetCapturedTotal = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerActivityLog + DataOffsets.DistanceCapturedTotal);
+                uint VillageQuestCount = sb.ReadBytesAbsolute(OffsetVillageQuestCount, 1)[0];
+                uint LowRankQuestCount = sb.ReadBytesAbsolute(OffsetLowRankQuestCount, 1)[0];
+                uint HighRankQuestCount = sb.ReadBytesAbsolute(OffsetHighRankQuestCount, 1)[0];
+                uint RampageQuestCount = sb.ReadBytesAbsolute(OffsetRampageQuestCount, 1)[0];
+                uint ArenaQuestCount = sb.ReadBytesAbsolute(OffsetArenaQuestCount, 1)[0];
+                uint SlainTotal = sb.ReadBytesAbsolute(OffsetSlainTotal, 1)[0];
+                uint CapturedTotal = sb.ReadBytesAbsolute(OffsetCapturedTotal, 1)[0];
+                SysBotVillageQuestCount.Value = VillageQuestCount;
+                SysBotLowRankQuestCount.Value = LowRankQuestCount;
+                SysBotHighRankQuestCount.Value = HighRankQuestCount;
+                SysBotRampageQuestCount.Value = RampageQuestCount;
+                SysBotArenaQuestCount.Value = ArenaQuestCount;
+                SysBotSlainTotalCount.Value = SlainTotal;
+                SysBotCapturedTotalCount.Value = CapturedTotal;
+
+                SysBotVillageQuestCount.Enabled = true;
+                SysBotLowRankQuestCount.Enabled = true;
+                SysBotHighRankQuestCount.Enabled = true;
+                SysBotRampageQuestCount.Enabled = true;
+                SysBotArenaQuestCount.Enabled = true;
+                SysBotSlainTotalCount.Enabled = true;
+                SysBotCapturedTotalCount.Enabled = true;
+
+            }
+            catch (Exception ex)
+            {
+                SysBotVillageQuestCount.Enabled = false;
+                SysBotLowRankQuestCount.Enabled = false;
+                SysBotHighRankQuestCount.Enabled = false;
+                SysBotRampageQuestCount.Enabled = false;
+                SysBotArenaQuestCount.Enabled = false;
+                SysBotSlainTotalCount.Enabled = false;
+                SysBotCapturedTotalCount.Enabled = false;
+                SysBotPlaytimeCount.Enabled = false;
+                LogError(ex);
+            }
+            // Playtime
+            try
+            {
+                OffsetPlaytime = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerActivityLog + DataOffsets.DistancePlaytime);
+                uint Playtime = sb.ReadBytesAbsolute(OffsetPlaytime, 1)[0];
+                SysBotPlaytimeCount.Value = Playtime;
+                SysBotPlaytimeCount.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                SysBotPlaytimeCount.Enabled = false;
                 LogError(ex);
             }
             // Pouch
