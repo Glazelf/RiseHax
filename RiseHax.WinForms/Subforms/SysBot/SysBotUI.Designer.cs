@@ -552,7 +552,7 @@ namespace RiseHax.WinForms
             0,
             0});
             this.SysBotPouchItem5Count.Name = "SysBotPouchItem5Count";
-            this.SysBotPouchItem5Count.Size = new System.Drawing.Size(224, 20);
+            this.SysBotPouchItem5Count.Size = new System.Drawing.Size(61, 20);
             this.SysBotPouchItem5Count.TabIndex = 9;
             this.SysBotPouchItem5Count.ValueChanged += new System.EventHandler(this.SysBotPouchItem5Count_ValueChanged);
             // 
@@ -562,7 +562,7 @@ namespace RiseHax.WinForms
             this.LabelSysBotPouchItem1.AutoSize = true;
             this.LabelSysBotPouchItem1.Location = new System.Drawing.Point(2, 2);
             this.LabelSysBotPouchItem1.Name = "LabelSysBotPouchItem1";
-            this.LabelSysBotPouchItem1.Size = new System.Drawing.Size(31, 10);
+            this.LabelSysBotPouchItem1.Size = new System.Drawing.Size(39, 13);
             this.LabelSysBotPouchItem1.TabIndex = 1;
             this.LabelSysBotPouchItem1.Text = "Item 1:";
             // 
@@ -570,9 +570,9 @@ namespace RiseHax.WinForms
             // 
             this.QuestSysBotPouchItem5.AccessibleName = "LabelSysBotPouchItem5";
             this.QuestSysBotPouchItem5.AutoSize = true;
-            this.QuestSysBotPouchItem5.Location = new System.Drawing.Point(2, 106);
+            this.QuestSysBotPouchItem5.Location = new System.Drawing.Point(2, 133);
             this.QuestSysBotPouchItem5.Name = "QuestSysBotPouchItem5";
-            this.QuestSysBotPouchItem5.Size = new System.Drawing.Size(31, 10);
+            this.QuestSysBotPouchItem5.Size = new System.Drawing.Size(39, 13);
             this.QuestSysBotPouchItem5.TabIndex = 8;
             this.QuestSysBotPouchItem5.Text = "Item 5:";
             // 
@@ -587,7 +587,7 @@ namespace RiseHax.WinForms
             0,
             0});
             this.SysBotPouchItem1Count.Name = "SysBotPouchItem1Count";
-            this.SysBotPouchItem1Count.Size = new System.Drawing.Size(143, 20);
+            this.SysBotPouchItem1Count.Size = new System.Drawing.Size(61, 20);
             this.SysBotPouchItem1Count.TabIndex = 0;
             this.SysBotPouchItem1Count.ValueChanged += new System.EventHandler(this.SysBotPouchItem1Count_ValueChanged);
             // 
@@ -602,7 +602,7 @@ namespace RiseHax.WinForms
             0,
             0});
             this.SysBotPouchItem4Count.Name = "SysBotPouchItem4Count";
-            this.SysBotPouchItem4Count.Size = new System.Drawing.Size(114, 20);
+            this.SysBotPouchItem4Count.Size = new System.Drawing.Size(61, 20);
             this.SysBotPouchItem4Count.TabIndex = 7;
             this.SysBotPouchItem4Count.ValueChanged += new System.EventHandler(this.SysBotPouchItem4Count_ValueChanged);
             // 
@@ -610,9 +610,9 @@ namespace RiseHax.WinForms
             // 
             this.LabelSysBotPouchItem2.AccessibleName = "LabelSysBotPouchItem2";
             this.LabelSysBotPouchItem2.AutoSize = true;
-            this.LabelSysBotPouchItem2.Location = new System.Drawing.Point(2, 26);
+            this.LabelSysBotPouchItem2.Location = new System.Drawing.Point(2, 33);
             this.LabelSysBotPouchItem2.Name = "LabelSysBotPouchItem2";
-            this.LabelSysBotPouchItem2.Size = new System.Drawing.Size(31, 10);
+            this.LabelSysBotPouchItem2.Size = new System.Drawing.Size(39, 13);
             this.LabelSysBotPouchItem2.TabIndex = 2;
             this.LabelSysBotPouchItem2.Text = "Item 2:";
             // 
@@ -620,9 +620,9 @@ namespace RiseHax.WinForms
             // 
             this.LabelSysBotPouchItem4.AccessibleName = "LabelSysBotPouchItem4";
             this.LabelSysBotPouchItem4.AutoSize = true;
-            this.LabelSysBotPouchItem4.Location = new System.Drawing.Point(2, 80);
+            this.LabelSysBotPouchItem4.Location = new System.Drawing.Point(2, 100);
             this.LabelSysBotPouchItem4.Name = "LabelSysBotPouchItem4";
-            this.LabelSysBotPouchItem4.Size = new System.Drawing.Size(31, 10);
+            this.LabelSysBotPouchItem4.Size = new System.Drawing.Size(39, 13);
             this.LabelSysBotPouchItem4.TabIndex = 6;
             this.LabelSysBotPouchItem4.Text = "Item 4:";
             // 
@@ -637,7 +637,7 @@ namespace RiseHax.WinForms
             0,
             0});
             this.SysBotPouchItem2Count.Name = "SysBotPouchItem2Count";
-            this.SysBotPouchItem2Count.Size = new System.Drawing.Size(91, 20);
+            this.SysBotPouchItem2Count.Size = new System.Drawing.Size(61, 20);
             this.SysBotPouchItem2Count.TabIndex = 3;
             this.SysBotPouchItem2Count.ValueChanged += new System.EventHandler(this.SysBotPouchItem2Count_ValueChanged);
             // 
@@ -652,7 +652,7 @@ namespace RiseHax.WinForms
             0,
             0});
             this.SysBotPouchItem3Count.Name = "SysBotPouchItem3Count";
-            this.SysBotPouchItem3Count.Size = new System.Drawing.Size(73, 20);
+            this.SysBotPouchItem3Count.Size = new System.Drawing.Size(61, 20);
             this.SysBotPouchItem3Count.TabIndex = 5;
             this.SysBotPouchItem3Count.ValueChanged += new System.EventHandler(this.SysBotPouchItem3Count_ValueChanged);
             // 
@@ -660,9 +660,9 @@ namespace RiseHax.WinForms
             // 
             this.LabelSysBotPouchItem3.AccessibleName = "LabelSysBotPouchItem3";
             this.LabelSysBotPouchItem3.AutoSize = true;
-            this.LabelSysBotPouchItem3.Location = new System.Drawing.Point(2, 54);
+            this.LabelSysBotPouchItem3.Location = new System.Drawing.Point(2, 67);
             this.LabelSysBotPouchItem3.Name = "LabelSysBotPouchItem3";
-            this.LabelSysBotPouchItem3.Size = new System.Drawing.Size(31, 10);
+            this.LabelSysBotPouchItem3.Size = new System.Drawing.Size(39, 13);
             this.LabelSysBotPouchItem3.TabIndex = 4;
             this.LabelSysBotPouchItem3.Text = "Item 3:";
             // 
