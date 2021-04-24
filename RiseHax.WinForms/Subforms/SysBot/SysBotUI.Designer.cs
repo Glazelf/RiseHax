@@ -41,17 +41,37 @@ namespace RiseHax.WinForms
             this.ButtonSysbotRead = new System.Windows.Forms.Button();
             this.SysBotTabControl = new System.Windows.Forms.TabControl();
             this.TabSysBotPlayer = new System.Windows.Forms.TabPage();
+            this.GroupSysBotActivityLog = new System.Windows.Forms.GroupBox();
+            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.LabelSysBotCapturedTotal = new System.Windows.Forms.Label();
+            this.LabelSysBotSlainTotal = new System.Windows.Forms.Label();
+            this.LabelSysBotArenaQuests = new System.Windows.Forms.Label();
+            this.LabelSysBotRampageQuests = new System.Windows.Forms.Label();
+            this.LabelSysBotHRQuests = new System.Windows.Forms.Label();
+            this.LabelSysBotLRQuests = new System.Windows.Forms.Label();
+            this.LabelSysBotVillageQuest = new System.Windows.Forms.Label();
+            this.GroupSysBotCurrencies = new System.Windows.Forms.GroupBox();
+            this.SysBotPointsCount = new System.Windows.Forms.NumericUpDown();
+            this.LabelSysBotPoints = new System.Windows.Forms.Label();
+            this.SysBotZeniCount = new System.Windows.Forms.NumericUpDown();
+            this.LabelSysBotZeni = new System.Windows.Forms.Label();
             this.GroupSysBotPouch = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SysBotPouchItem5Count = new System.Windows.Forms.NumericUpDown();
+            this.LabelSysBotPouchItem1 = new System.Windows.Forms.Label();
             this.QuestSysBotPouchItem5 = new System.Windows.Forms.Label();
+            this.SysBotPouchItem1Count = new System.Windows.Forms.NumericUpDown();
             this.SysBotPouchItem4Count = new System.Windows.Forms.NumericUpDown();
+            this.LabelSysBotPouchItem2 = new System.Windows.Forms.Label();
             this.LabelSysBotPouchItem4 = new System.Windows.Forms.Label();
+            this.SysBotPouchItem2Count = new System.Windows.Forms.NumericUpDown();
             this.SysBotPouchItem3Count = new System.Windows.Forms.NumericUpDown();
             this.LabelSysBotPouchItem3 = new System.Windows.Forms.Label();
-            this.SysBotPouchItem2Count = new System.Windows.Forms.NumericUpDown();
-            this.LabelSysBotPouchItem2 = new System.Windows.Forms.Label();
-            this.LabelSysBotPouchItem1 = new System.Windows.Forms.Label();
-            this.SysBotPouchItem1Count = new System.Windows.Forms.NumericUpDown();
             this.GroupSysBotHunterCoords = new System.Windows.Forms.GroupBox();
             this.SysBotHunterCoordZCount = new System.Windows.Forms.NumericUpDown();
             this.SysBotHunterCoordZLabel = new System.Windows.Forms.Label();
@@ -75,22 +95,30 @@ namespace RiseHax.WinForms
             this.SysBotHunterHP = new System.Windows.Forms.Label();
             this.TabSysBotLog = new System.Windows.Forms.TabPage();
             this.SysBotLog = new System.Windows.Forms.RichTextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.GroupSysBotCurrencies = new System.Windows.Forms.GroupBox();
-            this.LabelSysBotZeni = new System.Windows.Forms.Label();
-            this.SysBotZeniCount = new System.Windows.Forms.NumericUpDown();
-            this.LabelSysBotPoints = new System.Windows.Forms.Label();
-            this.SysBotPointsCount = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
+            this.LabelSysBotPlaytime = new System.Windows.Forms.Label();
+            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
             this.GroupSysBotConnection.SuspendLayout();
             this.GroupSysBotStatus.SuspendLayout();
             this.SysBotTabControl.SuspendLayout();
             this.TabSysBotPlayer.SuspendLayout();
+            this.GroupSysBotActivityLog.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.GroupSysBotCurrencies.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotPointsCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotZeniCount)).BeginInit();
             this.GroupSysBotPouch.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SysBotPouchItem5Count)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotPouchItem4Count)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotPouchItem3Count)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotPouchItem2Count)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SysBotPouchItem1Count)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotPouchItem4Count)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotPouchItem2Count)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotPouchItem3Count)).BeginInit();
             this.GroupSysBotHunterCoords.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterCoordZCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterCoordYCount)).BeginInit();
@@ -104,10 +132,8 @@ namespace RiseHax.WinForms
             ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterStaminaCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterHPCount)).BeginInit();
             this.TabSysBotLog.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.GroupSysBotCurrencies.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotZeniCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotPointsCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
             this.SuspendLayout();
             // 
             // TextBoxIP
@@ -236,6 +262,7 @@ namespace RiseHax.WinForms
             // TabSysBotPlayer
             // 
             this.TabSysBotPlayer.AccessibleName = "TabSysBotPlayer";
+            this.TabSysBotPlayer.Controls.Add(this.GroupSysBotActivityLog);
             this.TabSysBotPlayer.Controls.Add(this.GroupSysBotCurrencies);
             this.TabSysBotPlayer.Controls.Add(this.GroupSysBotPouch);
             this.TabSysBotPlayer.Controls.Add(this.GroupSysBotHunterCoords);
@@ -247,6 +274,208 @@ namespace RiseHax.WinForms
             this.TabSysBotPlayer.Text = "Player";
             this.TabSysBotPlayer.UseVisualStyleBackColor = true;
             // 
+            // GroupSysBotActivityLog
+            // 
+            this.GroupSysBotActivityLog.AccessibleName = "GroupSysBotActivityLog";
+            this.GroupSysBotActivityLog.Controls.Add(this.numericUpDown8);
+            this.GroupSysBotActivityLog.Controls.Add(this.LabelSysBotPlaytime);
+            this.GroupSysBotActivityLog.Controls.Add(this.numericUpDown7);
+            this.GroupSysBotActivityLog.Controls.Add(this.numericUpDown6);
+            this.GroupSysBotActivityLog.Controls.Add(this.numericUpDown5);
+            this.GroupSysBotActivityLog.Controls.Add(this.numericUpDown4);
+            this.GroupSysBotActivityLog.Controls.Add(this.numericUpDown3);
+            this.GroupSysBotActivityLog.Controls.Add(this.numericUpDown2);
+            this.GroupSysBotActivityLog.Controls.Add(this.numericUpDown1);
+            this.GroupSysBotActivityLog.Controls.Add(this.LabelSysBotCapturedTotal);
+            this.GroupSysBotActivityLog.Controls.Add(this.LabelSysBotSlainTotal);
+            this.GroupSysBotActivityLog.Controls.Add(this.LabelSysBotArenaQuests);
+            this.GroupSysBotActivityLog.Controls.Add(this.LabelSysBotRampageQuests);
+            this.GroupSysBotActivityLog.Controls.Add(this.LabelSysBotHRQuests);
+            this.GroupSysBotActivityLog.Controls.Add(this.LabelSysBotLRQuests);
+            this.GroupSysBotActivityLog.Controls.Add(this.LabelSysBotVillageQuest);
+            this.GroupSysBotActivityLog.Location = new System.Drawing.Point(236, 6);
+            this.GroupSysBotActivityLog.Name = "GroupSysBotActivityLog";
+            this.GroupSysBotActivityLog.Size = new System.Drawing.Size(143, 273);
+            this.GroupSysBotActivityLog.TabIndex = 5;
+            this.GroupSysBotActivityLog.TabStop = false;
+            this.GroupSysBotActivityLog.Text = "Activity Log";
+            // 
+            // numericUpDown6
+            // 
+            this.numericUpDown6.Location = new System.Drawing.Point(79, 178);
+            this.numericUpDown6.Name = "numericUpDown6";
+            this.numericUpDown6.Size = new System.Drawing.Size(64, 20);
+            this.numericUpDown6.TabIndex = 14;
+            // 
+            // numericUpDown5
+            // 
+            this.numericUpDown5.Location = new System.Drawing.Point(79, 142);
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(64, 20);
+            this.numericUpDown5.TabIndex = 13;
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Location = new System.Drawing.Point(79, 107);
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(64, 20);
+            this.numericUpDown4.TabIndex = 12;
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Location = new System.Drawing.Point(79, 76);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(64, 20);
+            this.numericUpDown3.TabIndex = 5;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(79, 45);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(64, 20);
+            this.numericUpDown2.TabIndex = 11;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(79, 14);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(64, 20);
+            this.numericUpDown1.TabIndex = 5;
+            // 
+            // LabelSysBotCapturedTotal
+            // 
+            this.LabelSysBotCapturedTotal.AccessibleName = "LabelSysBotCapturedTotal";
+            this.LabelSysBotCapturedTotal.AutoSize = true;
+            this.LabelSysBotCapturedTotal.Location = new System.Drawing.Point(6, 217);
+            this.LabelSysBotCapturedTotal.Name = "LabelSysBotCapturedTotal";
+            this.LabelSysBotCapturedTotal.Size = new System.Drawing.Size(53, 13);
+            this.LabelSysBotCapturedTotal.TabIndex = 10;
+            this.LabelSysBotCapturedTotal.Text = "Captured:";
+            // 
+            // LabelSysBotSlainTotal
+            // 
+            this.LabelSysBotSlainTotal.AccessibleName = "LabelSysBotSlainTotal";
+            this.LabelSysBotSlainTotal.AutoSize = true;
+            this.LabelSysBotSlainTotal.Location = new System.Drawing.Point(7, 180);
+            this.LabelSysBotSlainTotal.Name = "LabelSysBotSlainTotal";
+            this.LabelSysBotSlainTotal.Size = new System.Drawing.Size(33, 13);
+            this.LabelSysBotSlainTotal.TabIndex = 9;
+            this.LabelSysBotSlainTotal.Text = "Slain:";
+            // 
+            // LabelSysBotArenaQuests
+            // 
+            this.LabelSysBotArenaQuests.AccessibleName = "LabelSysBotArenaQuests";
+            this.LabelSysBotArenaQuests.AutoSize = true;
+            this.LabelSysBotArenaQuests.Location = new System.Drawing.Point(6, 144);
+            this.LabelSysBotArenaQuests.Name = "LabelSysBotArenaQuests";
+            this.LabelSysBotArenaQuests.Size = new System.Drawing.Size(43, 13);
+            this.LabelSysBotArenaQuests.TabIndex = 8;
+            this.LabelSysBotArenaQuests.Text = "Arenas:";
+            // 
+            // LabelSysBotRampageQuests
+            // 
+            this.LabelSysBotRampageQuests.AccessibleName = "LabelSysBotRampageQuests";
+            this.LabelSysBotRampageQuests.AutoSize = true;
+            this.LabelSysBotRampageQuests.Location = new System.Drawing.Point(7, 109);
+            this.LabelSysBotRampageQuests.Name = "LabelSysBotRampageQuests";
+            this.LabelSysBotRampageQuests.Size = new System.Drawing.Size(61, 13);
+            this.LabelSysBotRampageQuests.TabIndex = 7;
+            this.LabelSysBotRampageQuests.Text = "Rampages:";
+            // 
+            // LabelSysBotHRQuests
+            // 
+            this.LabelSysBotHRQuests.AccessibleName = "LabelSysBotHRQuests";
+            this.LabelSysBotHRQuests.AutoSize = true;
+            this.LabelSysBotHRQuests.Location = new System.Drawing.Point(6, 79);
+            this.LabelSysBotHRQuests.Name = "LabelSysBotHRQuests";
+            this.LabelSysBotHRQuests.Size = new System.Drawing.Size(62, 13);
+            this.LabelSysBotHRQuests.TabIndex = 6;
+            this.LabelSysBotHRQuests.Text = "HR Quests:";
+            // 
+            // LabelSysBotLRQuests
+            // 
+            this.LabelSysBotLRQuests.AccessibleName = "LabelSysBotLRQuests";
+            this.LabelSysBotLRQuests.AutoSize = true;
+            this.LabelSysBotLRQuests.Location = new System.Drawing.Point(6, 47);
+            this.LabelSysBotLRQuests.Name = "LabelSysBotLRQuests";
+            this.LabelSysBotLRQuests.Size = new System.Drawing.Size(60, 13);
+            this.LabelSysBotLRQuests.TabIndex = 5;
+            this.LabelSysBotLRQuests.Text = "LR Quests:";
+            // 
+            // LabelSysBotVillageQuest
+            // 
+            this.LabelSysBotVillageQuest.AccessibleName = "LabelSysBotVillageQuest";
+            this.LabelSysBotVillageQuest.AutoSize = true;
+            this.LabelSysBotVillageQuest.Location = new System.Drawing.Point(6, 16);
+            this.LabelSysBotVillageQuest.Name = "LabelSysBotVillageQuest";
+            this.LabelSysBotVillageQuest.Size = new System.Drawing.Size(77, 13);
+            this.LabelSysBotVillageQuest.TabIndex = 0;
+            this.LabelSysBotVillageQuest.Text = "Village Quests:";
+            // 
+            // GroupSysBotCurrencies
+            // 
+            this.GroupSysBotCurrencies.AccessibleName = "GroupSysBotCurrencies";
+            this.GroupSysBotCurrencies.Controls.Add(this.SysBotPointsCount);
+            this.GroupSysBotCurrencies.Controls.Add(this.LabelSysBotPoints);
+            this.GroupSysBotCurrencies.Controls.Add(this.SysBotZeniCount);
+            this.GroupSysBotCurrencies.Controls.Add(this.LabelSysBotZeni);
+            this.GroupSysBotCurrencies.Location = new System.Drawing.Point(236, 285);
+            this.GroupSysBotCurrencies.Name = "GroupSysBotCurrencies";
+            this.GroupSysBotCurrencies.Size = new System.Drawing.Size(143, 71);
+            this.GroupSysBotCurrencies.TabIndex = 10;
+            this.GroupSysBotCurrencies.TabStop = false;
+            this.GroupSysBotCurrencies.Text = "Currencies";
+            // 
+            // SysBotPointsCount
+            // 
+            this.SysBotPointsCount.AccessibleName = "SysBotPointsCount";
+            this.SysBotPointsCount.Enabled = false;
+            this.SysBotPointsCount.Location = new System.Drawing.Point(54, 44);
+            this.SysBotPointsCount.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
+            this.SysBotPointsCount.Name = "SysBotPointsCount";
+            this.SysBotPointsCount.Size = new System.Drawing.Size(83, 20);
+            this.SysBotPointsCount.TabIndex = 3;
+            this.SysBotPointsCount.ValueChanged += new System.EventHandler(this.SysBotPointsCount_ValueChanged);
+            // 
+            // LabelSysBotPoints
+            // 
+            this.LabelSysBotPoints.AccessibleName = "LabelSysBotPoints";
+            this.LabelSysBotPoints.AutoSize = true;
+            this.LabelSysBotPoints.Location = new System.Drawing.Point(6, 46);
+            this.LabelSysBotPoints.Name = "LabelSysBotPoints";
+            this.LabelSysBotPoints.Size = new System.Drawing.Size(39, 13);
+            this.LabelSysBotPoints.TabIndex = 2;
+            this.LabelSysBotPoints.Text = "Points:";
+            // 
+            // SysBotZeniCount
+            // 
+            this.SysBotZeniCount.AccessibleName = "SysBotZeniCount";
+            this.SysBotZeniCount.Enabled = false;
+            this.SysBotZeniCount.Location = new System.Drawing.Point(54, 16);
+            this.SysBotZeniCount.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
+            this.SysBotZeniCount.Name = "SysBotZeniCount";
+            this.SysBotZeniCount.Size = new System.Drawing.Size(83, 20);
+            this.SysBotZeniCount.TabIndex = 1;
+            this.SysBotZeniCount.ValueChanged += new System.EventHandler(this.SysBotZeniCount_ValueChanged);
+            // 
+            // LabelSysBotZeni
+            // 
+            this.LabelSysBotZeni.AccessibleName = "LabelSysBotZeni";
+            this.LabelSysBotZeni.AutoSize = true;
+            this.LabelSysBotZeni.Location = new System.Drawing.Point(6, 18);
+            this.LabelSysBotZeni.Name = "LabelSysBotZeni";
+            this.LabelSysBotZeni.Size = new System.Drawing.Size(31, 13);
+            this.LabelSysBotZeni.TabIndex = 0;
+            this.LabelSysBotZeni.Text = "Zeni:";
+            // 
             // GroupSysBotPouch
             // 
             this.GroupSysBotPouch.AccessibleName = "GroupSysBotPouch";
@@ -257,6 +486,24 @@ namespace RiseHax.WinForms
             this.GroupSysBotPouch.TabIndex = 9;
             this.GroupSysBotPouch.TabStop = false;
             this.GroupSysBotPouch.Text = "Item Pouch";
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.SysBotPouchItem5Count);
+            this.panel1.Controls.Add(this.LabelSysBotPouchItem1);
+            this.panel1.Controls.Add(this.QuestSysBotPouchItem5);
+            this.panel1.Controls.Add(this.SysBotPouchItem1Count);
+            this.panel1.Controls.Add(this.SysBotPouchItem4Count);
+            this.panel1.Controls.Add(this.LabelSysBotPouchItem2);
+            this.panel1.Controls.Add(this.LabelSysBotPouchItem4);
+            this.panel1.Controls.Add(this.SysBotPouchItem2Count);
+            this.panel1.Controls.Add(this.SysBotPouchItem3Count);
+            this.panel1.Controls.Add(this.LabelSysBotPouchItem3);
+            this.panel1.Location = new System.Drawing.Point(0, 19);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(144, 334);
+            this.panel1.TabIndex = 10;
             // 
             // SysBotPouchItem5Count
             // 
@@ -273,6 +520,16 @@ namespace RiseHax.WinForms
             this.SysBotPouchItem5Count.TabIndex = 9;
             this.SysBotPouchItem5Count.ValueChanged += new System.EventHandler(this.SysBotPouchItem5Count_ValueChanged);
             // 
+            // LabelSysBotPouchItem1
+            // 
+            this.LabelSysBotPouchItem1.AccessibleName = "LabelSysBotPouchItem1";
+            this.LabelSysBotPouchItem1.AutoSize = true;
+            this.LabelSysBotPouchItem1.Location = new System.Drawing.Point(2, 2);
+            this.LabelSysBotPouchItem1.Name = "LabelSysBotPouchItem1";
+            this.LabelSysBotPouchItem1.Size = new System.Drawing.Size(39, 13);
+            this.LabelSysBotPouchItem1.TabIndex = 1;
+            this.LabelSysBotPouchItem1.Text = "Item 1:";
+            // 
             // QuestSysBotPouchItem5
             // 
             this.QuestSysBotPouchItem5.AccessibleName = "LabelSysBotPouchItem5";
@@ -282,6 +539,21 @@ namespace RiseHax.WinForms
             this.QuestSysBotPouchItem5.Size = new System.Drawing.Size(39, 13);
             this.QuestSysBotPouchItem5.TabIndex = 8;
             this.QuestSysBotPouchItem5.Text = "Item 5:";
+            // 
+            // SysBotPouchItem1Count
+            // 
+            this.SysBotPouchItem1Count.AccessibleName = "SysBotPouchItem1Count";
+            this.SysBotPouchItem1Count.Enabled = false;
+            this.SysBotPouchItem1Count.Location = new System.Drawing.Point(83, 0);
+            this.SysBotPouchItem1Count.Maximum = new decimal(new int[] {
+            65536,
+            0,
+            0,
+            0});
+            this.SysBotPouchItem1Count.Name = "SysBotPouchItem1Count";
+            this.SysBotPouchItem1Count.Size = new System.Drawing.Size(58, 20);
+            this.SysBotPouchItem1Count.TabIndex = 0;
+            this.SysBotPouchItem1Count.ValueChanged += new System.EventHandler(this.SysBotPouchItem1Count_ValueChanged);
             // 
             // SysBotPouchItem4Count
             // 
@@ -298,6 +570,16 @@ namespace RiseHax.WinForms
             this.SysBotPouchItem4Count.TabIndex = 7;
             this.SysBotPouchItem4Count.ValueChanged += new System.EventHandler(this.SysBotPouchItem4Count_ValueChanged);
             // 
+            // LabelSysBotPouchItem2
+            // 
+            this.LabelSysBotPouchItem2.AccessibleName = "LabelSysBotPouchItem2";
+            this.LabelSysBotPouchItem2.AutoSize = true;
+            this.LabelSysBotPouchItem2.Location = new System.Drawing.Point(2, 33);
+            this.LabelSysBotPouchItem2.Name = "LabelSysBotPouchItem2";
+            this.LabelSysBotPouchItem2.Size = new System.Drawing.Size(39, 13);
+            this.LabelSysBotPouchItem2.TabIndex = 2;
+            this.LabelSysBotPouchItem2.Text = "Item 2:";
+            // 
             // LabelSysBotPouchItem4
             // 
             this.LabelSysBotPouchItem4.AccessibleName = "LabelSysBotPouchItem4";
@@ -307,6 +589,21 @@ namespace RiseHax.WinForms
             this.LabelSysBotPouchItem4.Size = new System.Drawing.Size(39, 13);
             this.LabelSysBotPouchItem4.TabIndex = 6;
             this.LabelSysBotPouchItem4.Text = "Item 4:";
+            // 
+            // SysBotPouchItem2Count
+            // 
+            this.SysBotPouchItem2Count.AccessibleName = "SysBotPouchItem2Count";
+            this.SysBotPouchItem2Count.Enabled = false;
+            this.SysBotPouchItem2Count.Location = new System.Drawing.Point(83, 31);
+            this.SysBotPouchItem2Count.Maximum = new decimal(new int[] {
+            65536,
+            0,
+            0,
+            0});
+            this.SysBotPouchItem2Count.Name = "SysBotPouchItem2Count";
+            this.SysBotPouchItem2Count.Size = new System.Drawing.Size(58, 20);
+            this.SysBotPouchItem2Count.TabIndex = 3;
+            this.SysBotPouchItem2Count.ValueChanged += new System.EventHandler(this.SysBotPouchItem2Count_ValueChanged);
             // 
             // SysBotPouchItem3Count
             // 
@@ -332,56 +629,6 @@ namespace RiseHax.WinForms
             this.LabelSysBotPouchItem3.Size = new System.Drawing.Size(39, 13);
             this.LabelSysBotPouchItem3.TabIndex = 4;
             this.LabelSysBotPouchItem3.Text = "Item 3:";
-            // 
-            // SysBotPouchItem2Count
-            // 
-            this.SysBotPouchItem2Count.AccessibleName = "SysBotPouchItem2Count";
-            this.SysBotPouchItem2Count.Enabled = false;
-            this.SysBotPouchItem2Count.Location = new System.Drawing.Point(83, 31);
-            this.SysBotPouchItem2Count.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.SysBotPouchItem2Count.Name = "SysBotPouchItem2Count";
-            this.SysBotPouchItem2Count.Size = new System.Drawing.Size(58, 20);
-            this.SysBotPouchItem2Count.TabIndex = 3;
-            this.SysBotPouchItem2Count.ValueChanged += new System.EventHandler(this.SysBotPouchItem2Count_ValueChanged);
-            // 
-            // LabelSysBotPouchItem2
-            // 
-            this.LabelSysBotPouchItem2.AccessibleName = "LabelSysBotPouchItem2";
-            this.LabelSysBotPouchItem2.AutoSize = true;
-            this.LabelSysBotPouchItem2.Location = new System.Drawing.Point(2, 33);
-            this.LabelSysBotPouchItem2.Name = "LabelSysBotPouchItem2";
-            this.LabelSysBotPouchItem2.Size = new System.Drawing.Size(39, 13);
-            this.LabelSysBotPouchItem2.TabIndex = 2;
-            this.LabelSysBotPouchItem2.Text = "Item 2:";
-            // 
-            // LabelSysBotPouchItem1
-            // 
-            this.LabelSysBotPouchItem1.AccessibleName = "LabelSysBotPouchItem1";
-            this.LabelSysBotPouchItem1.AutoSize = true;
-            this.LabelSysBotPouchItem1.Location = new System.Drawing.Point(2, 2);
-            this.LabelSysBotPouchItem1.Name = "LabelSysBotPouchItem1";
-            this.LabelSysBotPouchItem1.Size = new System.Drawing.Size(39, 13);
-            this.LabelSysBotPouchItem1.TabIndex = 1;
-            this.LabelSysBotPouchItem1.Text = "Item 1:";
-            // 
-            // SysBotPouchItem1Count
-            // 
-            this.SysBotPouchItem1Count.AccessibleName = "SysBotPouchItem1Count";
-            this.SysBotPouchItem1Count.Enabled = false;
-            this.SysBotPouchItem1Count.Location = new System.Drawing.Point(83, 0);
-            this.SysBotPouchItem1Count.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.SysBotPouchItem1Count.Name = "SysBotPouchItem1Count";
-            this.SysBotPouchItem1Count.Size = new System.Drawing.Size(58, 20);
-            this.SysBotPouchItem1Count.TabIndex = 0;
-            this.SysBotPouchItem1Count.ValueChanged += new System.EventHandler(this.SysBotPouchItem1Count_ValueChanged);
             // 
             // GroupSysBotHunterCoords
             // 
@@ -691,87 +938,29 @@ namespace RiseHax.WinForms
             this.SysBotLog.TabIndex = 5;
             this.SysBotLog.Text = "Started application.";
             // 
-            // panel1
+            // numericUpDown7
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.SysBotPouchItem5Count);
-            this.panel1.Controls.Add(this.LabelSysBotPouchItem1);
-            this.panel1.Controls.Add(this.QuestSysBotPouchItem5);
-            this.panel1.Controls.Add(this.SysBotPouchItem1Count);
-            this.panel1.Controls.Add(this.SysBotPouchItem4Count);
-            this.panel1.Controls.Add(this.LabelSysBotPouchItem2);
-            this.panel1.Controls.Add(this.LabelSysBotPouchItem4);
-            this.panel1.Controls.Add(this.SysBotPouchItem2Count);
-            this.panel1.Controls.Add(this.SysBotPouchItem3Count);
-            this.panel1.Controls.Add(this.LabelSysBotPouchItem3);
-            this.panel1.Location = new System.Drawing.Point(0, 19);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(144, 334);
-            this.panel1.TabIndex = 10;
+            this.numericUpDown7.Location = new System.Drawing.Point(79, 215);
+            this.numericUpDown7.Name = "numericUpDown7";
+            this.numericUpDown7.Size = new System.Drawing.Size(64, 20);
+            this.numericUpDown7.TabIndex = 15;
             // 
-            // GroupSysBotCurrencies
+            // LabelSysBotPlaytime
             // 
-            this.GroupSysBotCurrencies.AccessibleName = "GroupSysBotCurrencies";
-            this.GroupSysBotCurrencies.Controls.Add(this.SysBotPointsCount);
-            this.GroupSysBotCurrencies.Controls.Add(this.LabelSysBotPoints);
-            this.GroupSysBotCurrencies.Controls.Add(this.SysBotZeniCount);
-            this.GroupSysBotCurrencies.Controls.Add(this.LabelSysBotZeni);
-            this.GroupSysBotCurrencies.Location = new System.Drawing.Point(236, 285);
-            this.GroupSysBotCurrencies.Name = "GroupSysBotCurrencies";
-            this.GroupSysBotCurrencies.Size = new System.Drawing.Size(143, 71);
-            this.GroupSysBotCurrencies.TabIndex = 10;
-            this.GroupSysBotCurrencies.TabStop = false;
-            this.GroupSysBotCurrencies.Text = "Currencies";
+            this.LabelSysBotPlaytime.AccessibleName = "LabelSysBotPlaytime";
+            this.LabelSysBotPlaytime.AutoSize = true;
+            this.LabelSysBotPlaytime.Location = new System.Drawing.Point(6, 249);
+            this.LabelSysBotPlaytime.Name = "LabelSysBotPlaytime";
+            this.LabelSysBotPlaytime.Size = new System.Drawing.Size(49, 13);
+            this.LabelSysBotPlaytime.TabIndex = 16;
+            this.LabelSysBotPlaytime.Text = "Playtime:";
             // 
-            // LabelSysBotZeni
+            // numericUpDown8
             // 
-            this.LabelSysBotZeni.AccessibleName = "LabelSysBotZeni";
-            this.LabelSysBotZeni.AutoSize = true;
-            this.LabelSysBotZeni.Location = new System.Drawing.Point(6, 18);
-            this.LabelSysBotZeni.Name = "LabelSysBotZeni";
-            this.LabelSysBotZeni.Size = new System.Drawing.Size(31, 13);
-            this.LabelSysBotZeni.TabIndex = 0;
-            this.LabelSysBotZeni.Text = "Zeni:";
-            // 
-            // SysBotZeniCount
-            // 
-            this.SysBotZeniCount.AccessibleName = "SysBotZeniCount";
-            this.SysBotZeniCount.Enabled = false;
-            this.SysBotZeniCount.Location = new System.Drawing.Point(54, 16);
-            this.SysBotZeniCount.Maximum = new decimal(new int[] {
-            99999999,
-            0,
-            0,
-            0});
-            this.SysBotZeniCount.Name = "SysBotZeniCount";
-            this.SysBotZeniCount.Size = new System.Drawing.Size(83, 20);
-            this.SysBotZeniCount.TabIndex = 1;
-            this.SysBotZeniCount.ValueChanged += new System.EventHandler(this.SysBotZeniCount_ValueChanged);
-            // 
-            // LabelSysBotPoints
-            // 
-            this.LabelSysBotPoints.AccessibleName = "LabelSysBotPoints";
-            this.LabelSysBotPoints.AutoSize = true;
-            this.LabelSysBotPoints.Location = new System.Drawing.Point(6, 46);
-            this.LabelSysBotPoints.Name = "LabelSysBotPoints";
-            this.LabelSysBotPoints.Size = new System.Drawing.Size(39, 13);
-            this.LabelSysBotPoints.TabIndex = 2;
-            this.LabelSysBotPoints.Text = "Points:";
-            // 
-            // SysBotPointsCount
-            // 
-            this.SysBotPointsCount.AccessibleName = "SysBotPointsCount";
-            this.SysBotPointsCount.Enabled = false;
-            this.SysBotPointsCount.Location = new System.Drawing.Point(54, 44);
-            this.SysBotPointsCount.Maximum = new decimal(new int[] {
-            99999999,
-            0,
-            0,
-            0});
-            this.SysBotPointsCount.Name = "SysBotPointsCount";
-            this.SysBotPointsCount.Size = new System.Drawing.Size(83, 20);
-            this.SysBotPointsCount.TabIndex = 3;
-            this.SysBotPointsCount.ValueChanged += new System.EventHandler(this.SysBotPointsCount_ValueChanged);
+            this.numericUpDown8.Location = new System.Drawing.Point(79, 247);
+            this.numericUpDown8.Name = "numericUpDown8";
+            this.numericUpDown8.Size = new System.Drawing.Size(64, 20);
+            this.numericUpDown8.TabIndex = 17;
             // 
             // SysBotUI
             // 
@@ -791,12 +980,26 @@ namespace RiseHax.WinForms
             this.GroupSysBotStatus.PerformLayout();
             this.SysBotTabControl.ResumeLayout(false);
             this.TabSysBotPlayer.ResumeLayout(false);
+            this.GroupSysBotActivityLog.ResumeLayout(false);
+            this.GroupSysBotActivityLog.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.GroupSysBotCurrencies.ResumeLayout(false);
+            this.GroupSysBotCurrencies.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotPointsCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotZeniCount)).EndInit();
             this.GroupSysBotPouch.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SysBotPouchItem5Count)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotPouchItem4Count)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotPouchItem3Count)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotPouchItem2Count)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SysBotPouchItem1Count)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotPouchItem4Count)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotPouchItem2Count)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SysBotPouchItem3Count)).EndInit();
             this.GroupSysBotHunterCoords.ResumeLayout(false);
             this.GroupSysBotHunterCoords.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterCoordZCount)).EndInit();
@@ -813,12 +1016,8 @@ namespace RiseHax.WinForms
             ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterStaminaCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SysBotHunterHPCount)).EndInit();
             this.TabSysBotLog.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.GroupSysBotCurrencies.ResumeLayout(false);
-            this.GroupSysBotCurrencies.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotZeniCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotPointsCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -877,5 +1076,22 @@ namespace RiseHax.WinForms
         private System.Windows.Forms.NumericUpDown SysBotPointsCount;
         private System.Windows.Forms.Label LabelSysBotPoints;
         private System.Windows.Forms.NumericUpDown SysBotZeniCount;
+        private System.Windows.Forms.GroupBox GroupSysBotActivityLog;
+        private System.Windows.Forms.Label LabelSysBotCapturedTotal;
+        private System.Windows.Forms.Label LabelSysBotSlainTotal;
+        private System.Windows.Forms.Label LabelSysBotArenaQuests;
+        private System.Windows.Forms.Label LabelSysBotRampageQuests;
+        private System.Windows.Forms.Label LabelSysBotHRQuests;
+        private System.Windows.Forms.Label LabelSysBotLRQuests;
+        private System.Windows.Forms.Label LabelSysBotVillageQuest;
+        private System.Windows.Forms.NumericUpDown numericUpDown6;
+        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDown7;
+        private System.Windows.Forms.NumericUpDown numericUpDown8;
+        private System.Windows.Forms.Label LabelSysBotPlaytime;
     }
 }
