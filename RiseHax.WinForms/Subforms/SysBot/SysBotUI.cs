@@ -124,6 +124,47 @@ namespace RiseHax.WinForms
             BytesHandler.WriteUInt(GlobalVariables.MaxHP, OffsetHunterHPMax, sb);
         }
 
+        // Activity Log writing
+        private void SysBotVillageQuestCount_ValueChanged(object sender, EventArgs e)
+        {
+            BytesHandler.WriteUInt((uint)SysBotVillageQuestCount.Value, OffsetVillageQuestCount, sb);
+        }
+
+        private void SysBotLowRankQuestCount_ValueChanged(object sender, EventArgs e)
+        {
+            BytesHandler.WriteUInt((uint)SysBotLowRankQuestCount.Value, OffsetLowRankQuestCount, sb);
+        }
+
+        private void SysBotHighRankQuestCount_ValueChanged(object sender, EventArgs e)
+        {
+            BytesHandler.WriteUInt((uint)SysBotHighRankQuestCount.Value, OffsetHighRankQuestCount, sb);
+        }
+
+        private void SysBotRampageQuestCount_ValueChanged(object sender, EventArgs e)
+        {
+            BytesHandler.WriteUInt((uint)SysBotRampageQuestCount.Value, OffsetRampageQuestCount, sb);
+        }
+
+        private void SysBotArenaQuestCount_ValueChanged(object sender, EventArgs e)
+        {
+            BytesHandler.WriteUInt((uint)SysBotArenaQuestCount.Value, OffsetArenaQuestCount, sb);
+        }
+
+        private void SysBotSlainTotalCount_ValueChanged(object sender, EventArgs e)
+        {
+            BytesHandler.WriteUInt((uint)SysBotSlainTotalCount.Value, OffsetSlainTotal, sb);
+        }
+
+        private void SysBotCapturedTotalCount_ValueChanged(object sender, EventArgs e)
+        {
+            BytesHandler.WriteUInt((uint)SysBotCapturedTotalCount.Value, OffsetCapturedTotal, sb);
+        }
+
+        private void SysBotPlaytimeCount_ValueChanged(object sender, EventArgs e)
+        {
+            BytesHandler.WriteUInt((uint)SysBotPlaytimeCount.Value, OffsetPlaytime, sb);
+        }
+
         // Pouch item writing
         private void SysBotPouchItem1Count_ValueChanged(object sender, EventArgs e)
         {

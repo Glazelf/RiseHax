@@ -313,6 +313,7 @@ namespace RiseHax.WinForms
             this.SysBotPlaytimeCount.Name = "SysBotPlaytimeCount";
             this.SysBotPlaytimeCount.Size = new System.Drawing.Size(64, 20);
             this.SysBotPlaytimeCount.TabIndex = 17;
+            this.SysBotPlaytimeCount.ValueChanged += new System.EventHandler(this.SysBotPlaytimeCount_ValueChanged);
             // 
             // LabelSysBotPlaytime
             // 
@@ -337,6 +338,7 @@ namespace RiseHax.WinForms
             this.SysBotCapturedTotalCount.Name = "SysBotCapturedTotalCount";
             this.SysBotCapturedTotalCount.Size = new System.Drawing.Size(64, 20);
             this.SysBotCapturedTotalCount.TabIndex = 15;
+            this.SysBotCapturedTotalCount.ValueChanged += new System.EventHandler(this.SysBotCapturedTotalCount_ValueChanged);
             // 
             // SysBotSlainTotalCount
             // 
@@ -351,6 +353,7 @@ namespace RiseHax.WinForms
             this.SysBotSlainTotalCount.Name = "SysBotSlainTotalCount";
             this.SysBotSlainTotalCount.Size = new System.Drawing.Size(64, 20);
             this.SysBotSlainTotalCount.TabIndex = 14;
+            this.SysBotSlainTotalCount.ValueChanged += new System.EventHandler(this.SysBotSlainTotalCount_ValueChanged);
             // 
             // SysBotArenaQuestCount
             // 
@@ -365,6 +368,7 @@ namespace RiseHax.WinForms
             this.SysBotArenaQuestCount.Name = "SysBotArenaQuestCount";
             this.SysBotArenaQuestCount.Size = new System.Drawing.Size(64, 20);
             this.SysBotArenaQuestCount.TabIndex = 13;
+            this.SysBotArenaQuestCount.ValueChanged += new System.EventHandler(this.SysBotArenaQuestCount_ValueChanged);
             // 
             // SysBotRampageQuestCount
             // 
@@ -379,6 +383,7 @@ namespace RiseHax.WinForms
             this.SysBotRampageQuestCount.Name = "SysBotRampageQuestCount";
             this.SysBotRampageQuestCount.Size = new System.Drawing.Size(64, 20);
             this.SysBotRampageQuestCount.TabIndex = 12;
+            this.SysBotRampageQuestCount.ValueChanged += new System.EventHandler(this.SysBotRampageQuestCount_ValueChanged);
             // 
             // SysBotHighRankQuestCount
             // 
@@ -393,6 +398,7 @@ namespace RiseHax.WinForms
             this.SysBotHighRankQuestCount.Name = "SysBotHighRankQuestCount";
             this.SysBotHighRankQuestCount.Size = new System.Drawing.Size(64, 20);
             this.SysBotHighRankQuestCount.TabIndex = 5;
+            this.SysBotHighRankQuestCount.ValueChanged += new System.EventHandler(this.SysBotHighRankQuestCount_ValueChanged);
             // 
             // SysBotLowRankQuestCount
             // 
@@ -407,6 +413,7 @@ namespace RiseHax.WinForms
             this.SysBotLowRankQuestCount.Name = "SysBotLowRankQuestCount";
             this.SysBotLowRankQuestCount.Size = new System.Drawing.Size(64, 20);
             this.SysBotLowRankQuestCount.TabIndex = 11;
+            this.SysBotLowRankQuestCount.ValueChanged += new System.EventHandler(this.SysBotLowRankQuestCount_ValueChanged);
             // 
             // SysBotVillageQuestCount
             // 
@@ -421,6 +428,7 @@ namespace RiseHax.WinForms
             this.SysBotVillageQuestCount.Name = "SysBotVillageQuestCount";
             this.SysBotVillageQuestCount.Size = new System.Drawing.Size(64, 20);
             this.SysBotVillageQuestCount.TabIndex = 5;
+            this.SysBotVillageQuestCount.ValueChanged += new System.EventHandler(this.SysBotVillageQuestCount_ValueChanged);
             // 
             // LabelSysBotCapturedTotal
             // 
