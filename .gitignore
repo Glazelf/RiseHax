@@ -255,4 +255,4 @@ pip-log.txt
 *.lnk
 
 # Private offsets/pointers
-RiseHax.Hunter/Structures/RAM/DataOffsets.cs
+# RiseHax.Hunter/Structures/RAM/DataOffsets.cs
