@@ -250,10 +250,10 @@ namespace RiseHax.WinForms
             try
             {
                 OffsetVillageQuestCount = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerActivityLog);
-                OffsetLowRankQuestCount = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerActivityLog + DataOffsets.DistanceLowRankQuestCount);
-                OffsetHighRankQuestCount = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerActivityLog + DataOffsets.DistanceHighRankQuestCount);
-                OffsetRampageQuestCount = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerActivityLog + DataOffsets.DistanceRampageQuestCount);
-                OffsetArenaQuestCount = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerActivityLog + DataOffsets.DistanceArenaQuestCount);
+                OffsetLowRankQuestCount = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerActivityLog + DataOffsets.DistanceActivityLog);
+                OffsetHighRankQuestCount = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerActivityLog + DataOffsets.DistanceActivityLog * 2);
+                OffsetRampageQuestCount = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerActivityLog + DataOffsets.DistanceActivityLog * 3);
+                OffsetArenaQuestCount = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerActivityLog + DataOffsets.DistanceActivityLog * 4);
                 OffsetSlainTotal = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerActivityLog + DataOffsets.DistanceSlainTotal);
                 OffsetCapturedTotal = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerActivityLog + DataOffsets.DistanceCapturedTotal);
                 uint VillageQuestCount = sb.ReadBytesAbsolute(OffsetVillageQuestCount, 1)[0];

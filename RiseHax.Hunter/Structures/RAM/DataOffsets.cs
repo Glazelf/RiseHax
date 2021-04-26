@@ -33,11 +33,7 @@
         public const int DistanceCoordinates = 0x4;
         // Activity Log
         public const int DistancePlaytime = -0x3C;
-        private const int DistanceActivityLog = 0x4;
-        public const int DistanceLowRankQuestCount = DistanceActivityLog;
-        public const int DistanceHighRankQuestCount = DistanceActivityLog * 2;
-        public const int DistanceRampageQuestCount = DistanceActivityLog * 3;
-        public const int DistanceArenaQuestCount = DistanceActivityLog * 4;
+        public const int DistanceActivityLog = 0x4;
         public const int DistanceSlainTotal = 0x24;
         public const int DistanceCapturedTotal = DistanceSlainTotal + DistanceActivityLog;
     }
