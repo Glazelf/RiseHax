@@ -16,7 +16,9 @@
         // Count is +0x805FC8, all consecutive pouch item counts are + 0x60
         public const string PointerPouchItem1 = "[[[[[[[[[main+D5F9E00]+78]+268]+10]]+68]+18]+20]+20]+10";
 
-        // DEMO, NOT UPDATED FOR FULL GAME YET. Just here to prevent build errors
+        /// <summary>
+        /// DEMO, NOT UPDATED FOR FULL GAME YET. Just here to prevent build errors
+        /// </summary> 
         // Coords directly follow eachother
         public const string PointerHunterCoordX = "[[[[main+CDBBF88]+A0]+18]+30";
         // SHOULD work for all quests with 3 monsters but not widely tested
