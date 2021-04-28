@@ -2,22 +2,22 @@
 {
     public static class DataOffsets
     {
-        //// Updated for v2.0:
+        //////////////////////////// Updated for v2.0:
+        // Doubles as Village Quest pointer
+        public const string PointerActivityLog = "[[main+D96F848]+70]+80";
 
-        //// Outdated pointers:
+        public const string PointerPouchItem1 = "[[[[main+D9674B8]+78]+18]+40]+10";
+
+        //////////////////////////// Outdated pointers:
         /// <summary>
         /// Pointers
         /// </summary>
         // General
         public const string PointerZeni = "[[[[[[main+D5F7E00]+78]+2B0]+10]]+58]+18";
-        // Doubles as Village Quest pointer
-        public const string PointerActivityLog = "[[main+D696C88]+70]+80";
 
         /// Quest
         // Max HP at +0x
         public const string PointerHunterHP = "[[[[[main+D5F9DF0]+448]+140]+A0]+118]+10";
-        // Count is +0x805FC8, all consecutive pouch item counts are + 0x60
-        public const string PointerPouchItem1 = "[[[[[[[[[main+D5F9E00]+78]+268]+10]]+68]+18]+20]+20]+10";
 
         // Coords directly follow eachother
         public const string PointerHunterCoordX = "[[[[main+CDBBF88]+A0]+18]+30";
