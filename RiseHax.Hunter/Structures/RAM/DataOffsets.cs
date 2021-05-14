@@ -8,6 +8,10 @@
 
         public const string PointerPouchItem1 = "[[[[main+D9674B8]+78]+18]+40]+10";
 
+        // Add 0x8 to the second to last number to get the next item.
+        public const string PointerLayeredArmor = "[[[[[main+0D9674B8]+D8]+10]+10]+20]+20";
+        public const string PointerLayeredArmorBuddies = "[[[[[main+0D9674B8]+D0]+28]+10]+20]+10";
+
         //////////////////////////// Outdated pointers:
         /// <summary>
         /// Pointers
