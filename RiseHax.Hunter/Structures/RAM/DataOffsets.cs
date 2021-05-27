@@ -2,15 +2,8 @@
 {
     public static class DataOffsets
     {
-        //////////////////////////// Updated for v2.0:
-        // Doubles as Village Quest pointer
-        public const string PointerActivityLog = "[[main+D96F848]+70]+80";
+        //////////////////////////// Updated for v3.0:
 
-        public const string PointerPouchItem1 = "[[[[main+D9674B8]+78]+18]+40]+10";
-
-        // Add 0x8 to the second to last number to get the next item.
-        public const string PointerLayeredArmor = "[[[[[main+0D9674B8]+D8]+10]+10]+20]+20";
-        public const string PointerLayeredArmorBuddies = "[[[[[main+0D9674B8]+D0]+28]+10]+20]+10";
 
         //////////////////////////// Outdated pointers:
         /// <summary>
@@ -27,6 +20,15 @@
         public const string PointerHunterCoordX = "[[[[main+CDBBF88]+A0]+18]+30";
         // SHOULD work for all quests with 3 monsters but not widely tested
         public const string PointerMonsters3HP = "[[[main+CD776B0]+50]+280]+170";
+
+        // Doubles as Village Quest pointer
+        public const string PointerActivityLog = "[[main+D96F848]+70]+80";
+
+        public const string PointerPouchItem1 = "[[[[main+D9674B8]+78]+18]+40]+10";
+
+        // Add 0x8 to the second to last number to get the next item.
+        public const string PointerLayeredArmor = "[[[[[main+0D9674B8]+D8]+10]+10]+20]+20";
+        public const string PointerLayeredArmorBuddies = "[[[[[main+0D9674B8]+D0]+28]+10]+20]+10";
 
         /// <summary>
         /// Distances
