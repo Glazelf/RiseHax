@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFrameworks>net47;net5.0-windows</TargetFrameworks>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <!--<TargetFrameworks>net47;net5.0-windows</TargetFrameworks-->
     <UseWindowsForms>true</UseWindowsForms>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>

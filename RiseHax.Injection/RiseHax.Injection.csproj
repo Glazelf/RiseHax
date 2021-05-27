@@ -1,7 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net47;net5.0-windows</TargetFrameworks>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <!--<TargetFrameworks>net47;net5.0-windows</TargetFrameworks-->
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net46|AnyCPU'">
