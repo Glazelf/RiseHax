@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discussions
+    url: https://github.com/Glazelf/RiseHax/discussions
+    about: Have questions or need support? Create a discussion instead.
+  - name: Discord server
+    url: https://discord.gg/5NsYYuvm7D
+    about: Have questions or need support but can't find the discussions page still? Feel free to join our Discord.
