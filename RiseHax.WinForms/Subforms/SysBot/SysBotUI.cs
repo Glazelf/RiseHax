@@ -48,7 +48,20 @@ namespace RiseHax.WinForms
 
         public void SysBotUI_Load(object sender, EventArgs e)
         {
+            TextBoxPort.Text = Settings.Default.Port;
+            TextBoxIP.Text = Settings.Default.IP;
+        }
 
+        private void TextBoxPort_TextChanged(object sender, EventArgs e)
+        {
+            Settings.Default.Port = TextBoxPort.Text;
+            Settings.Default.Save();
+        }
+
+        private void TextBoxIP_TextChanged(object sender, EventArgs e)
+        {
+            Settings.Default.IP = TextBoxIP.Text;
+            Settings.Default.Save();
         }
 
         // sb and getting values
