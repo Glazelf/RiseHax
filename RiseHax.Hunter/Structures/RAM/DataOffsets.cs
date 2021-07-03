@@ -8,9 +8,10 @@
         //////////////////////////// Updated for v3.0:
         // General
         public const string PointerZeni = "[heap+001DEE5428]";
+        public const string PointerPoints = "[heap+1DEDB390]";
 
         //////////////////////////// Outdated pointers:
-        
+
         /// Quest
         // Max HP at +0x
         public const string PointerHunterHP = "[[[[[main+D5F9DF0]+448]+140]+A0]+118]+10";

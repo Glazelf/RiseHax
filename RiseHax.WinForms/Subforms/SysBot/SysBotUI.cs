@@ -43,8 +43,6 @@ namespace RiseHax.WinForms
         ulong OffsetHunterCoordY;
         ulong OffsetHunterCoordZ;
         ulong OffsetMonster1HP;
-        ulong OffsetZeni;
-        ulong OffsetPoints;
 
         public void SysBotUI_Load(object sender, EventArgs e)
         {
@@ -227,7 +225,8 @@ namespace RiseHax.WinForms
         }
         private void SysBotPointsCount_ValueChanged(object sender, EventArgs e)
         {
-
+            byte[] PointsBytes = BitConverter.GetBytes((uint)SysBotPointsCount.Value);
+            PointerHandler.WritePointer(sb, DataOffsets.PointerZeni, PointsBytes);
         }
 
         private void ReloadValues()
@@ -253,10 +252,14 @@ namespace RiseHax.WinForms
                 uint Zeni = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerZeni);
                 SysBotZeniCount.Value = Zeni;
                 SysBotZeniCount.Enabled = true;
+                uint Points = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerPoints);
+                SysBotPointsCount.Value = Points;
+                SysBotPointsCount.Enabled = true;
             }
             catch (Exception ex)
             {
                 SysBotZeniCount.Enabled = false;
+                SysBotPointsCount.Enabled = false;
                 LogError(ex);
             }
             // Activity Log
