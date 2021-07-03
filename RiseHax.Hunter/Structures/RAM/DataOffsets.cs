@@ -2,16 +2,15 @@
 {
     public static class DataOffsets
     {
-        //////////////////////////// Updated for v3.0:
-
-
-        //////////////////////////// Outdated pointers:
         /// <summary>
         /// Pointers
         /// </summary>
+        //////////////////////////// Updated for v3.0:
         // General
-        public const string PointerZeni = "[[[[[[main+D5F7E00]+78]+2B0]+10]]+58]+18";
+        public const string PointerZeni = "[heap+001DEE5428]";
 
+        //////////////////////////// Outdated pointers:
+        
         /// Quest
         // Max HP at +0x
         public const string PointerHunterHP = "[[[[[main+D5F9DF0]+448]+140]+A0]+118]+10";
@@ -29,6 +28,7 @@
         // Add 0x8 to the second to last number to get the next item.
         public const string PointerLayeredArmor = "[[[[[main+0D9674B8]+D8]+10]+10]+20]+20";
         public const string PointerLayeredArmorBuddies = "[[[[[main+0D9674B8]+D0]+28]+10]+20]+10";
+
 
         /// <summary>
         /// Distances
