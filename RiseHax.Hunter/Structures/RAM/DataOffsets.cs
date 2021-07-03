@@ -10,6 +10,9 @@
         public const string PointerZeni = "[heap+001DEE5428]";
         public const string PointerPoints = "[heap+1DEDB390]";
 
+        // Still need to add code for these
+        public const string PointerDangoTickets = "[heap+1D95BC94]";
+
         //////////////////////////// Outdated pointers:
 
         /// Quest
