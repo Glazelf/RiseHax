@@ -7,11 +7,11 @@
         /// </summary>
         //////////////////////////// Updated for v3.0:
         // General
-        public const string PointerZeni = "[heap+001DEE5428]";
-        public const string PointerPoints = "[heap+1DEDB390]";
+        public const string PointerZeni = "[heap+001DEE5428]"; // Notes: Max 999.999.999?
+        public const string PointerPoints = "[heap+1DEDB390]"; // Notes: Max 999.999.999?
 
         // Still need to add code for these
-        public const string PointerDangoTickets = "[heap+1D95BC94]";
+        public const string PointerDangoTickets = "[heap+1D95BC94]"; // Notes: Max 9999?
 
         //////////////////////////// Outdated pointers:
 
