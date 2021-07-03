@@ -43,15 +43,58 @@ namespace RiseHax.Hunter
             return result;
         }
 
-        public ulong GetPointerAddress(ISwitchConnectionSync sb, string ptr)
+        public static ulong GetPointerAddress(ISwitchConnectionSync sb, string ptr)
         {
             uint finadd = 0;
             if (!ptr.EndsWith("]"))
                 finadd = GetHexValue(ptr.Split('+').Last());
-            var jumps = ptr.Replace("main", "").Replace("[", "").Replace("]", "").Split(new[] { "+" }, StringSplitOptions.RemoveEmptyEntries);
+            var heap = sb.GetHeapBase();
+            var jumps = ptr.Replace("main", "").Replace("heap", "").Replace("[", "").Replace("]", "").Split(new[] { "+" }, StringSplitOptions.RemoveEmptyEntries);
 
             var initaddress = GetHexValue(jumps[0].Trim());
-            ulong address = BitConverter.ToUInt64(sb.ReadBytesMain(initaddress, 0x8), 0);
+            ulong address;
+            if (ptr.Contains("heap"))
+            {
+                address = BitConverter.ToUInt64(sb.ReadBytes(initaddress, 0x8), 0);
+            }
+            else
+            {
+                address = BitConverter.ToUInt64(sb.ReadBytesMain(initaddress, 0x8), 0);
+            }
+            foreach (var j in jumps)
+            {
+                var val = GetHexValue(j.Trim());
+                if (val == initaddress)
+                    continue;
+                if (val == finadd)
+                {
+                    address += val;
+                    break;
+                }
+                address = BitConverter.ToUInt64(sb.ReadBytesAbsolute(address + val, 0x8), 0);
+
+            }
+            return address;
+        }
+
+        public static void WritePointer(ISwitchConnectionSync sb, string ptr, byte[] data)
+        {
+            uint finadd = 0;
+            if (!ptr.EndsWith("]"))
+                finadd = GetHexValue(ptr.Split('+').Last());
+            var heap = sb.GetHeapBase();
+            var jumps = ptr.Replace("main", "").Replace("heap", "").Replace("[", "").Replace("]", "").Split(new[] { "+" }, StringSplitOptions.RemoveEmptyEntries);
+
+            var initaddress = GetHexValue(jumps[0].Trim());
+            ulong address;
+            if (ptr.Contains("heap"))
+            {
+                address = BitConverter.ToUInt64(sb.ReadBytes(initaddress, 0x8), 0);
+            }
+            else
+            {
+                address = BitConverter.ToUInt64(sb.ReadBytesMain(initaddress, 0x8), 0);
+            }
             foreach (var j in jumps)
             {
                 var val = GetHexValue(j.Trim());
@@ -64,13 +107,14 @@ namespace RiseHax.Hunter
                 }
                 address = BitConverter.ToUInt64(sb.ReadBytesAbsolute(address + val, 0x8), 0);
             }
-            return address;
-        }
-
-        public static string DecimalToHex(ulong decValue)
-        {
-            string hexValue = decValue.ToString("X");
-            return hexValue;
+            if (ptr.Contains("heap"))
+            {
+                sb.WriteBytes(data, initaddress);
+            }
+            else
+            {
+                sb.WriteBytesMain(data, address);
+            }
         }
 
         public static ulong ConvertLittleEndian(byte[] array)
