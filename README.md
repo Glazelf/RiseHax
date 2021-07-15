@@ -7,8 +7,11 @@ There is no easy way for us to test the ban risks of using this tool, especially
 For the first few months of the game being released we will have no proper indication of the risks either so use this tool fully at your own risk. If you do discover anything relevant to the risks of using this, please contact us either through [Discord](https://discord.gg/5NsYYuvm7D) or [a discussion](https://github.com/Glazelf/RiseHax/discussions) so we can document it for future reference.  
 "Luckily" people are selling really poorly made hacks online so we can just look at them and see if they get people banned or not. :)  
 
+## How do use?
+Refer to [the wiki](https://github.com/Glazelf/RiseHax/wiki) for usage handles. 
+
 ## Support
-Have questions? Either [create a discussion](https://github.com/Glazelf/RiseHax/discussions) or join my Discord.  
+Still need support? Have questions? Either [create a discussion](https://github.com/Glazelf/RiseHax/discussions) or join my Discord.  
 [<img src="https://canary.discordapp.com/api/guilds/826479009206108188/widget.png?style=banner2">](https://discord.gg/5NsYYuvm7D)
 
 ## Credits
