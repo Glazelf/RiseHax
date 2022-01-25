@@ -1,5 +1,5 @@
 # RiseHax  
-This is a WIP save/memory editor for Monster Hunter: Rise for Nintendo Switch.
+This is a WIP save/memory editor for Monster Hunter: Rise **for Nintendo Switch**.
 Check the [releases page](https://github.com/Glazelf/RiseHax/releases) for releases and the [issues page](https://github.com/Glazelf/RiseHax/issues) for general progress.
 
 ## Risks
