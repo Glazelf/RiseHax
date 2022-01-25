@@ -3,9 +3,9 @@ This is a WIP save/memory editor for Monster Hunter: Rise **for Nintendo Switch*
 Check the [releases page](https://github.com/Glazelf/RiseHax/releases) for releases and the [issues page](https://github.com/Glazelf/RiseHax/issues) for general progress.
 
 ## Risks
-There is no easy way for us to test the ban risks of using this tool, especially online.  
-For the first few months of the game being released we will have no proper indication of the risks either so use this tool fully at your own risk. If you do discover anything relevant to the risks of using this, please contact us either through [Discord](https://discord.gg/5NsYYuvm7D) or [a discussion](https://github.com/Glazelf/RiseHax/discussions) so we can document it for future reference.  
-"Luckily" people are selling really poorly made hacks online so we can just look at them and see if they get people banned or not. :)  
+There is no easy way for us to thoroughly test the ban risks of using this tool, especially online.  
+It doesn't seem like Capcom gives a shit about most forms of cheating, so this tool should be free to use.  
+If you notice any bans please contact us either through [Discord](https://discord.gg/5NsYYuvm7D) or [a discussion](https://github.com/Glazelf/RiseHax/discussions) so we can document them for future reference.  
 
 ## How do use?
 Refer to [the wiki](https://github.com/Glazelf/RiseHax/wiki) for usage handles. 
