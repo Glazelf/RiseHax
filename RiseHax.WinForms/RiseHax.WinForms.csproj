@@ -80,7 +80,7 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="NLog" Version="5.1.4" />
+    <PackageReference Include="NLog" Version="5.1.5" />
   </ItemGroup>
 
   <ItemGroup>
