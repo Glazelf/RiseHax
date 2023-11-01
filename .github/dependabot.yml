@@ -4,4 +4,4 @@ updates:
     directory: "/"
     assignees: ["glazelf"]
     schedule:
-      interval: "daily"
+      interval: "monthly"
