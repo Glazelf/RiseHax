@@ -10,10 +10,6 @@ If you notice any bans please contact us either through [Discord](https://discor
 ## How do use?
 Refer to [the wiki](https://github.com/Glazelf/RiseHax/wiki) for usage handles. 
 
-## Support
-Still need support? Have questions? Either [create a discussion](https://github.com/Glazelf/RiseHax/discussions) or join my Discord.  
-[<img src="https://canary.discordapp.com/api/guilds/826479009206108188/widget.png?style=banner2">](https://discord.gg/5NsYYuvm7D)
-
 ## Credits
 **Contributions:**  
 [Red](https://github.com/hp3721): Helping develop for the initial demo build through finding a coordinate pointer and some coding help.  
