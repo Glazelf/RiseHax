@@ -1,5 +1,8 @@
 # RiseHax  
-This is a WIP save/memory editor for Monster Hunter: Rise **for Nintendo Switch**.
+This was a WIP save/memory editor for Monster Hunter: Rise **for Nintendo Switch**.  
+Due to a lack of interest of finding memory pointers for every tiny update, as well as me finishing the game and not seeing use in this tool for myself and the release of this game on PC, where development of tools like this is a lot easier, development of this project has halted.  
+Thanks to everyone who has helped or in any way guided me through this project, it has taught me a lot about C# as a language and application development in general.  
+If you want to reach out, you can do so at `glazelf` on Discord.  
 Check the [releases page](https://github.com/Glazelf/RiseHax/releases) for releases and the [issues page](https://github.com/Glazelf/RiseHax/issues) for general progress.
 
 ## Risks
